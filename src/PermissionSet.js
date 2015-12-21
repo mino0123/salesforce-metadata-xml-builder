@@ -1,0 +1,34 @@
+const PermissionSetApplicationVisibility = require('./PermissionSetApplicationVisibility');
+const PermissionSetApexClassAccess = require('./PermissionSetApexClassAccess');
+const PermissionSetCustomPermissions = require('./PermissionSetCustomPermissions');
+const PermissionSetExternalDataSourceAccess = require('./PermissionSetExternalDataSourceAccess');
+const PermissionSetFieldPermissions = require('./PermissionSetFieldPermissions');
+const PermissionSetObjectPermissions = require('./PermissionSetObjectPermissions');
+const PermissionSetApexPageAccess = require('./PermissionSetApexPageAccess');
+const PermissionSetRecordTypeVisibility = require('./PermissionSetRecordTypeVisibility');
+const PermissionSetTabSetting = require('./PermissionSetTabSetting');
+const PermissionSetUserPermission = require('./PermissionSetUserPermission');
+
+module.exports = (object, asChild) => {
+  var rootTagStart = '<PermissionSet>';
+  var rootTagEnd = '</PermissionSet>';
+  if (asChild) {
+    rootTagStart = '';
+    rootTagEnd = '';
+  }
+  return `${rootTagStart}
+	${object.applicationVisibilities == null ? '' : object.applicationVisibilities.map(p => '<applicationVisibilities>' + PermissionSetApplicationVisibility(p, true) + '</applicationVisibilities>')}
+	${object.classAccesses == null ? '' : object.classAccesses.map(p => '<classAccesses>' + PermissionSetApexClassAccess(p, true) + '</classAccesses>')}
+	${object.customPermissions == null ? '' : object.customPermissions.map(p => '<customPermissions>' + PermissionSetCustomPermissions(p, true) + '</customPermissions>')}
+	${object.description == null ? '' : '<description>' + object.description + '</description>'}
+	${object.externalDataSourceAccesses == null ? '' : object.externalDataSourceAccesses.map(p => '<externalDataSourceAccesses>' + PermissionSetExternalDataSourceAccess(p, true) + '</externalDataSourceAccesses>')}
+	${object.fieldPermissions == null ? '' : object.fieldPermissions.map(p => '<fieldPermissions>' + PermissionSetFieldPermissions(p, true) + '</fieldPermissions>')}
+	${object.label == null ? '' : '<label>' + object.label + '</label>'}
+	${object.objectPermissions == null ? '' : object.objectPermissions.map(p => '<objectPermissions>' + PermissionSetObjectPermissions(p, true) + '</objectPermissions>')}
+	${object.pageAccesses == null ? '' : object.pageAccesses.map(p => '<pageAccesses>' + PermissionSetApexPageAccess(p, true) + '</pageAccesses>')}
+	${object.recordTypeVisibilities == null ? '' : object.recordTypeVisibilities.map(p => '<recordTypeVisibilities>' + PermissionSetRecordTypeVisibility(p, true) + '</recordTypeVisibilities>')}
+	${object.tabSettings == null ? '' : object.tabSettings.map(p => '<tabSettings>' + PermissionSetTabSetting(p, true) + '</tabSettings>')}
+	${object.userLicense == null ? '' : '<userLicense>' + object.userLicense + '</userLicense>'}
+	${object.userPermissions == null ? '' : object.userPermissions.map(p => '<userPermissions>' + PermissionSetUserPermission(p, true) + '</userPermissions>')}
+${rootTagEnd}`;
+}
