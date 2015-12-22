@@ -23,5 +23,6 @@ module.exports = (object, asChild) => {
 	${object.quickActions == null ? '' : object.quickActions.map(p => '<quickActions>' + GlobalQuickActionTranslation(p, true) + '</quickActions>')}
 	${object.reportTypes == null ? '' : object.reportTypes.map(p => '<reportTypes>' + ReportTypeTranslation(p, true) + '</reportTypes>')}
 	${object.scontrols == null ? '' : object.scontrols.map(p => '<scontrols>' + ScontrolTranslation(p, true) + '</scontrols>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

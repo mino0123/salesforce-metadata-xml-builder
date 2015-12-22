@@ -55,5 +55,6 @@ module.exports = (object, asChild) => {
 	${object.territoryHierarchyFilter == null ? '' : '<territoryHierarchyFilter>' + object.territoryHierarchyFilter + '</territoryHierarchyFilter>'}
 	${object.timeFrameFilter == null ? '' : '<timeFrameFilter>' + ReportTimeFrameFilter(object.timeFrameFilter, true) + '</timeFrameFilter>'}
 	${object.userFilter == null ? '' : '<userFilter>' + object.userFilter + '</userFilter>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

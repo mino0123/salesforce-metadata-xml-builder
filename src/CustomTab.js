@@ -23,5 +23,6 @@ module.exports = (object, asChild) => {
 	${object.splashPageLink == null ? '' : '<splashPageLink>' + object.splashPageLink + '</splashPageLink>'}
 	${object.url == null ? '' : '<url>' + object.url + '</url>'}
 	${object.urlEncodingKey == null ? '' : '<urlEncodingKey>' + Encoding(object.urlEncodingKey, true) + '</urlEncodingKey>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -37,5 +37,6 @@ module.exports = (object, asChild) => {
 	${object.showFewerCloseActions == null ? '' : '<showFewerCloseActions>' + object.showFewerCloseActions + '</showFewerCloseActions>'}
 	${object.useSystemEmailAddress == null ? '' : '<useSystemEmailAddress>' + object.useSystemEmailAddress + '</useSystemEmailAddress>'}
 	${object.webToCase == null ? '' : '<webToCase>' + WebToCaseSettings(object.webToCase, true) + '</webToCase>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

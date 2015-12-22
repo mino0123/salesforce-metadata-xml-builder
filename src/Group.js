@@ -9,5 +9,6 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.doesIncludeBosses == null ? '' : '<doesIncludeBosses>' + object.doesIncludeBosses + '</doesIncludeBosses>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -9,5 +9,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.appMenuItems == null ? '' : object.appMenuItems.map(p => '<appMenuItems>' + AppMenuItem(p, true) + '</appMenuItems>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

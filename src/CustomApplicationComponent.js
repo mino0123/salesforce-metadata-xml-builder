@@ -17,5 +17,6 @@ module.exports = (object, asChild) => {
 	${object.isWidthFixed == null ? '' : '<isWidthFixed>' + object.isWidthFixed + '</isWidthFixed>'}
 	${object.visualforcePage == null ? '' : '<visualforcePage>' + object.visualforcePage + '</visualforcePage>'}
 	${object.width == null ? '' : '<width>' + object.width + '</width>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -15,5 +15,6 @@ module.exports = (object, asChild) => {
 	${object.internalNameLabel == null ? '' : '<internalNameLabel>' + object.internalNameLabel + '</internalNameLabel>'}
 	${object.sections == null ? '' : object.sections.map(p => '<sections>' + CallCenterSection(p, true) + '</sections>')}
 	${object.version == null ? '' : '<version>' + object.version + '</version>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

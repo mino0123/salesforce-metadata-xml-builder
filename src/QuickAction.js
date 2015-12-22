@@ -26,5 +26,6 @@ module.exports = (object, asChild) => {
 	${object.targetRecordType == null ? '' : '<targetRecordType>' + object.targetRecordType + '</targetRecordType>'}
 	${object.type == null ? '' : '<type>' + QuickActionType(object.type, true) + '</type>'}
 	${object.width == null ? '' : '<width>' + object.width + '</width>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -9,5 +9,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.labels == null ? '' : object.labels.map(p => '<labels>' + CustomLabel(p, true) + '</labels>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

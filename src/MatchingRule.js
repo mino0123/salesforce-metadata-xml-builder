@@ -14,5 +14,6 @@ module.exports = (object, asChild) => {
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.matchingRuleItems == null ? '' : object.matchingRuleItems.map(p => '<matchingRuleItems>' + MatchingRuleItem(p, true) + '</matchingRuleItems>')}
 	${object.ruleStatus == null ? '' : '<ruleStatus>' + MatchingRuleStatus(object.ruleStatus, true) + '</ruleStatus>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

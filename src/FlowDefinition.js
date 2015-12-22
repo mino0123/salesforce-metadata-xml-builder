@@ -10,5 +10,6 @@ module.exports = (object, asChild) => {
 	${object.activeVersionNumber == null ? '' : '<activeVersionNumber>' + object.activeVersionNumber + '</activeVersionNumber>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.masterLabel == null ? '' : '<masterLabel>' + object.masterLabel + '</masterLabel>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

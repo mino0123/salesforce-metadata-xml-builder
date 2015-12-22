@@ -10,5 +10,6 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.recurrenceType == null ? '' : '<recurrenceType>' + MilestoneTypeRecurrenceType(object.recurrenceType, true) + '</recurrenceType>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

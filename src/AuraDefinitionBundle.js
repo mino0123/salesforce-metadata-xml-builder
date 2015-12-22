@@ -23,5 +23,6 @@ module.exports = (object, asChild) => {
 	${object.styleContent == null ? '' : '<styleContent>' + object.styleContent + '</styleContent>'}
 	${object.testsuiteContent == null ? '' : '<testsuiteContent>' + object.testsuiteContent + '</testsuiteContent>'}
 	${object.type == null ? '' : '<type>' + AuraBundleType(object.type, true) + '</type>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

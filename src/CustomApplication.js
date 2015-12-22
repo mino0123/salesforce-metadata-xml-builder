@@ -38,5 +38,6 @@ module.exports = (object, asChild) => {
 	${object.saveUserSessions == null ? '' : '<saveUserSessions>' + object.saveUserSessions + '</saveUserSessions>'}
 	${object.tab == null ? '' : object.tab.map(p => '<tab>' + p + '</tab>')}
 	${object.workspaceMappings == null ? '' : '<workspaceMappings>' + WorkspaceMappings(object.workspaceMappings, true) + '</workspaceMappings>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

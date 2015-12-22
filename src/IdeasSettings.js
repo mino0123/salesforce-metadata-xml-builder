@@ -13,5 +13,6 @@ module.exports = (object, asChild) => {
 	${object.enableIdeasReputation == null ? '' : '<enableIdeasReputation>' + object.enableIdeasReputation + '</enableIdeasReputation>'}
 	${object.halfLife == null ? '' : '<halfLife>' + object.halfLife + '</halfLife>'}
 	${object.ideasProfilePage == null ? '' : '<ideasProfilePage>' + object.ideasProfilePage + '</ideasProfilePage>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

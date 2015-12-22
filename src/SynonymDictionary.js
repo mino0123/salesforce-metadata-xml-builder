@@ -11,5 +11,6 @@ module.exports = (object, asChild) => {
 	${object.groups == null ? '' : object.groups.map(p => '<groups>' + SynonymGroup(p, true) + '</groups>')}
 	${object.isProtected == null ? '' : '<isProtected>' + object.isProtected + '</isProtected>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -14,5 +14,6 @@ module.exports = (object, asChild) => {
 	${object.enableForecasts == null ? '' : '<enableForecasts>' + object.enableForecasts + '</enableForecasts>'}
 	${object.forecastingCategoryMappings == null ? '' : object.forecastingCategoryMappings.map(p => '<forecastingCategoryMappings>' + ForecastingCategoryMapping(p, true) + '</forecastingCategoryMappings>')}
 	${object.forecastingTypeSettings == null ? '' : object.forecastingTypeSettings.map(p => '<forecastingTypeSettings>' + ForecastingTypeSettings(p, true) + '</forecastingTypeSettings>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -40,5 +40,6 @@ module.exports = (object, asChild) => {
 	${object.showSolutionSection == null ? '' : '<showSolutionSection>' + object.showSolutionSection + '</showSolutionSection>'}
 	${object.showSubmitAndAttachButton == null ? '' : '<showSubmitAndAttachButton>' + object.showSubmitAndAttachButton + '</showSubmitAndAttachButton>'}
 	${object.summaryLayout == null ? '' : '<summaryLayout>' + SummaryLayout(object.summaryLayout, true) + '</summaryLayout>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

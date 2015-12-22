@@ -12,5 +12,6 @@ module.exports = (object, asChild) => {
 	${object.email == null ? '' : '<email>' + object.email + '</email>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
 	${object.queueSobject == null ? '' : object.queueSobject.map(p => '<queueSobject>' + QueueSobject(p, true) + '</queueSobject>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

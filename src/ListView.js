@@ -20,5 +20,6 @@ module.exports = (object, asChild) => {
 	${object.language == null ? '' : '<language>' + Language(object.language, true) + '</language>'}
 	${object.queue == null ? '' : '<queue>' + object.queue + '</queue>'}
 	${object.sharedTo == null ? '' : '<sharedTo>' + SharedTo(object.sharedTo, true) + '</sharedTo>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

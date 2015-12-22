@@ -30,5 +30,6 @@ module.exports = (object, asChild) => {
 	${object.samlVersion == null ? '' : '<samlVersion>' + SamlType(object.samlVersion, true) + '</samlVersion>'}
 	${object.userProvisioning == null ? '' : '<userProvisioning>' + object.userProvisioning + '</userProvisioning>'}
 	${object.validationCert == null ? '' : '<validationCert>' + object.validationCert + '</validationCert>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

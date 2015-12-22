@@ -12,5 +12,6 @@ module.exports = (object, asChild) => {
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.protected == null ? '' : '<protected>' + object.protected + '</protected>'}
 	${object.values == null ? '' : object.values.map(p => '<values>' + CustomMetadataValue(p, true) + '</values>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

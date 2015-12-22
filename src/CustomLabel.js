@@ -12,5 +12,6 @@ module.exports = (object, asChild) => {
 	${object.protected == null ? '' : '<protected>' + object.protected + '</protected>'}
 	${object.shortDescription == null ? '' : '<shortDescription>' + object.shortDescription + '</shortDescription>'}
 	${object.value == null ? '' : '<value>' + object.value + '</value>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

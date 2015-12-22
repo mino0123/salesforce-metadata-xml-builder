@@ -12,5 +12,6 @@ module.exports = (object, asChild) => {
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.requiredPermission == null ? '' : object.requiredPermission.map(p => '<requiredPermission>' + CustomPermissionDependencyRequired(p, true) + '</requiredPermission>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

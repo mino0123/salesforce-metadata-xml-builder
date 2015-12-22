@@ -20,5 +20,6 @@ module.exports = (object, asChild) => {
 	${object.revision == null ? '' : '<revision>' + object.revision + '</revision>'}
 	${object.trialLicenseDuration == null ? '' : '<trialLicenseDuration>' + object.trialLicenseDuration + '</trialLicenseDuration>'}
 	${object.trialLicenseQuantity == null ? '' : '<trialLicenseQuantity>' + object.trialLicenseQuantity + '</trialLicenseQuantity>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

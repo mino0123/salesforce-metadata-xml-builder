@@ -38,5 +38,6 @@ module.exports = (object, asChild) => {
 	${object.supervisorSkills == null ? '' : '<supervisorSkills>' + SupervisorAgentConfigSkills(object.supervisorSkills, true) + '</supervisorSkills>'}
 	${object.transferableButtons == null ? '' : '<transferableButtons>' + AgentConfigButtons(object.transferableButtons, true) + '</transferableButtons>'}
 	${object.transferableSkills == null ? '' : '<transferableSkills>' + AgentConfigSkills(object.transferableSkills, true) + '</transferableSkills>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

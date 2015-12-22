@@ -16,5 +16,6 @@ module.exports = (object, asChild) => {
 	${object.senderAddress == null ? '' : '<senderAddress>' + object.senderAddress + '</senderAddress>'}
 	${object.senderType == null ? '' : '<senderType>' + ActionEmailSenderType(object.senderType, true) + '</senderType>'}
 	${object.template == null ? '' : '<template>' + object.template + '</template>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

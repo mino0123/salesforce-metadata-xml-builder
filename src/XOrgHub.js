@@ -12,5 +12,6 @@ module.exports = (object, asChild) => {
 	${object.lockSharedObjects == null ? '' : '<lockSharedObjects>' + object.lockSharedObjects + '</lockSharedObjects>'}
 	${object.permissionSets == null ? '' : object.permissionSets.map(p => '<permissionSets>' + p + '</permissionSets>')}
 	${object.sharedObjects == null ? '' : object.sharedObjects.map(p => '<sharedObjects>' + XOrgHubSharedObject(p, true) + '</sharedObjects>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

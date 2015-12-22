@@ -19,5 +19,6 @@ module.exports = (object, asChild) => {
 	${object.enableRichTextEditor == null ? '' : '<enableRichTextEditor>' + object.enableRichTextEditor + '</enableRichTextEditor>'}
 	${object.facebookAuthProvider == null ? '' : '<facebookAuthProvider>' + object.facebookAuthProvider + '</facebookAuthProvider>'}
 	${object.showInPortals == null ? '' : '<showInPortals>' + object.showInPortals + '</showInPortals>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

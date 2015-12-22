@@ -14,5 +14,6 @@ module.exports = (object, asChild) => {
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.picklistValues == null ? '' : object.picklistValues.map(p => '<picklistValues>' + RecordTypePicklistValue(p, true) + '</picklistValues>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

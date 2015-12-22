@@ -17,5 +17,6 @@ module.exports = (object, asChild) => {
 	${object.showLabel == null ? '' : '<showLabel>' + object.showLabel + '</showLabel>'}
 	${object.showScrollbars == null ? '' : '<showScrollbars>' + object.showScrollbars + '</showScrollbars>'}
 	${object.width == null ? '' : '<width>' + PageComponentWidth(object.width, true) + '</width>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

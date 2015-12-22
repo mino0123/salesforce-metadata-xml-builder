@@ -15,5 +15,6 @@ module.exports = (object, asChild) => {
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.rightAligned == null ? '' : '<rightAligned>' + object.rightAligned + '</rightAligned>'}
 	${object.supportComponentsInReports == null ? '' : '<supportComponentsInReports>' + object.supportComponentsInReports + '</supportComponentsInReports>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

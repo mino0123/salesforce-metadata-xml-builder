@@ -12,5 +12,6 @@ module.exports = (object, asChild) => {
 	${object.errorConditionFormula == null ? '' : '<errorConditionFormula>' + object.errorConditionFormula + '</errorConditionFormula>'}
 	${object.errorDisplayField == null ? '' : '<errorDisplayField>' + object.errorDisplayField + '</errorDisplayField>'}
 	${object.errorMessage == null ? '' : '<errorMessage>' + object.errorMessage + '</errorMessage>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

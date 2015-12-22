@@ -9,5 +9,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.countriesAndStates == null ? '' : '<countriesAndStates>' + CountriesAndStates(object.countriesAndStates, true) + '</countriesAndStates>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

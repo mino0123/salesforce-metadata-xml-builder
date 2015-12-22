@@ -22,5 +22,6 @@ module.exports = (object, asChild) => {
 	${object.showArticleSummariesInternalApp == null ? '' : '<showArticleSummariesInternalApp>' + object.showArticleSummariesInternalApp + '</showArticleSummariesInternalApp>'}
 	${object.showArticleSummariesPartnerPortal == null ? '' : '<showArticleSummariesPartnerPortal>' + object.showArticleSummariesPartnerPortal + '</showArticleSummariesPartnerPortal>'}
 	${object.showValidationStatusField == null ? '' : '<showValidationStatusField>' + object.showValidationStatusField + '</showValidationStatusField>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

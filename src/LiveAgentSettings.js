@@ -8,5 +8,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.enableLiveAgent == null ? '' : '<enableLiveAgent>' + object.enableLiveAgent + '</enableLiveAgent>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

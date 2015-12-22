@@ -9,5 +9,6 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.enableMiddleName == null ? '' : '<enableMiddleName>' + object.enableMiddleName + '</enableMiddleName>'}
 	${object.enableNameSuffix == null ? '' : '<enableNameSuffix>' + object.enableNameSuffix + '</enableNameSuffix>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

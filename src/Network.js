@@ -42,5 +42,6 @@ module.exports = (object, asChild) => {
 	${object.tabs == null ? '' : '<tabs>' + NetworkTabSet(object.tabs, true) + '</tabs>'}
 	${object.urlPathPrefix == null ? '' : '<urlPathPrefix>' + object.urlPathPrefix + '</urlPathPrefix>'}
 	${object.welcomeTemplate == null ? '' : '<welcomeTemplate>' + object.welcomeTemplate + '</welcomeTemplate>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

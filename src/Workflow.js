@@ -23,5 +23,6 @@ module.exports = (object, asChild) => {
 	${object.rules == null ? '' : object.rules.map(p => '<rules>' + WorkflowRule(p, true) + '</rules>')}
 	${object.send == null ? '' : object.send.map(p => '<send>' + WorkflowSend(p, true) + '</send>')}
 	${object.tasks == null ? '' : object.tasks.map(p => '<tasks>' + WorkflowTask(p, true) + '</tasks>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

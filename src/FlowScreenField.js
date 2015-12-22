@@ -2,6 +2,7 @@ const FlowDataType = require('./FlowDataType');
 const FlowElementReferenceOrValue = require('./FlowElementReferenceOrValue');
 const FlowScreenFieldType = require('./FlowScreenFieldType');
 const FlowInputValidationRule = require('./FlowInputValidationRule');
+const FlowMetadataValue = require('./FlowMetadataValue');
 
 module.exports = (object, asChild) => {
   var rootTagStart = '<FlowScreenField>';
@@ -21,5 +22,8 @@ module.exports = (object, asChild) => {
 	${object.isRequired == null ? '' : '<isRequired>' + object.isRequired + '</isRequired>'}
 	${object.scale == null ? '' : '<scale>' + object.scale + '</scale>'}
 	${object.validationRule == null ? '' : '<validationRule>' + FlowInputValidationRule(object.validationRule, true) + '</validationRule>'}
+	${object.description == null ? '' : '<description>' + object.description + '</description>'}
+	${object.name == null ? '' : '<name>' + object.name + '</name>'}
+	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>')}
 ${rootTagEnd}`;
 }

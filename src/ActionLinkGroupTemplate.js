@@ -16,5 +16,6 @@ module.exports = (object, asChild) => {
 	${object.hoursUntilExpiration == null ? '' : '<hoursUntilExpiration>' + object.hoursUntilExpiration + '</hoursUntilExpiration>'}
 	${object.isPublished == null ? '' : '<isPublished>' + object.isPublished + '</isPublished>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

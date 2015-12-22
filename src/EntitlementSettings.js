@@ -17,5 +17,6 @@ module.exports = (object, asChild) => {
 	${object.entitlementLookupLimitedToSameAccount == null ? '' : '<entitlementLookupLimitedToSameAccount>' + object.entitlementLookupLimitedToSameAccount + '</entitlementLookupLimitedToSameAccount>'}
 	${object.entitlementLookupLimitedToSameAsset == null ? '' : '<entitlementLookupLimitedToSameAsset>' + object.entitlementLookupLimitedToSameAsset + '</entitlementLookupLimitedToSameAsset>'}
 	${object.entitlementLookupLimitedToSameContact == null ? '' : '<entitlementLookupLimitedToSameContact>' + object.entitlementLookupLimitedToSameContact + '</entitlementLookupLimitedToSameContact>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

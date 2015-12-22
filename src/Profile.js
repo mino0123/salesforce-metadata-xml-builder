@@ -36,5 +36,6 @@ module.exports = (object, asChild) => {
 	${object.tabVisibilities == null ? '' : object.tabVisibilities.map(p => '<tabVisibilities>' + ProfileTabVisibility(p, true) + '</tabVisibilities>')}
 	${object.userLicense == null ? '' : '<userLicense>' + object.userLicense + '</userLicense>'}
 	${object.userPermissions == null ? '' : object.userPermissions.map(p => '<userPermissions>' + ProfileUserPermission(p, true) + '</userPermissions>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

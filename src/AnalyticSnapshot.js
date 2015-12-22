@@ -15,5 +15,6 @@ module.exports = (object, asChild) => {
 	${object.runningUser == null ? '' : '<runningUser>' + object.runningUser + '</runningUser>'}
 	${object.sourceReport == null ? '' : '<sourceReport>' + object.sourceReport + '</sourceReport>'}
 	${object.targetObject == null ? '' : '<targetObject>' + object.targetObject + '</targetObject>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -8,5 +8,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.enablePersonList == null ? '' : '<enablePersonList>' + object.enablePersonList + '</enablePersonList>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -31,5 +31,6 @@ module.exports = (object, asChild) => {
 	${object.title == null ? '' : '<title>' + object.title + '</title>'}
 	${object.titleColor == null ? '' : '<titleColor>' + object.titleColor + '</titleColor>'}
 	${object.titleSize == null ? '' : '<titleSize>' + object.titleSize + '</titleSize>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

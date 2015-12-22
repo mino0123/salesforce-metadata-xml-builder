@@ -10,5 +10,6 @@ module.exports = (object, asChild) => {
 	${object.enableCascadeActivateToRelatedPrices == null ? '' : '<enableCascadeActivateToRelatedPrices>' + object.enableCascadeActivateToRelatedPrices + '</enableCascadeActivateToRelatedPrices>'}
 	${object.enableQuantitySchedule == null ? '' : '<enableQuantitySchedule>' + object.enableQuantitySchedule + '</enableQuantitySchedule>'}
 	${object.enableRevenueSchedule == null ? '' : '<enableRevenueSchedule>' + object.enableRevenueSchedule + '</enableRevenueSchedule>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -12,5 +12,6 @@ module.exports = (object, asChild) => {
 	${object.isDefaultPartition == null ? '' : '<isDefaultPartition>' + object.isDefaultPartition + '</isDefaultPartition>'}
 	${object.masterLabel == null ? '' : '<masterLabel>' + object.masterLabel + '</masterLabel>'}
 	${object.platformCachePartitionTypes == null ? '' : object.platformCachePartitionTypes.map(p => '<platformCachePartitionTypes>' + PlatformCachePartitionType(p, true) + '</platformCachePartitionTypes>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -8,5 +8,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.enableExactTargetForSalesforceApps == null ? '' : '<enableExactTargetForSalesforceApps>' + object.enableExactTargetForSalesforceApps + '</enableExactTargetForSalesforceApps>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

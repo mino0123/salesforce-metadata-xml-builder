@@ -17,5 +17,6 @@ module.exports = (object, asChild) => {
 	${object.mobileBrandingImage == null ? '' : '<mobileBrandingImage>' + object.mobileBrandingImage + '</mobileBrandingImage>'}
 	${object.site == null ? '' : '<site>' + object.site + '</site>'}
 	${object.windowTitle == null ? '' : '<windowTitle>' + object.windowTitle + '</windowTitle>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

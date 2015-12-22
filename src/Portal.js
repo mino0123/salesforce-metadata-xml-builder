@@ -34,5 +34,6 @@ module.exports = (object, asChild) => {
 	${object.showActionConfirmation == null ? '' : '<showActionConfirmation>' + object.showActionConfirmation + '</showActionConfirmation>'}
 	${object.stylesheetDocument == null ? '' : '<stylesheetDocument>' + object.stylesheetDocument + '</stylesheetDocument>'}
 	${object.type == null ? '' : '<type>' + PortalType(object.type, true) + '</type>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

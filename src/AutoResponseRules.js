@@ -9,5 +9,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.autoResponseRule == null ? '' : object.autoResponseRule.map(p => '<autoResponseRule>' + AutoResponseRule(p, true) + '</autoResponseRule>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

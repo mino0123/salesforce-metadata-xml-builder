@@ -26,5 +26,6 @@ module.exports = (object, asChild) => {
 	${object.sendClientCredentialsInHeader == null ? '' : '<sendClientCredentialsInHeader>' + object.sendClientCredentialsInHeader + '</sendClientCredentialsInHeader>'}
 	${object.tokenUrl == null ? '' : '<tokenUrl>' + object.tokenUrl + '</tokenUrl>'}
 	${object.userInfoUrl == null ? '' : '<userInfoUrl>' + object.userInfoUrl + '</userInfoUrl>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

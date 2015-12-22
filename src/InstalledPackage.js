@@ -9,5 +9,6 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.password == null ? '' : '<password>' + object.password + '</password>'}
 	${object.versionNumber == null ? '' : '<versionNumber>' + object.versionNumber + '</versionNumber>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

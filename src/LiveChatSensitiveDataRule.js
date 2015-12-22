@@ -14,5 +14,6 @@ module.exports = (object, asChild) => {
 	${object.isEnabled == null ? '' : '<isEnabled>' + object.isEnabled + '</isEnabled>'}
 	${object.pattern == null ? '' : '<pattern>' + object.pattern + '</pattern>'}
 	${object.replacement == null ? '' : '<replacement>' + object.replacement + '</replacement>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

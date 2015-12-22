@@ -18,5 +18,6 @@ module.exports = (object, asChild) => {
 	${object.join == null ? '' : '<join>' + ObjectRelationship(object.join, true) + '</join>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.sections == null ? '' : object.sections.map(p => '<sections>' + ReportLayoutSection(p, true) + '</sections>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

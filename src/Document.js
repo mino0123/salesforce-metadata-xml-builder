@@ -12,5 +12,7 @@ module.exports = (object, asChild) => {
 	${object.keywords == null ? '' : '<keywords>' + object.keywords + '</keywords>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
 	${object.public == null ? '' : '<public>' + object.public + '</public>'}
+	${object.content == null ? '' : '<content>' + object.content + '</content>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

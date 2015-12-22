@@ -27,5 +27,6 @@ module.exports = (object, asChild) => {
 	${object.showHomePageHoverLinksForEvents == null ? '' : '<showHomePageHoverLinksForEvents>' + object.showHomePageHoverLinksForEvents + '</showHomePageHoverLinksForEvents>'}
 	${object.showMyTasksHoverLinks == null ? '' : '<showMyTasksHoverLinks>' + object.showMyTasksHoverLinks + '</showMyTasksHoverLinks>'}
 	${object.showRequestedMeetingsOnHomePage == null ? '' : '<showRequestedMeetingsOnHomePage>' + object.showRequestedMeetingsOnHomePage + '</showRequestedMeetingsOnHomePage>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

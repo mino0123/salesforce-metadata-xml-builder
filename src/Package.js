@@ -19,5 +19,6 @@ module.exports = (object, asChild) => {
 	${object.types == null ? '' : object.types.map(p => '<types>' + PackageTypeMembers(p, true) + '</types>')}
 	${object.uninstallClass == null ? '' : '<uninstallClass>' + object.uninstallClass + '</uninstallClass>'}
 	${object.version == null ? '' : '<version>' + object.version + '</version>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

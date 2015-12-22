@@ -20,5 +20,6 @@ module.exports = (object, asChild) => {
 	${object.principalType == null ? '' : '<principalType>' + ExternalPrincipalType(object.principalType, true) + '</principalType>'}
 	${object.protocol == null ? '' : '<protocol>' + AuthenticationProtocol(object.protocol, true) + '</protocol>'}
 	${object.username == null ? '' : '<username>' + object.username + '</username>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -21,5 +21,6 @@ module.exports = (object, asChild) => {
 	${object.protected == null ? '' : '<protected>' + object.protected + '</protected>'}
 	${object.reevaluateOnChange == null ? '' : '<reevaluateOnChange>' + object.reevaluateOnChange + '</reevaluateOnChange>'}
 	${object.targetObject == null ? '' : '<targetObject>' + object.targetObject + '</targetObject>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

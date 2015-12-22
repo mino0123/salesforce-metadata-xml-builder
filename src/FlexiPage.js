@@ -20,5 +20,6 @@ module.exports = (object, asChild) => {
 	${object.quickActionList == null ? '' : '<quickActionList>' + QuickActionList(object.quickActionList, true) + '</quickActionList>'}
 	${object.sobjectType == null ? '' : '<sobjectType>' + object.sobjectType + '</sobjectType>'}
 	${object.type == null ? '' : '<type>' + FlexiPageType(object.type, true) + '</type>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

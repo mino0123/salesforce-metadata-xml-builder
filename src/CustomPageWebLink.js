@@ -34,5 +34,6 @@ module.exports = (object, asChild) => {
 	${object.showsStatus == null ? '' : '<showsStatus>' + object.showsStatus + '</showsStatus>'}
 	${object.url == null ? '' : '<url>' + object.url + '</url>'}
 	${object.width == null ? '' : '<width>' + object.width + '</width>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

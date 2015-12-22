@@ -11,5 +11,6 @@ module.exports = (object, asChild) => {
 	${object.customFields == null ? '' : object.customFields.map(p => '<customFields>' + FieldValue(p, true) + '</customFields>')}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

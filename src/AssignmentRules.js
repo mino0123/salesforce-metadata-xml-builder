@@ -9,5 +9,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.assignmentRule == null ? '' : object.assignmentRule.map(p => '<assignmentRule>' + AssignmentRule(p, true) + '</assignmentRule>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

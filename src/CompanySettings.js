@@ -9,5 +9,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.fiscalYear == null ? '' : '<fiscalYear>' + FiscalYearSettings(object.fiscalYear, true) + '</fiscalYear>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

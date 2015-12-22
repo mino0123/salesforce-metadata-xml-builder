@@ -16,5 +16,7 @@ module.exports = (object, asChild) => {
 	${object.fileName == null ? '' : '<fileName>' + object.fileName + '</fileName>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
 	${object.supportsCaching == null ? '' : '<supportsCaching>' + object.supportsCaching + '</supportsCaching>'}
+	${object.content == null ? '' : '<content>' + object.content + '</content>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

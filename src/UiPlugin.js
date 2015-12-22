@@ -12,5 +12,7 @@ module.exports = (object, asChild) => {
 	${object.isEnabled == null ? '' : '<isEnabled>' + object.isEnabled + '</isEnabled>'}
 	${object.language == null ? '' : '<language>' + object.language + '</language>'}
 	${object.masterLabel == null ? '' : '<masterLabel>' + object.masterLabel + '</masterLabel>'}
+	${object.content == null ? '' : '<content>' + object.content + '</content>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

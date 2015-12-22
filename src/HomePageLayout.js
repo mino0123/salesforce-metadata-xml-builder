@@ -9,5 +9,6 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.narrowComponents == null ? '' : object.narrowComponents.map(p => '<narrowComponents>' + p + '</narrowComponents>')}
 	${object.wideComponents == null ? '' : object.wideComponents.map(p => '<wideComponents>' + p + '</wideComponents>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

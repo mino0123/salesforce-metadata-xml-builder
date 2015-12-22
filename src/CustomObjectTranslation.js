@@ -32,5 +32,6 @@ module.exports = (object, asChild) => {
 	${object.validationRules == null ? '' : object.validationRules.map(p => '<validationRules>' + ValidationRuleTranslation(p, true) + '</validationRules>')}
 	${object.webLinks == null ? '' : object.webLinks.map(p => '<webLinks>' + WebLinkTranslation(p, true) + '</webLinks>')}
 	${object.workflowTasks == null ? '' : object.workflowTasks.map(p => '<workflowTasks>' + WorkflowTaskTranslation(p, true) + '</workflowTasks>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

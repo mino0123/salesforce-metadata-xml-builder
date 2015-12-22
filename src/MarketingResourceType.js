@@ -11,5 +11,6 @@ module.exports = (object, asChild) => {
 	${object.masterLabel == null ? '' : '<masterLabel>' + object.masterLabel + '</masterLabel>'}
 	${object.object == null ? '' : '<object>' + object.object + '</object>'}
 	${object.provider == null ? '' : '<provider>' + object.provider + '</provider>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

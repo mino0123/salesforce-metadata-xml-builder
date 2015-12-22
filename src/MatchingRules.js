@@ -9,5 +9,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.matchingRules == null ? '' : object.matchingRules.map(p => '<matchingRules>' + MatchingRule(p, true) + '</matchingRules>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

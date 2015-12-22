@@ -13,5 +13,6 @@ module.exports = (object, asChild) => {
 	${object.networkAccess == null ? '' : '<networkAccess>' + NetworkAccess(object.networkAccess, true) + '</networkAccess>'}
 	${object.passwordPolicies == null ? '' : '<passwordPolicies>' + PasswordPolicies(object.passwordPolicies, true) + '</passwordPolicies>'}
 	${object.sessionSettings == null ? '' : '<sessionSettings>' + SessionSettings(object.sessionSettings, true) + '</sessionSettings>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

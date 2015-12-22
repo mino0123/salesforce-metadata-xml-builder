@@ -11,5 +11,6 @@ module.exports = (object, asChild) => {
 	${object.disableProtocolSecurity == null ? '' : '<disableProtocolSecurity>' + object.disableProtocolSecurity + '</disableProtocolSecurity>'}
 	${object.isActive == null ? '' : '<isActive>' + object.isActive + '</isActive>'}
 	${object.url == null ? '' : '<url>' + object.url + '</url>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

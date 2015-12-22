@@ -19,5 +19,6 @@ module.exports = (object, asChild) => {
 	${object.parentTerritory == null ? '' : '<parentTerritory>' + object.parentTerritory + '</parentTerritory>'}
 	${object.ruleAssociations == null ? '' : object.ruleAssociations.map(p => '<ruleAssociations>' + Territory2RuleAssociation(p, true) + '</ruleAssociations>')}
 	${object.territory2Type == null ? '' : '<territory2Type>' + object.territory2Type + '</territory2Type>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -8,5 +8,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.urlPattern == null ? '' : '<urlPattern>' + object.urlPattern + '</urlPattern>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

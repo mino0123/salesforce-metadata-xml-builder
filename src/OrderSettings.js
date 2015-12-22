@@ -10,5 +10,6 @@ module.exports = (object, asChild) => {
 	${object.enableNegativeQuantity == null ? '' : '<enableNegativeQuantity>' + object.enableNegativeQuantity + '</enableNegativeQuantity>'}
 	${object.enableOrders == null ? '' : '<enableOrders>' + object.enableOrders + '</enableOrders>'}
 	${object.enableReductionOrders == null ? '' : '<enableReductionOrders>' + object.enableReductionOrders + '</enableReductionOrders>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -66,5 +66,6 @@ module.exports = (object, asChild) => {
 	${object.unique == null ? '' : '<unique>' + object.unique + '</unique>'}
 	${object.visibleLines == null ? '' : '<visibleLines>' + object.visibleLines + '</visibleLines>'}
 	${object.writeRequiresMasterRead == null ? '' : '<writeRequiresMasterRead>' + object.writeRequiresMasterRead + '</writeRequiresMasterRead>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

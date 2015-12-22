@@ -11,5 +11,7 @@ module.exports = (object, asChild) => {
 	${object.apiVersion == null ? '' : '<apiVersion>' + object.apiVersion + '</apiVersion>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.scriptType == null ? '' : '<scriptType>' + DataPipelineType(object.scriptType, true) + '</scriptType>'}
+	${object.content == null ? '' : '<content>' + object.content + '</content>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -13,5 +13,6 @@ module.exports = (object, asChild) => {
 	${object.sharingCriteriaRules == null ? '' : object.sharingCriteriaRules.map(p => '<sharingCriteriaRules>' + SharingCriteriaRule(p, true) + '</sharingCriteriaRules>')}
 	${object.sharingOwnerRules == null ? '' : object.sharingOwnerRules.map(p => '<sharingOwnerRules>' + SharingOwnerRule(p, true) + '</sharingOwnerRules>')}
 	${object.sharingTerritoryRules == null ? '' : object.sharingTerritoryRules.map(p => '<sharingTerritoryRules>' + SharingTerritoryRule(p, true) + '</sharingTerritoryRules>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -19,5 +19,6 @@ module.exports = (object, asChild) => {
 	${object.formula == null ? '' : '<formula>' + object.formula + '</formula>'}
 	${object.triggerType == null ? '' : '<triggerType>' + WorkflowTriggerTypes(object.triggerType, true) + '</triggerType>'}
 	${object.workflowTimeTriggers == null ? '' : object.workflowTimeTriggers.map(p => '<workflowTimeTriggers>' + WorkflowTimeTrigger(p, true) + '</workflowTimeTriggers>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

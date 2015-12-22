@@ -1,6 +1,7 @@
 const FlowConnector = require('./FlowConnector');
 const FlowRecordFilter = require('./FlowRecordFilter');
 const FlowInputFieldAssignment = require('./FlowInputFieldAssignment');
+const FlowMetadataValue = require('./FlowMetadataValue');
 
 module.exports = (object, asChild) => {
   var rootTagStart = '<FlowRecordUpdate>';
@@ -16,5 +17,11 @@ module.exports = (object, asChild) => {
 	${object.inputAssignments == null ? '' : object.inputAssignments.map(p => '<inputAssignments>' + FlowInputFieldAssignment(p, true) + '</inputAssignments>')}
 	${object.inputReference == null ? '' : '<inputReference>' + object.inputReference + '</inputReference>'}
 	${object.object == null ? '' : '<object>' + object.object + '</object>'}
+	${object.label == null ? '' : '<label>' + object.label + '</label>'}
+	${object.locationX == null ? '' : '<locationX>' + object.locationX + '</locationX>'}
+	${object.locationY == null ? '' : '<locationY>' + object.locationY + '</locationY>'}
+	${object.description == null ? '' : '<description>' + object.description + '</description>'}
+	${object.name == null ? '' : '<name>' + object.name + '</name>'}
+	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>')}
 ${rootTagEnd}`;
 }

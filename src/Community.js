@@ -21,5 +21,6 @@ module.exports = (object, asChild) => {
 	${object.reputationLevels == null ? '' : '<reputationLevels>' + ReputationLevels(object.reputationLevels, true) + '</reputationLevels>'}
 	${object.showInPortal == null ? '' : '<showInPortal>' + object.showInPortal + '</showInPortal>'}
 	${object.site == null ? '' : '<site>' + object.site + '</site>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

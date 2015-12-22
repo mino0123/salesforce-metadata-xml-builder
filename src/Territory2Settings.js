@@ -13,5 +13,6 @@ module.exports = (object, asChild) => {
 	${object.defaultContactAccessLevel == null ? '' : '<defaultContactAccessLevel>' + object.defaultContactAccessLevel + '</defaultContactAccessLevel>'}
 	${object.defaultOpportunityAccessLevel == null ? '' : '<defaultOpportunityAccessLevel>' + object.defaultOpportunityAccessLevel + '</defaultOpportunityAccessLevel>'}
 	${object.opportunityFilterSettings == null ? '' : '<opportunityFilterSettings>' + Territory2SettingsOpportunityFilter(object.opportunityFilterSettings, true) + '</opportunityFilterSettings>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

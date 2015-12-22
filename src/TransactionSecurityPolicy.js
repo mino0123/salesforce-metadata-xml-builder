@@ -15,5 +15,6 @@ module.exports = (object, asChild) => {
 	${object.eventType == null ? '' : '<eventType>' + MonitoredEvents(object.eventType, true) + '</eventType>'}
 	${object.executionUser == null ? '' : '<executionUser>' + object.executionUser + '</executionUser>'}
 	${object.resourceName == null ? '' : '<resourceName>' + object.resourceName + '</resourceName>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

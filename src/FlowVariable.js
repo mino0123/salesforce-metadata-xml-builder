@@ -1,5 +1,6 @@
 const FlowDataType = require('./FlowDataType');
 const FlowElementReferenceOrValue = require('./FlowElementReferenceOrValue');
+const FlowMetadataValue = require('./FlowMetadataValue');
 
 module.exports = (object, asChild) => {
   var rootTagStart = '<FlowVariable>';
@@ -16,5 +17,8 @@ module.exports = (object, asChild) => {
 	${object.objectType == null ? '' : '<objectType>' + object.objectType + '</objectType>'}
 	${object.scale == null ? '' : '<scale>' + object.scale + '</scale>'}
 	${object.value == null ? '' : '<value>' + FlowElementReferenceOrValue(object.value, true) + '</value>'}
+	${object.description == null ? '' : '<description>' + object.description + '</description>'}
+	${object.name == null ? '' : '<name>' + object.name + '</name>'}
+	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>')}
 ${rootTagEnd}`;
 }

@@ -13,5 +13,6 @@ module.exports = (object, asChild) => {
 	${object.mayForecastManagerShare == null ? '' : '<mayForecastManagerShare>' + object.mayForecastManagerShare + '</mayForecastManagerShare>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
 	${object.opportunityAccessLevel == null ? '' : '<opportunityAccessLevel>' + object.opportunityAccessLevel + '</opportunityAccessLevel>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

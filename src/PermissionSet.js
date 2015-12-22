@@ -30,5 +30,6 @@ module.exports = (object, asChild) => {
 	${object.tabSettings == null ? '' : object.tabSettings.map(p => '<tabSettings>' + PermissionSetTabSetting(p, true) + '</tabSettings>')}
 	${object.userLicense == null ? '' : '<userLicense>' + object.userLicense + '</userLicense>'}
 	${object.userPermissions == null ? '' : object.userPermissions.map(p => '<userPermissions>' + PermissionSetUserPermission(p, true) + '</userPermissions>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

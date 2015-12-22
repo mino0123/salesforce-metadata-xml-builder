@@ -51,5 +51,6 @@ module.exports = (object, asChild) => {
 	${object.timeToRemoveInvite == null ? '' : '<timeToRemoveInvite>' + object.timeToRemoveInvite + '</timeToRemoveInvite>'}
 	${object.type == null ? '' : '<type>' + LiveChatButtonType(object.type, true) + '</type>'}
 	${object.windowLanguage == null ? '' : '<windowLanguage>' + Language(object.windowLanguage, true) + '</windowLanguage>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

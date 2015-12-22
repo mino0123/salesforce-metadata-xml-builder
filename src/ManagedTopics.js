@@ -9,5 +9,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.managedTopic == null ? '' : object.managedTopic.map(p => '<managedTopic>' + ManagedTopic(p, true) + '</managedTopic>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

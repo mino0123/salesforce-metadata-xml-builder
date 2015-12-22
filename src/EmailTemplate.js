@@ -25,5 +25,7 @@ module.exports = (object, asChild) => {
 	${object.subject == null ? '' : '<subject>' + object.subject + '</subject>'}
 	${object.textOnly == null ? '' : '<textOnly>' + object.textOnly + '</textOnly>'}
 	${object.type == null ? '' : '<type>' + EmailTemplateType(object.type, true) + '</type>'}
+	${object.content == null ? '' : '<content>' + object.content + '</content>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -11,5 +11,6 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.businessHours == null ? '' : object.businessHours.map(p => '<businessHours>' + BusinessHoursEntry(p, true) + '</businessHours>')}
 	${object.holidays == null ? '' : object.holidays.map(p => '<holidays>' + Holiday(p, true) + '</holidays>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

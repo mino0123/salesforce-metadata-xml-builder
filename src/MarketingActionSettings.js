@@ -8,5 +8,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.enableMarketingAction == null ? '' : '<enableMarketingAction>' + object.enableMarketingAction + '</enableMarketingAction>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -13,5 +13,6 @@ module.exports = (object, asChild) => {
 	${object.isPerIncident == null ? '' : '<isPerIncident>' + object.isPerIncident + '</isPerIncident>'}
 	${object.term == null ? '' : '<term>' + object.term + '</term>'}
 	${object.type == null ? '' : '<type>' + object.type + '</type>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

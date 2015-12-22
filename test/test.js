@@ -18,6 +18,7 @@ describe('buildCustomObject', function () {
       }
     });
     assert(xml.indexOf('<nameField>') > -1);
+    assert(xml.indexOf('<fullName>MyField__c</fullName>') > -1);
     assert(xml.indexOf('<label>Name</label>') > -1);
     assert(xml.indexOf('<length>255</length>') > -1);
   });

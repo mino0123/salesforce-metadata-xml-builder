@@ -11,5 +11,6 @@ module.exports = (object, asChild) => {
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.templateType == null ? '' : '<templateType>' + object.templateType + '</templateType>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

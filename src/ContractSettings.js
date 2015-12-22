@@ -13,5 +13,6 @@ module.exports = (object, asChild) => {
 	${object.autoExpireContracts == null ? '' : '<autoExpireContracts>' + object.autoExpireContracts + '</autoExpireContracts>'}
 	${object.enableContractHistoryTracking == null ? '' : '<enableContractHistoryTracking>' + object.enableContractHistoryTracking + '</enableContractHistoryTracking>'}
 	${object.notifyOwnersOnContractExpiration == null ? '' : '<notifyOwnersOnContractExpiration>' + object.notifyOwnersOnContractExpiration + '</notifyOwnersOnContractExpiration>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -15,5 +15,6 @@ module.exports = (object, asChild) => {
 	${object.dashboardMobile == null ? '' : '<dashboardMobile>' + DashboardMobileSettings(object.dashboardMobile, true) + '</dashboardMobile>'}
 	${object.salesforceMobile == null ? '' : '<salesforceMobile>' + SFDCMobileSettings(object.salesforceMobile, true) + '</salesforceMobile>'}
 	${object.touchMobile == null ? '' : '<touchMobile>' + TouchMobileSettings(object.touchMobile, true) + '</touchMobile>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

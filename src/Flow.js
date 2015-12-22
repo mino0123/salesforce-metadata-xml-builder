@@ -53,5 +53,6 @@ module.exports = (object, asChild) => {
 	${object.textTemplates == null ? '' : object.textTemplates.map(p => '<textTemplates>' + FlowTextTemplate(p, true) + '</textTemplates>')}
 	${object.variables == null ? '' : object.variables.map(p => '<variables>' + FlowVariable(p, true) + '</variables>')}
 	${object.waits == null ? '' : object.waits.map(p => '<waits>' + FlowWait(p, true) + '</waits>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

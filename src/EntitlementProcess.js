@@ -22,5 +22,6 @@ module.exports = (object, asChild) => {
 	${object.versionMaster == null ? '' : '<versionMaster>' + object.versionMaster + '</versionMaster>'}
 	${object.versionNotes == null ? '' : '<versionNotes>' + object.versionNotes + '</versionNotes>'}
 	${object.versionNumber == null ? '' : '<versionNumber>' + object.versionNumber + '</versionNumber>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

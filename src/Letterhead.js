@@ -19,5 +19,6 @@ module.exports = (object, asChild) => {
 	${object.middleLine == null ? '' : '<middleLine>' + LetterheadLine(object.middleLine, true) + '</middleLine>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
 	${object.topLine == null ? '' : '<topLine>' + LetterheadLine(object.topLine, true) + '</topLine>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -12,5 +12,6 @@ module.exports = (object, asChild) => {
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.displayedFields == null ? '' : object.displayedFields.map(p => '<displayedFields>' + FieldSetItem(p, true) + '</displayedFields>')}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

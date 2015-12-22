@@ -25,5 +25,6 @@ module.exports = (object, asChild) => {
 	${object.tuesdayStartTime == null ? '' : '<tuesdayStartTime>' + object.tuesdayStartTime + '</tuesdayStartTime>'}
 	${object.wednesdayEndTime == null ? '' : '<wednesdayEndTime>' + object.wednesdayEndTime + '</wednesdayEndTime>'}
 	${object.wednesdayStartTime == null ? '' : '<wednesdayStartTime>' + object.wednesdayStartTime + '</wednesdayStartTime>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

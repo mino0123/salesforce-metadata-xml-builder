@@ -10,5 +10,6 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.allowOwnerChange == null ? '' : '<allowOwnerChange>' + object.allowOwnerChange + '</allowOwnerChange>'}
 	${object.opportunityCreationOptions == null ? '' : '<opportunityCreationOptions>' + VisibleOrRequired(object.opportunityCreationOptions, true) + '</opportunityCreationOptions>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

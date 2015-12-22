@@ -34,5 +34,6 @@ module.exports = (object, asChild) => {
 	${object.recallActions == null ? '' : '<recallActions>' + ApprovalAction(object.recallActions, true) + '</recallActions>'}
 	${object.recordEditability == null ? '' : '<recordEditability>' + RecordEditabilityType(object.recordEditability, true) + '</recordEditability>'}
 	${object.showApprovalHistory == null ? '' : '<showApprovalHistory>' + object.showApprovalHistory + '</showApprovalHistory>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

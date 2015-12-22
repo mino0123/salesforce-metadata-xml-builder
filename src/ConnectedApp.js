@@ -29,5 +29,6 @@ module.exports = (object, asChild) => {
 	${object.plugin == null ? '' : '<plugin>' + object.plugin + '</plugin>'}
 	${object.samlConfig == null ? '' : '<samlConfig>' + ConnectedAppSamlConfig(object.samlConfig, true) + '</samlConfig>'}
 	${object.startUrl == null ? '' : '<startUrl>' + object.startUrl + '</startUrl>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -27,5 +27,6 @@ module.exports = (object, asChild) => {
 	${object.type == null ? '' : '<type>' + ExternalDataSourceType(object.type, true) + '</type>'}
 	${object.username == null ? '' : '<username>' + object.username + '</username>'}
 	${object.version == null ? '' : '<version>' + object.version + '</version>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

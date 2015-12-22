@@ -14,5 +14,6 @@ module.exports = (object, asChild) => {
 	${object.enableUpdateReminders == null ? '' : '<enableUpdateReminders>' + object.enableUpdateReminders + '</enableUpdateReminders>'}
 	${object.findSimilarOppFilter == null ? '' : '<findSimilarOppFilter>' + FindSimilarOppFilter(object.findSimilarOppFilter, true) + '</findSimilarOppFilter>'}
 	${object.promptToAddProducts == null ? '' : '<promptToAddProducts>' + object.promptToAddProducts + '</promptToAddProducts>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

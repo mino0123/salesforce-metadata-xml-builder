@@ -16,5 +16,6 @@ module.exports = (object, asChild) => {
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
 	${object.publicFolderAccess == null ? '' : '<publicFolderAccess>' + PublicFolderAccess(object.publicFolderAccess, true) + '</publicFolderAccess>'}
 	${object.sharedTo == null ? '' : '<sharedTo>' + SharedTo(object.sharedTo, true) + '</sharedTo>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

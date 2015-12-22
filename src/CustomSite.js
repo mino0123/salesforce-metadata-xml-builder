@@ -52,5 +52,6 @@ module.exports = (object, asChild) => {
 	${object.siteType == null ? '' : '<siteType>' + SiteType(object.siteType, true) + '</siteType>'}
 	${object.subdomain == null ? '' : '<subdomain>' + object.subdomain + '</subdomain>'}
 	${object.urlPathPrefix == null ? '' : '<urlPathPrefix>' + object.urlPathPrefix + '</urlPathPrefix>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

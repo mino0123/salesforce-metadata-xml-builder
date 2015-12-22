@@ -8,5 +8,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.pathAssistantEnabled == null ? '' : '<pathAssistantEnabled>' + object.pathAssistantEnabled + '</pathAssistantEnabled>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

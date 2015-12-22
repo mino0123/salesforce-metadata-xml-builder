@@ -73,5 +73,6 @@ module.exports = (object, asChild) => {
 	${object.validationRules == null ? '' : object.validationRules.map(p => '<validationRules>' + ValidationRule(p, true) + '</validationRules>')}
 	${object.visibility == null ? '' : '<visibility>' + SetupObjectVisibility(object.visibility, true) + '</visibility>'}
 	${object.webLinks == null ? '' : object.webLinks.map(p => '<webLinks>' + WebLink(p, true) + '</webLinks>')}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

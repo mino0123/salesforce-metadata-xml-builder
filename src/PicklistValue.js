@@ -22,5 +22,6 @@ module.exports = (object, asChild) => {
 	${object.reverseRole == null ? '' : '<reverseRole>' + object.reverseRole + '</reverseRole>'}
 	${object.reviewed == null ? '' : '<reviewed>' + object.reviewed + '</reviewed>'}
 	${object.won == null ? '' : '<won>' + object.won + '</won>'}
+	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }
