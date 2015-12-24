@@ -17,7 +17,7 @@ module.exports = (object, asChild) => {
 	${object.backgroundColor1 == null ? '' : '<backgroundColor1>' + object.backgroundColor1 + '</backgroundColor1>'}
 	${object.backgroundColor2 == null ? '' : '<backgroundColor2>' + object.backgroundColor2 + '</backgroundColor2>'}
 	${object.backgroundFadeDir == null ? '' : '<backgroundFadeDir>' + ChartBackgroundDirection(object.backgroundFadeDir, true) + '</backgroundFadeDir>'}
-	${object.chartSummaries == null ? '' : object.chartSummaries.map(p => '<chartSummaries>' + ChartSummary(p, true) + '</chartSummaries>')}
+	${object.chartSummaries == null ? '' : object.chartSummaries.map(p => '<chartSummaries>' + ChartSummary(p, true) + '</chartSummaries>').join('')}
 	${object.chartType == null ? '' : '<chartType>' + ChartType(object.chartType, true) + '</chartType>'}
 	${object.enableHoverLabels == null ? '' : '<enableHoverLabels>' + object.enableHoverLabels + '</enableHoverLabels>'}
 	${object.expandOthers == null ? '' : '<expandOthers>' + object.expandOthers + '</expandOthers>'}

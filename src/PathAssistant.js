@@ -12,7 +12,7 @@ module.exports = (object, asChild) => {
 	${object.entityName == null ? '' : '<entityName>' + object.entityName + '</entityName>'}
 	${object.fieldName == null ? '' : '<fieldName>' + object.fieldName + '</fieldName>'}
 	${object.masterLabel == null ? '' : '<masterLabel>' + object.masterLabel + '</masterLabel>'}
-	${object.pathAssistantSteps == null ? '' : object.pathAssistantSteps.map(p => '<pathAssistantSteps>' + PathAssistantStep(p, true) + '</pathAssistantSteps>')}
+	${object.pathAssistantSteps == null ? '' : object.pathAssistantSteps.map(p => '<pathAssistantSteps>' + PathAssistantStep(p, true) + '</pathAssistantSteps>').join('')}
 	${object.recordTypeName == null ? '' : '<recordTypeName>' + object.recordTypeName + '</recordTypeName>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;

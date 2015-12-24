@@ -13,6 +13,6 @@ module.exports = (object, asChild) => {
 	${object.assignToReference == null ? '' : '<assignToReference>' + object.assignToReference + '</assignToReference>'}
 	${object.operator == null ? '' : '<operator>' + FlowAssignmentOperator(object.operator, true) + '</operator>'}
 	${object.value == null ? '' : '<value>' + FlowElementReferenceOrValue(object.value, true) + '</value>'}
-	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>')}
+	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>').join('')}
 ${rootTagEnd}`;
 }

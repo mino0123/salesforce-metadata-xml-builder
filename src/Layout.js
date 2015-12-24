@@ -17,20 +17,20 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.customButtons == null ? '' : object.customButtons.map(p => '<customButtons>' + p + '</customButtons>')}
+	${object.customButtons == null ? '' : object.customButtons.map(p => '<customButtons>' + p + '</customButtons>').join('')}
 	${object.customConsoleComponents == null ? '' : '<customConsoleComponents>' + CustomConsoleComponents(object.customConsoleComponents, true) + '</customConsoleComponents>'}
 	${object.emailDefault == null ? '' : '<emailDefault>' + object.emailDefault + '</emailDefault>'}
-	${object.excludeButtons == null ? '' : object.excludeButtons.map(p => '<excludeButtons>' + p + '</excludeButtons>')}
+	${object.excludeButtons == null ? '' : object.excludeButtons.map(p => '<excludeButtons>' + p + '</excludeButtons>').join('')}
 	${object.feedLayout == null ? '' : '<feedLayout>' + FeedLayout(object.feedLayout, true) + '</feedLayout>'}
-	${object.headers == null ? '' : object.headers.map(p => '<headers>' + LayoutHeader(p, true) + '</headers>')}
-	${object.layoutSections == null ? '' : object.layoutSections.map(p => '<layoutSections>' + LayoutSection(p, true) + '</layoutSections>')}
+	${object.headers == null ? '' : object.headers.map(p => '<headers>' + LayoutHeader(p, true) + '</headers>').join('')}
+	${object.layoutSections == null ? '' : object.layoutSections.map(p => '<layoutSections>' + LayoutSection(p, true) + '</layoutSections>').join('')}
 	${object.miniLayout == null ? '' : '<miniLayout>' + MiniLayout(object.miniLayout, true) + '</miniLayout>'}
-	${object.multilineLayoutFields == null ? '' : object.multilineLayoutFields.map(p => '<multilineLayoutFields>' + p + '</multilineLayoutFields>')}
+	${object.multilineLayoutFields == null ? '' : object.multilineLayoutFields.map(p => '<multilineLayoutFields>' + p + '</multilineLayoutFields>').join('')}
 	${object.platformActionList == null ? '' : '<platformActionList>' + PlatformActionList(object.platformActionList, true) + '</platformActionList>'}
 	${object.quickActionList == null ? '' : '<quickActionList>' + QuickActionList(object.quickActionList, true) + '</quickActionList>'}
 	${object.relatedContent == null ? '' : '<relatedContent>' + RelatedContent(object.relatedContent, true) + '</relatedContent>'}
-	${object.relatedLists == null ? '' : object.relatedLists.map(p => '<relatedLists>' + RelatedListItem(p, true) + '</relatedLists>')}
-	${object.relatedObjects == null ? '' : object.relatedObjects.map(p => '<relatedObjects>' + p + '</relatedObjects>')}
+	${object.relatedLists == null ? '' : object.relatedLists.map(p => '<relatedLists>' + RelatedListItem(p, true) + '</relatedLists>').join('')}
+	${object.relatedObjects == null ? '' : object.relatedObjects.map(p => '<relatedObjects>' + p + '</relatedObjects>').join('')}
 	${object.runAssignmentRulesDefault == null ? '' : '<runAssignmentRulesDefault>' + object.runAssignmentRulesDefault + '</runAssignmentRulesDefault>'}
 	${object.showEmailCheckbox == null ? '' : '<showEmailCheckbox>' + object.showEmailCheckbox + '</showEmailCheckbox>'}
 	${object.showHighlightsPanel == null ? '' : '<showHighlightsPanel>' + object.showHighlightsPanel + '</showHighlightsPanel>'}

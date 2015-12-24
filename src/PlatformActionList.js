@@ -10,7 +10,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.actionListContext == null ? '' : '<actionListContext>' + PlatformActionListContext(object.actionListContext, true) + '</actionListContext>'}
-	${object.platformActionListItems == null ? '' : object.platformActionListItems.map(p => '<platformActionListItems>' + PlatformActionListItem(p, true) + '</platformActionListItems>')}
+	${object.platformActionListItems == null ? '' : object.platformActionListItems.map(p => '<platformActionListItems>' + PlatformActionListItem(p, true) + '</platformActionListItems>').join('')}
 	${object.relatedSourceEntity == null ? '' : '<relatedSourceEntity>' + object.relatedSourceEntity + '</relatedSourceEntity>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;

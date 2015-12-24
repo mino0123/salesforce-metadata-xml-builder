@@ -7,6 +7,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.skill == null ? '' : object.skill.map(p => '<skill>' + p + '</skill>')}
+	${object.skill == null ? '' : object.skill.map(p => '<skill>' + p + '</skill>').join('')}
 ${rootTagEnd}`;
 }

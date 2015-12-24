@@ -11,7 +11,7 @@ module.exports = (object, asChild) => {
 	${object.height == null ? '' : '<height>' + object.height + '</height>'}
 	${object.isContainerAutoSizeEnabled == null ? '' : '<isContainerAutoSizeEnabled>' + object.isContainerAutoSizeEnabled + '</isContainerAutoSizeEnabled>'}
 	${object.region == null ? '' : '<region>' + object.region + '</region>'}
-	${object.sidebarComponents == null ? '' : object.sidebarComponents.map(p => '<sidebarComponents>' + SidebarComponent(p, true) + '</sidebarComponents>')}
+	${object.sidebarComponents == null ? '' : object.sidebarComponents.map(p => '<sidebarComponents>' + SidebarComponent(p, true) + '</sidebarComponents>').join('')}
 	${object.style == null ? '' : '<style>' + object.style + '</style>'}
 	${object.unit == null ? '' : '<unit>' + object.unit + '</unit>'}
 	${object.width == null ? '' : '<width>' + object.width + '</width>'}

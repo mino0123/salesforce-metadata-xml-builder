@@ -12,7 +12,7 @@ module.exports = (object, asChild) => {
 	${object.booleanFilter == null ? '' : '<booleanFilter>' + object.booleanFilter + '</booleanFilter>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.errorMessage == null ? '' : '<errorMessage>' + object.errorMessage + '</errorMessage>'}
-	${object.filterItems == null ? '' : object.filterItems.map(p => '<filterItems>' + FilterItem(p, true) + '</filterItems>')}
+	${object.filterItems == null ? '' : object.filterItems.map(p => '<filterItems>' + FilterItem(p, true) + '</filterItems>').join('')}
 	${object.infoMessage == null ? '' : '<infoMessage>' + object.infoMessage + '</infoMessage>'}
 	${object.isOptional == null ? '' : '<isOptional>' + object.isOptional + '</isOptional>'}
 ${rootTagEnd}`;

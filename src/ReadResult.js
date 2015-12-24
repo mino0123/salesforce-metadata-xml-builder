@@ -8,6 +8,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.records == null ? '' : object.records.map(p => '<records>' + Metadata(p, true) + '</records>')}
+	${object.records == null ? '' : object.records.map(p => '<records>' + Metadata(p, true) + '</records>').join('')}
 ${rootTagEnd}`;
 }

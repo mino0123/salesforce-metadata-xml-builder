@@ -8,6 +8,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.language == null ? '' : object.language.map(p => '<language>' + KnowledgeLanguage(p, true) + '</language>')}
+	${object.language == null ? '' : object.language.map(p => '<language>' + KnowledgeLanguage(p, true) + '</language>').join('')}
 ${rootTagEnd}`;
 }

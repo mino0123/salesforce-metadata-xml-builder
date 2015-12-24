@@ -10,6 +10,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.columnSize == null ? '' : '<columnSize>' + DashboardComponentSize(object.columnSize, true) + '</columnSize>'}
-	${object.components == null ? '' : object.components.map(p => '<components>' + DashboardComponent(p, true) + '</components>')}
+	${object.components == null ? '' : object.components.map(p => '<components>' + DashboardComponent(p, true) + '</components>').join('')}
 ${rootTagEnd}`;
 }

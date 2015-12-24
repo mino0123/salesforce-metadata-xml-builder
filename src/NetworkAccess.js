@@ -8,6 +8,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.ipRanges == null ? '' : object.ipRanges.map(p => '<ipRanges>' + IpRange(p, true) + '</ipRanges>')}
+	${object.ipRanges == null ? '' : object.ipRanges.map(p => '<ipRanges>' + IpRange(p, true) + '</ipRanges>').join('')}
 ${rootTagEnd}`;
 }

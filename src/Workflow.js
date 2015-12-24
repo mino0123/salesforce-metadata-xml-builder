@@ -15,14 +15,14 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.alerts == null ? '' : object.alerts.map(p => '<alerts>' + WorkflowAlert(p, true) + '</alerts>')}
-	${object.fieldUpdates == null ? '' : object.fieldUpdates.map(p => '<fieldUpdates>' + WorkflowFieldUpdate(p, true) + '</fieldUpdates>')}
-	${object.flowActions == null ? '' : object.flowActions.map(p => '<flowActions>' + WorkflowFlowAction(p, true) + '</flowActions>')}
-	${object.knowledgePublishes == null ? '' : object.knowledgePublishes.map(p => '<knowledgePublishes>' + WorkflowKnowledgePublish(p, true) + '</knowledgePublishes>')}
-	${object.outboundMessages == null ? '' : object.outboundMessages.map(p => '<outboundMessages>' + WorkflowOutboundMessage(p, true) + '</outboundMessages>')}
-	${object.rules == null ? '' : object.rules.map(p => '<rules>' + WorkflowRule(p, true) + '</rules>')}
-	${object.send == null ? '' : object.send.map(p => '<send>' + WorkflowSend(p, true) + '</send>')}
-	${object.tasks == null ? '' : object.tasks.map(p => '<tasks>' + WorkflowTask(p, true) + '</tasks>')}
+	${object.alerts == null ? '' : object.alerts.map(p => '<alerts>' + WorkflowAlert(p, true) + '</alerts>').join('')}
+	${object.fieldUpdates == null ? '' : object.fieldUpdates.map(p => '<fieldUpdates>' + WorkflowFieldUpdate(p, true) + '</fieldUpdates>').join('')}
+	${object.flowActions == null ? '' : object.flowActions.map(p => '<flowActions>' + WorkflowFlowAction(p, true) + '</flowActions>').join('')}
+	${object.knowledgePublishes == null ? '' : object.knowledgePublishes.map(p => '<knowledgePublishes>' + WorkflowKnowledgePublish(p, true) + '</knowledgePublishes>').join('')}
+	${object.outboundMessages == null ? '' : object.outboundMessages.map(p => '<outboundMessages>' + WorkflowOutboundMessage(p, true) + '</outboundMessages>').join('')}
+	${object.rules == null ? '' : object.rules.map(p => '<rules>' + WorkflowRule(p, true) + '</rules>').join('')}
+	${object.send == null ? '' : object.send.map(p => '<send>' + WorkflowSend(p, true) + '</send>').join('')}
+	${object.tasks == null ? '' : object.tasks.map(p => '<tasks>' + WorkflowTask(p, true) + '</tasks>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

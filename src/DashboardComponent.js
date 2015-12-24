@@ -19,10 +19,10 @@ module.exports = (object, asChild) => {
 	${object.chartAxisRange == null ? '' : '<chartAxisRange>' + ChartRangeType(object.chartAxisRange, true) + '</chartAxisRange>'}
 	${object.chartAxisRangeMax == null ? '' : '<chartAxisRangeMax>' + object.chartAxisRangeMax + '</chartAxisRangeMax>'}
 	${object.chartAxisRangeMin == null ? '' : '<chartAxisRangeMin>' + object.chartAxisRangeMin + '</chartAxisRangeMin>'}
-	${object.chartSummary == null ? '' : object.chartSummary.map(p => '<chartSummary>' + ChartSummary(p, true) + '</chartSummary>')}
+	${object.chartSummary == null ? '' : object.chartSummary.map(p => '<chartSummary>' + ChartSummary(p, true) + '</chartSummary>').join('')}
 	${object.componentType == null ? '' : '<componentType>' + DashboardComponentType(object.componentType, true) + '</componentType>'}
-	${object.dashboardFilterColumns == null ? '' : object.dashboardFilterColumns.map(p => '<dashboardFilterColumns>' + DashboardFilterColumn(p, true) + '</dashboardFilterColumns>')}
-	${object.dashboardTableColumn == null ? '' : object.dashboardTableColumn.map(p => '<dashboardTableColumn>' + DashboardTableColumn(p, true) + '</dashboardTableColumn>')}
+	${object.dashboardFilterColumns == null ? '' : object.dashboardFilterColumns.map(p => '<dashboardFilterColumns>' + DashboardFilterColumn(p, true) + '</dashboardFilterColumns>').join('')}
+	${object.dashboardTableColumn == null ? '' : object.dashboardTableColumn.map(p => '<dashboardTableColumn>' + DashboardTableColumn(p, true) + '</dashboardTableColumn>').join('')}
 	${object.displayUnits == null ? '' : '<displayUnits>' + ChartUnits(object.displayUnits, true) + '</displayUnits>'}
 	${object.drillDownUrl == null ? '' : '<drillDownUrl>' + object.drillDownUrl + '</drillDownUrl>'}
 	${object.drillEnabled == null ? '' : '<drillEnabled>' + object.drillEnabled + '</drillEnabled>'}
@@ -32,7 +32,7 @@ module.exports = (object, asChild) => {
 	${object.footer == null ? '' : '<footer>' + object.footer + '</footer>'}
 	${object.gaugeMax == null ? '' : '<gaugeMax>' + object.gaugeMax + '</gaugeMax>'}
 	${object.gaugeMin == null ? '' : '<gaugeMin>' + object.gaugeMin + '</gaugeMin>'}
-	${object.groupingColumn == null ? '' : object.groupingColumn.map(p => '<groupingColumn>' + p + '</groupingColumn>')}
+	${object.groupingColumn == null ? '' : object.groupingColumn.map(p => '<groupingColumn>' + p + '</groupingColumn>').join('')}
 	${object.header == null ? '' : '<header>' + object.header + '</header>'}
 	${object.indicatorBreakpoint1 == null ? '' : '<indicatorBreakpoint1>' + object.indicatorBreakpoint1 + '</indicatorBreakpoint1>'}
 	${object.indicatorBreakpoint2 == null ? '' : '<indicatorBreakpoint2>' + object.indicatorBreakpoint2 + '</indicatorBreakpoint2>'}

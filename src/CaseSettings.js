@@ -14,7 +14,7 @@ module.exports = (object, asChild) => {
 	${object.caseCloseNotificationTemplate == null ? '' : '<caseCloseNotificationTemplate>' + object.caseCloseNotificationTemplate + '</caseCloseNotificationTemplate>'}
 	${object.caseCommentNotificationTemplate == null ? '' : '<caseCommentNotificationTemplate>' + object.caseCommentNotificationTemplate + '</caseCommentNotificationTemplate>'}
 	${object.caseCreateNotificationTemplate == null ? '' : '<caseCreateNotificationTemplate>' + object.caseCreateNotificationTemplate + '</caseCreateNotificationTemplate>'}
-	${object.caseFeedItemSettings == null ? '' : object.caseFeedItemSettings.map(p => '<caseFeedItemSettings>' + FeedItemSettings(p, true) + '</caseFeedItemSettings>')}
+	${object.caseFeedItemSettings == null ? '' : object.caseFeedItemSettings.map(p => '<caseFeedItemSettings>' + FeedItemSettings(p, true) + '</caseFeedItemSettings>').join('')}
 	${object.closeCaseThroughStatusChange == null ? '' : '<closeCaseThroughStatusChange>' + object.closeCaseThroughStatusChange + '</closeCaseThroughStatusChange>'}
 	${object.defaultCaseOwner == null ? '' : '<defaultCaseOwner>' + object.defaultCaseOwner + '</defaultCaseOwner>'}
 	${object.defaultCaseOwnerType == null ? '' : '<defaultCaseOwnerType>' + object.defaultCaseOwnerType + '</defaultCaseOwnerType>'}

@@ -8,6 +8,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.containers == null ? '' : object.containers.map(p => '<containers>' + Container(p, true) + '</containers>')}
+	${object.containers == null ? '' : object.containers.map(p => '<containers>' + Container(p, true) + '</containers>').join('')}
 ${rootTagEnd}`;
 }

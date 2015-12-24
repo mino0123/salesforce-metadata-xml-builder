@@ -88,10 +88,10 @@ function toXMLBuilder(type) {
         if (m.isArray) {
           if (isPrimitive(m.type)) {
             const pArrayExp = `'<${n}>' + p + '</${n}>'`;
-            return '\t${' + `${paramExp} == null ? '' : ${paramExp}.map(p => ${pArrayExp})}`;
+            return '\t${' + `${paramExp} == null ? '' : ${paramExp}.map(p => ${pArrayExp}).join('')}`;
           } else {
             const objArrayExp = `'<${n}>' + ${m.type}(p, true) + '</${n}>'`;
-            return '\t${' + `${paramExp} == null ? '' : ${paramExp}.map(p => ${objArrayExp})}`;
+            return '\t${' + `${paramExp} == null ? '' : ${paramExp}.map(p => ${objArrayExp}).join('')}`;
           }
         } else {
           if (isPrimitive(m.type)) {

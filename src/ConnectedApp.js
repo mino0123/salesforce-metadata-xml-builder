@@ -13,14 +13,14 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.attributes == null ? '' : object.attributes.map(p => '<attributes>' + ConnectedAppAttribute(p, true) + '</attributes>')}
+	${object.attributes == null ? '' : object.attributes.map(p => '<attributes>' + ConnectedAppAttribute(p, true) + '</attributes>').join('')}
 	${object.canvasConfig == null ? '' : '<canvasConfig>' + ConnectedAppCanvasConfig(object.canvasConfig, true) + '</canvasConfig>'}
 	${object.contactEmail == null ? '' : '<contactEmail>' + object.contactEmail + '</contactEmail>'}
 	${object.contactPhone == null ? '' : '<contactPhone>' + object.contactPhone + '</contactPhone>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.iconUrl == null ? '' : '<iconUrl>' + object.iconUrl + '</iconUrl>'}
 	${object.infoUrl == null ? '' : '<infoUrl>' + object.infoUrl + '</infoUrl>'}
-	${object.ipRanges == null ? '' : object.ipRanges.map(p => '<ipRanges>' + ConnectedAppIpRange(p, true) + '</ipRanges>')}
+	${object.ipRanges == null ? '' : object.ipRanges.map(p => '<ipRanges>' + ConnectedAppIpRange(p, true) + '</ipRanges>').join('')}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.logoUrl == null ? '' : '<logoUrl>' + object.logoUrl + '</logoUrl>'}
 	${object.mobileAppConfig == null ? '' : '<mobileAppConfig>' + ConnectedAppMobileDetailConfig(object.mobileAppConfig, true) + '</mobileAppConfig>'}

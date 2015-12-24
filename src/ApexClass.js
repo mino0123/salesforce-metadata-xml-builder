@@ -10,7 +10,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.apiVersion == null ? '' : '<apiVersion>' + object.apiVersion + '</apiVersion>'}
-	${object.packageVersions == null ? '' : object.packageVersions.map(p => '<packageVersions>' + PackageVersion(p, true) + '</packageVersions>')}
+	${object.packageVersions == null ? '' : object.packageVersions.map(p => '<packageVersions>' + PackageVersion(p, true) + '</packageVersions>').join('')}
 	${object.status == null ? '' : '<status>' + ApexCodeUnitStatus(object.status, true) + '</status>'}
 	${object.content == null ? '' : '<content>' + object.content + '</content>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}

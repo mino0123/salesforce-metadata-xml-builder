@@ -10,7 +10,7 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.groupColumn == null ? '' : '<groupColumn>' + object.groupColumn + '</groupColumn>'}
-	${object.mappings == null ? '' : object.mappings.map(p => '<mappings>' + AnalyticSnapshotMapping(p, true) + '</mappings>')}
+	${object.mappings == null ? '' : object.mappings.map(p => '<mappings>' + AnalyticSnapshotMapping(p, true) + '</mappings>').join('')}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
 	${object.runningUser == null ? '' : '<runningUser>' + object.runningUser + '</runningUser>'}
 	${object.sourceReport == null ? '' : '<sourceReport>' + object.sourceReport + '</sourceReport>'}

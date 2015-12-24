@@ -9,10 +9,10 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.ccEmails == null ? '' : object.ccEmails.map(p => '<ccEmails>' + p + '</ccEmails>')}
+	${object.ccEmails == null ? '' : object.ccEmails.map(p => '<ccEmails>' + p + '</ccEmails>').join('')}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.protected == null ? '' : '<protected>' + object.protected + '</protected>'}
-	${object.recipients == null ? '' : object.recipients.map(p => '<recipients>' + WorkflowEmailRecipient(p, true) + '</recipients>')}
+	${object.recipients == null ? '' : object.recipients.map(p => '<recipients>' + WorkflowEmailRecipient(p, true) + '</recipients>').join('')}
 	${object.senderAddress == null ? '' : '<senderAddress>' + object.senderAddress + '</senderAddress>'}
 	${object.senderType == null ? '' : '<senderType>' + ActionEmailSenderType(object.senderType, true) + '</senderType>'}
 	${object.template == null ? '' : '<template>' + object.template + '</template>'}

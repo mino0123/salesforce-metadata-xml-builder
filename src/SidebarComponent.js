@@ -13,7 +13,7 @@ module.exports = (object, asChild) => {
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.lookup == null ? '' : '<lookup>' + object.lookup + '</lookup>'}
 	${object.page == null ? '' : '<page>' + object.page + '</page>'}
-	${object.relatedLists == null ? '' : object.relatedLists.map(p => '<relatedLists>' + RelatedList(p, true) + '</relatedLists>')}
+	${object.relatedLists == null ? '' : object.relatedLists.map(p => '<relatedLists>' + RelatedList(p, true) + '</relatedLists>').join('')}
 	${object.unit == null ? '' : '<unit>' + object.unit + '</unit>'}
 	${object.width == null ? '' : '<width>' + object.width + '</width>'}
 ${rootTagEnd}`;

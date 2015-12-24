@@ -9,6 +9,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.forecastingItemCategoryApiName == null ? '' : '<forecastingItemCategoryApiName>' + object.forecastingItemCategoryApiName + '</forecastingItemCategoryApiName>'}
-	${object.weightedSourceCategories == null ? '' : object.weightedSourceCategories.map(p => '<weightedSourceCategories>' + WeightedSourceCategory(p, true) + '</weightedSourceCategories>')}
+	${object.weightedSourceCategories == null ? '' : object.weightedSourceCategories.map(p => '<weightedSourceCategories>' + WeightedSourceCategory(p, true) + '</weightedSourceCategories>').join('')}
 ${rootTagEnd}`;
 }

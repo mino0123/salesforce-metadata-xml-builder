@@ -14,10 +14,10 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.dataType == null ? '' : '<dataType>' + FlowDataType(object.dataType, true) + '</dataType>'}
 	${object.displayField == null ? '' : '<displayField>' + object.displayField + '</displayField>'}
-	${object.filters == null ? '' : object.filters.map(p => '<filters>' + FlowRecordFilter(p, true) + '</filters>')}
+	${object.filters == null ? '' : object.filters.map(p => '<filters>' + FlowRecordFilter(p, true) + '</filters>').join('')}
 	${object.limit == null ? '' : '<limit>' + object.limit + '</limit>'}
 	${object.object == null ? '' : '<object>' + object.object + '</object>'}
-	${object.outputAssignments == null ? '' : object.outputAssignments.map(p => '<outputAssignments>' + FlowOutputFieldAssignment(p, true) + '</outputAssignments>')}
+	${object.outputAssignments == null ? '' : object.outputAssignments.map(p => '<outputAssignments>' + FlowOutputFieldAssignment(p, true) + '</outputAssignments>').join('')}
 	${object.picklistField == null ? '' : '<picklistField>' + object.picklistField + '</picklistField>'}
 	${object.picklistObject == null ? '' : '<picklistObject>' + object.picklistObject + '</picklistObject>'}
 	${object.sortField == null ? '' : '<sortField>' + object.sortField + '</sortField>'}
@@ -25,6 +25,6 @@ module.exports = (object, asChild) => {
 	${object.valueField == null ? '' : '<valueField>' + object.valueField + '</valueField>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
-	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>')}
+	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>').join('')}
 ${rootTagEnd}`;
 }

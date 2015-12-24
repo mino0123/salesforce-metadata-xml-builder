@@ -20,22 +20,22 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.applicationVisibilities == null ? '' : object.applicationVisibilities.map(p => '<applicationVisibilities>' + ProfileApplicationVisibility(p, true) + '</applicationVisibilities>')}
-	${object.classAccesses == null ? '' : object.classAccesses.map(p => '<classAccesses>' + ProfileApexClassAccess(p, true) + '</classAccesses>')}
+	${object.applicationVisibilities == null ? '' : object.applicationVisibilities.map(p => '<applicationVisibilities>' + ProfileApplicationVisibility(p, true) + '</applicationVisibilities>').join('')}
+	${object.classAccesses == null ? '' : object.classAccesses.map(p => '<classAccesses>' + ProfileApexClassAccess(p, true) + '</classAccesses>').join('')}
 	${object.custom == null ? '' : '<custom>' + object.custom + '</custom>'}
-	${object.customPermissions == null ? '' : object.customPermissions.map(p => '<customPermissions>' + ProfileCustomPermissions(p, true) + '</customPermissions>')}
+	${object.customPermissions == null ? '' : object.customPermissions.map(p => '<customPermissions>' + ProfileCustomPermissions(p, true) + '</customPermissions>').join('')}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
-	${object.externalDataSourceAccesses == null ? '' : object.externalDataSourceAccesses.map(p => '<externalDataSourceAccesses>' + ProfileExternalDataSourceAccess(p, true) + '</externalDataSourceAccesses>')}
-	${object.fieldPermissions == null ? '' : object.fieldPermissions.map(p => '<fieldPermissions>' + ProfileFieldLevelSecurity(p, true) + '</fieldPermissions>')}
-	${object.layoutAssignments == null ? '' : object.layoutAssignments.map(p => '<layoutAssignments>' + ProfileLayoutAssignment(p, true) + '</layoutAssignments>')}
+	${object.externalDataSourceAccesses == null ? '' : object.externalDataSourceAccesses.map(p => '<externalDataSourceAccesses>' + ProfileExternalDataSourceAccess(p, true) + '</externalDataSourceAccesses>').join('')}
+	${object.fieldPermissions == null ? '' : object.fieldPermissions.map(p => '<fieldPermissions>' + ProfileFieldLevelSecurity(p, true) + '</fieldPermissions>').join('')}
+	${object.layoutAssignments == null ? '' : object.layoutAssignments.map(p => '<layoutAssignments>' + ProfileLayoutAssignment(p, true) + '</layoutAssignments>').join('')}
 	${object.loginHours == null ? '' : '<loginHours>' + ProfileLoginHours(object.loginHours, true) + '</loginHours>'}
-	${object.loginIpRanges == null ? '' : object.loginIpRanges.map(p => '<loginIpRanges>' + ProfileLoginIpRange(p, true) + '</loginIpRanges>')}
-	${object.objectPermissions == null ? '' : object.objectPermissions.map(p => '<objectPermissions>' + ProfileObjectPermissions(p, true) + '</objectPermissions>')}
-	${object.pageAccesses == null ? '' : object.pageAccesses.map(p => '<pageAccesses>' + ProfileApexPageAccess(p, true) + '</pageAccesses>')}
-	${object.recordTypeVisibilities == null ? '' : object.recordTypeVisibilities.map(p => '<recordTypeVisibilities>' + ProfileRecordTypeVisibility(p, true) + '</recordTypeVisibilities>')}
-	${object.tabVisibilities == null ? '' : object.tabVisibilities.map(p => '<tabVisibilities>' + ProfileTabVisibility(p, true) + '</tabVisibilities>')}
+	${object.loginIpRanges == null ? '' : object.loginIpRanges.map(p => '<loginIpRanges>' + ProfileLoginIpRange(p, true) + '</loginIpRanges>').join('')}
+	${object.objectPermissions == null ? '' : object.objectPermissions.map(p => '<objectPermissions>' + ProfileObjectPermissions(p, true) + '</objectPermissions>').join('')}
+	${object.pageAccesses == null ? '' : object.pageAccesses.map(p => '<pageAccesses>' + ProfileApexPageAccess(p, true) + '</pageAccesses>').join('')}
+	${object.recordTypeVisibilities == null ? '' : object.recordTypeVisibilities.map(p => '<recordTypeVisibilities>' + ProfileRecordTypeVisibility(p, true) + '</recordTypeVisibilities>').join('')}
+	${object.tabVisibilities == null ? '' : object.tabVisibilities.map(p => '<tabVisibilities>' + ProfileTabVisibility(p, true) + '</tabVisibilities>').join('')}
 	${object.userLicense == null ? '' : '<userLicense>' + object.userLicense + '</userLicense>'}
-	${object.userPermissions == null ? '' : object.userPermissions.map(p => '<userPermissions>' + ProfileUserPermission(p, true) + '</userPermissions>')}
+	${object.userPermissions == null ? '' : object.userPermissions.map(p => '<userPermissions>' + ProfileUserPermission(p, true) + '</userPermissions>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

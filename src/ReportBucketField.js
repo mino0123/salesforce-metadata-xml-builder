@@ -17,6 +17,6 @@ module.exports = (object, asChild) => {
 	${object.otherBucketLabel == null ? '' : '<otherBucketLabel>' + object.otherBucketLabel + '</otherBucketLabel>'}
 	${object.sourceColumnName == null ? '' : '<sourceColumnName>' + object.sourceColumnName + '</sourceColumnName>'}
 	${object.useOther == null ? '' : '<useOther>' + object.useOther + '</useOther>'}
-	${object.values == null ? '' : object.values.map(p => '<values>' + ReportBucketFieldValue(p, true) + '</values>')}
+	${object.values == null ? '' : object.values.map(p => '<values>' + ReportBucketFieldValue(p, true) + '</values>').join('')}
 ${rootTagEnd}`;
 }

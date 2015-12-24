@@ -9,6 +9,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.operator == null ? '' : '<operator>' + DashboardFilterOperation(object.operator, true) + '</operator>'}
-	${object.values == null ? '' : object.values.map(p => '<values>' + p + '</values>')}
+	${object.values == null ? '' : object.values.map(p => '<values>' + p + '</values>').join('')}
 ${rootTagEnd}`;
 }

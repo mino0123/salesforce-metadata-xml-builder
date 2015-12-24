@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.managedTopic == null ? '' : object.managedTopic.map(p => '<managedTopic>' + ManagedTopic(p, true) + '</managedTopic>')}
+	${object.managedTopic == null ? '' : object.managedTopic.map(p => '<managedTopic>' + ManagedTopic(p, true) + '</managedTopic>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

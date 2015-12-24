@@ -12,7 +12,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.accessType == null ? '' : '<accessType>' + FolderAccessTypes(object.accessType, true) + '</accessType>'}
-	${object.folderShares == null ? '' : object.folderShares.map(p => '<folderShares>' + FolderShare(p, true) + '</folderShares>')}
+	${object.folderShares == null ? '' : object.folderShares.map(p => '<folderShares>' + FolderShare(p, true) + '</folderShares>').join('')}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
 	${object.publicFolderAccess == null ? '' : '<publicFolderAccess>' + PublicFolderAccess(object.publicFolderAccess, true) + '</publicFolderAccess>'}
 	${object.sharedTo == null ? '' : '<sharedTo>' + SharedTo(object.sharedTo, true) + '</sharedTo>'}

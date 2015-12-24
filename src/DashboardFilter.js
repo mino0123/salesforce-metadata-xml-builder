@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.dashboardFilterOptions == null ? '' : object.dashboardFilterOptions.map(p => '<dashboardFilterOptions>' + DashboardFilterOption(p, true) + '</dashboardFilterOptions>')}
+	${object.dashboardFilterOptions == null ? '' : object.dashboardFilterOptions.map(p => '<dashboardFilterOptions>' + DashboardFilterOption(p, true) + '</dashboardFilterOptions>').join('')}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
 ${rootTagEnd}`;
 }

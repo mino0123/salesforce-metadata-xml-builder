@@ -13,7 +13,7 @@ module.exports = (object, asChild) => {
 	${object.displayName == null ? '' : '<displayName>' + object.displayName + '</displayName>'}
 	${object.displayNameLabel == null ? '' : '<displayNameLabel>' + object.displayNameLabel + '</displayNameLabel>'}
 	${object.internalNameLabel == null ? '' : '<internalNameLabel>' + object.internalNameLabel + '</internalNameLabel>'}
-	${object.sections == null ? '' : object.sections.map(p => '<sections>' + CallCenterSection(p, true) + '</sections>')}
+	${object.sections == null ? '' : object.sections.map(p => '<sections>' + CallCenterSection(p, true) + '</sections>').join('')}
 	${object.version == null ? '' : '<version>' + object.version + '</version>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;

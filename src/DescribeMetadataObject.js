@@ -7,7 +7,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.childXmlNames == null ? '' : object.childXmlNames.map(p => '<childXmlNames>' + p + '</childXmlNames>')}
+	${object.childXmlNames == null ? '' : object.childXmlNames.map(p => '<childXmlNames>' + p + '</childXmlNames>').join('')}
 	${object.directoryName == null ? '' : '<directoryName>' + object.directoryName + '</directoryName>'}
 	${object.inFolder == null ? '' : '<inFolder>' + object.inFolder + '</inFolder>'}
 	${object.metaFile == null ? '' : '<metaFile>' + object.metaFile + '</metaFile>'}

@@ -16,9 +16,9 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.active == null ? '' : '<active>' + object.active + '</active>'}
 	${object.allowRecall == null ? '' : '<allowRecall>' + object.allowRecall + '</allowRecall>'}
-	${object.allowedSubmitters == null ? '' : object.allowedSubmitters.map(p => '<allowedSubmitters>' + ApprovalSubmitter(p, true) + '</allowedSubmitters>')}
+	${object.allowedSubmitters == null ? '' : object.allowedSubmitters.map(p => '<allowedSubmitters>' + ApprovalSubmitter(p, true) + '</allowedSubmitters>').join('')}
 	${object.approvalPageFields == null ? '' : '<approvalPageFields>' + ApprovalPageField(object.approvalPageFields, true) + '</approvalPageFields>'}
-	${object.approvalStep == null ? '' : object.approvalStep.map(p => '<approvalStep>' + ApprovalStep(p, true) + '</approvalStep>')}
+	${object.approvalStep == null ? '' : object.approvalStep.map(p => '<approvalStep>' + ApprovalStep(p, true) + '</approvalStep>').join('')}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.emailTemplate == null ? '' : '<emailTemplate>' + object.emailTemplate + '</emailTemplate>'}
 	${object.enableMobileDeviceAccess == null ? '' : '<enableMobileDeviceAccess>' + object.enableMobileDeviceAccess + '</enableMobileDeviceAccess>'}

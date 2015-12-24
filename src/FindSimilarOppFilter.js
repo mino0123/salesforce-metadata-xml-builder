@@ -7,7 +7,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.similarOpportunitiesDisplayColumns == null ? '' : object.similarOpportunitiesDisplayColumns.map(p => '<similarOpportunitiesDisplayColumns>' + p + '</similarOpportunitiesDisplayColumns>')}
-	${object.similarOpportunitiesMatchFields == null ? '' : object.similarOpportunitiesMatchFields.map(p => '<similarOpportunitiesMatchFields>' + p + '</similarOpportunitiesMatchFields>')}
+	${object.similarOpportunitiesDisplayColumns == null ? '' : object.similarOpportunitiesDisplayColumns.map(p => '<similarOpportunitiesDisplayColumns>' + p + '</similarOpportunitiesDisplayColumns>').join('')}
+	${object.similarOpportunitiesMatchFields == null ? '' : object.similarOpportunitiesMatchFields.map(p => '<similarOpportunitiesMatchFields>' + p + '</similarOpportunitiesMatchFields>').join('')}
 ${rootTagEnd}`;
 }

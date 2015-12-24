@@ -17,7 +17,7 @@ module.exports = (object, asChild) => {
 	${object.notifyOwnerOnNewCaseEmail == null ? '' : '<notifyOwnerOnNewCaseEmail>' + object.notifyOwnerOnNewCaseEmail + '</notifyOwnerOnNewCaseEmail>'}
 	${object.overEmailLimitAction == null ? '' : '<overEmailLimitAction>' + EmailToCaseOnFailureActionType(object.overEmailLimitAction, true) + '</overEmailLimitAction>'}
 	${object.preQuoteSignature == null ? '' : '<preQuoteSignature>' + object.preQuoteSignature + '</preQuoteSignature>'}
-	${object.routingAddresses == null ? '' : object.routingAddresses.map(p => '<routingAddresses>' + EmailToCaseRoutingAddress(p, true) + '</routingAddresses>')}
+	${object.routingAddresses == null ? '' : object.routingAddresses.map(p => '<routingAddresses>' + EmailToCaseRoutingAddress(p, true) + '</routingAddresses>').join('')}
 	${object.unauthorizedSenderAction == null ? '' : '<unauthorizedSenderAction>' + EmailToCaseOnFailureActionType(object.unauthorizedSenderAction, true) + '</unauthorizedSenderAction>'}
 ${rootTagEnd}`;
 }

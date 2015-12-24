@@ -13,7 +13,7 @@ module.exports = (object, asChild) => {
 	${object.detailHeading == null ? '' : '<detailHeading>' + object.detailHeading + '</detailHeading>'}
 	${object.editHeading == null ? '' : '<editHeading>' + object.editHeading + '</editHeading>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
-	${object.layoutColumns == null ? '' : object.layoutColumns.map(p => '<layoutColumns>' + LayoutColumn(p, true) + '</layoutColumns>')}
+	${object.layoutColumns == null ? '' : object.layoutColumns.map(p => '<layoutColumns>' + LayoutColumn(p, true) + '</layoutColumns>').join('')}
 	${object.style == null ? '' : '<style>' + LayoutSectionStyle(object.style, true) + '</style>'}
 ${rootTagEnd}`;
 }

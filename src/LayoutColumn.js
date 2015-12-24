@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.layoutItems == null ? '' : object.layoutItems.map(p => '<layoutItems>' + LayoutItem(p, true) + '</layoutItems>')}
+	${object.layoutItems == null ? '' : object.layoutItems.map(p => '<layoutItems>' + LayoutItem(p, true) + '</layoutItems>').join('')}
 	${object.reserved == null ? '' : '<reserved>' + object.reserved + '</reserved>'}
 ${rootTagEnd}`;
 }

@@ -12,6 +12,6 @@ module.exports = (object, asChild) => {
 	${object.certificate == null ? '' : '<certificate>' + object.certificate + '</certificate>'}
 	${object.consumerKey == null ? '' : '<consumerKey>' + object.consumerKey + '</consumerKey>'}
 	${object.consumerSecret == null ? '' : '<consumerSecret>' + object.consumerSecret + '</consumerSecret>'}
-	${object.scopes == null ? '' : object.scopes.map(p => '<scopes>' + ConnectedAppOauthAccessScope(p, true) + '</scopes>')}
+	${object.scopes == null ? '' : object.scopes.map(p => '<scopes>' + ConnectedAppOauthAccessScope(p, true) + '</scopes>').join('')}
 ${rootTagEnd}`;
 }

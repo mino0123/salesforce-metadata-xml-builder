@@ -36,7 +36,7 @@ module.exports = (object, asChild) => {
 	${object.primaryTabColor == null ? '' : '<primaryTabColor>' + object.primaryTabColor + '</primaryTabColor>'}
 	${object.pushNotifications == null ? '' : '<pushNotifications>' + PushNotifications(object.pushNotifications, true) + '</pushNotifications>'}
 	${object.saveUserSessions == null ? '' : '<saveUserSessions>' + object.saveUserSessions + '</saveUserSessions>'}
-	${object.tab == null ? '' : object.tab.map(p => '<tab>' + p + '</tab>')}
+	${object.tab == null ? '' : object.tab.map(p => '<tab>' + p + '</tab>').join('')}
 	${object.workspaceMappings == null ? '' : '<workspaceMappings>' + WorkspaceMappings(object.workspaceMappings, true) + '</workspaceMappings>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;

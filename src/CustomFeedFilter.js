@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.criteria == null ? '' : object.criteria.map(p => '<criteria>' + FeedFilterCriterion(p, true) + '</criteria>')}
+	${object.criteria == null ? '' : object.criteria.map(p => '<criteria>' + FeedFilterCriterion(p, true) + '</criteria>').join('')}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.isProtected == null ? '' : '<isProtected>' + object.isProtected + '</isProtected>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}

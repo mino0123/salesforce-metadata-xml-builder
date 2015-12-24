@@ -14,7 +14,7 @@ module.exports = (object, asChild) => {
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.orgDefault == null ? '' : '<orgDefault>' + object.orgDefault + '</orgDefault>'}
 	${object.standard == null ? '' : '<standard>' + object.standard + '</standard>'}
-	${object.states == null ? '' : object.states.map(p => '<states>' + State(p, true) + '</states>')}
+	${object.states == null ? '' : object.states.map(p => '<states>' + State(p, true) + '</states>').join('')}
 	${object.visible == null ? '' : '<visible>' + object.visible + '</visible>'}
 ${rootTagEnd}`;
 }

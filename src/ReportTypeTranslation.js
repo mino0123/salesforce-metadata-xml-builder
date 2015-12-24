@@ -11,6 +11,6 @@ module.exports = (object, asChild) => {
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
-	${object.sections == null ? '' : object.sections.map(p => '<sections>' + ReportTypeSectionTranslation(p, true) + '</sections>')}
+	${object.sections == null ? '' : object.sections.map(p => '<sections>' + ReportTypeSectionTranslation(p, true) + '</sections>').join('')}
 ${rootTagEnd}`;
 }

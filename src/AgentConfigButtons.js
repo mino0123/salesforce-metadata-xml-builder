@@ -7,6 +7,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.button == null ? '' : object.button.map(p => '<button>' + p + '</button>')}
+	${object.button == null ? '' : object.button.map(p => '<button>' + p + '</button>').join('')}
 ${rootTagEnd}`;
 }

@@ -11,6 +11,6 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
 	${object.value == null ? '' : '<value>' + FlowElementReferenceOrValue(object.value, true) + '</value>'}
-	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>')}
+	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>').join('')}
 ${rootTagEnd}`;
 }

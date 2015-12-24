@@ -8,6 +8,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.articleTypeTemplates == null ? '' : object.articleTypeTemplates.map(p => '<articleTypeTemplates>' + ArticleTypeTemplate(p, true) + '</articleTypeTemplates>')}
+	${object.articleTypeTemplates == null ? '' : object.articleTypeTemplates.map(p => '<articleTypeTemplates>' + ArticleTypeTemplate(p, true) + '</articleTypeTemplates>').join('')}
 ${rootTagEnd}`;
 }

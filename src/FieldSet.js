@@ -8,9 +8,9 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.availableFields == null ? '' : object.availableFields.map(p => '<availableFields>' + FieldSetItem(p, true) + '</availableFields>')}
+	${object.availableFields == null ? '' : object.availableFields.map(p => '<availableFields>' + FieldSetItem(p, true) + '</availableFields>').join('')}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
-	${object.displayedFields == null ? '' : object.displayedFields.map(p => '<displayedFields>' + FieldSetItem(p, true) + '</displayedFields>')}
+	${object.displayedFields == null ? '' : object.displayedFields.map(p => '<displayedFields>' + FieldSetItem(p, true) + '</displayedFields>').join('')}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;

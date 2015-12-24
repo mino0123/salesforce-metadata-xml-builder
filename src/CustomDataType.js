@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.customDataTypeComponents == null ? '' : object.customDataTypeComponents.map(p => '<customDataTypeComponents>' + CustomDataTypeComponent(p, true) + '</customDataTypeComponents>')}
+	${object.customDataTypeComponents == null ? '' : object.customDataTypeComponents.map(p => '<customDataTypeComponents>' + CustomDataTypeComponent(p, true) + '</customDataTypeComponents>').join('')}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.displayFormula == null ? '' : '<displayFormula>' + object.displayFormula + '</displayFormula>'}
 	${object.editComponentsOnSeparateLines == null ? '' : '<editComponentsOnSeparateLines>' + object.editComponentsOnSeparateLines + '</editComponentsOnSeparateLines>'}

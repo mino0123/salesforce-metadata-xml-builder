@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.fields == null ? '' : object.fields.map(p => '<fields>' + p + '</fields>')}
-	${object.relatedLists == null ? '' : object.relatedLists.map(p => '<relatedLists>' + RelatedListItem(p, true) + '</relatedLists>')}
+	${object.fields == null ? '' : object.fields.map(p => '<fields>' + p + '</fields>').join('')}
+	${object.relatedLists == null ? '' : object.relatedLists.map(p => '<relatedLists>' + RelatedListItem(p, true) + '</relatedLists>').join('')}
 ${rootTagEnd}`;
 }

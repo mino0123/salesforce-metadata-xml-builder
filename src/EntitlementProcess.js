@@ -14,10 +14,10 @@ module.exports = (object, asChild) => {
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.entryStartDateField == null ? '' : '<entryStartDateField>' + object.entryStartDateField + '</entryStartDateField>'}
 	${object.exitCriteriaBooleanFilter == null ? '' : '<exitCriteriaBooleanFilter>' + object.exitCriteriaBooleanFilter + '</exitCriteriaBooleanFilter>'}
-	${object.exitCriteriaFilterItems == null ? '' : object.exitCriteriaFilterItems.map(p => '<exitCriteriaFilterItems>' + FilterItem(p, true) + '</exitCriteriaFilterItems>')}
+	${object.exitCriteriaFilterItems == null ? '' : object.exitCriteriaFilterItems.map(p => '<exitCriteriaFilterItems>' + FilterItem(p, true) + '</exitCriteriaFilterItems>').join('')}
 	${object.exitCriteriaFormula == null ? '' : '<exitCriteriaFormula>' + object.exitCriteriaFormula + '</exitCriteriaFormula>'}
 	${object.isVersionDefault == null ? '' : '<isVersionDefault>' + object.isVersionDefault + '</isVersionDefault>'}
-	${object.milestones == null ? '' : object.milestones.map(p => '<milestones>' + EntitlementProcessMilestoneItem(p, true) + '</milestones>')}
+	${object.milestones == null ? '' : object.milestones.map(p => '<milestones>' + EntitlementProcessMilestoneItem(p, true) + '</milestones>').join('')}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
 	${object.versionMaster == null ? '' : '<versionMaster>' + object.versionMaster + '</versionMaster>'}
 	${object.versionNotes == null ? '' : '<versionNotes>' + object.versionNotes + '</versionNotes>'}

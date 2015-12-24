@@ -9,7 +9,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.active == null ? '' : '<active>' + object.active + '</active>'}
-	${object.ruleEntry == null ? '' : object.ruleEntry.map(p => '<ruleEntry>' + RuleEntry(p, true) + '</ruleEntry>')}
+	${object.ruleEntry == null ? '' : object.ruleEntry.map(p => '<ruleEntry>' + RuleEntry(p, true) + '</ruleEntry>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

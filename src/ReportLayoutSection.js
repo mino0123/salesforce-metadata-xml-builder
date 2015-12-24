@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.columns == null ? '' : object.columns.map(p => '<columns>' + ReportTypeColumn(p, true) + '</columns>')}
+	${object.columns == null ? '' : object.columns.map(p => '<columns>' + ReportTypeColumn(p, true) + '</columns>').join('')}
 	${object.masterLabel == null ? '' : '<masterLabel>' + object.masterLabel + '</masterLabel>'}
 ${rootTagEnd}`;
 }

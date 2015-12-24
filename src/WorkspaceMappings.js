@@ -8,6 +8,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.mapping == null ? '' : object.mapping.map(p => '<mapping>' + WorkspaceMapping(p, true) + '</mapping>')}
+	${object.mapping == null ? '' : object.mapping.map(p => '<mapping>' + WorkspaceMapping(p, true) + '</mapping>').join('')}
 ${rootTagEnd}`;
 }

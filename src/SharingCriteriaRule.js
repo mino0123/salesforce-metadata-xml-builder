@@ -11,7 +11,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.booleanFilter == null ? '' : '<booleanFilter>' + object.booleanFilter + '</booleanFilter>'}
-	${object.criteriaItems == null ? '' : object.criteriaItems.map(p => '<criteriaItems>' + FilterItem(p, true) + '</criteriaItems>')}
+	${object.criteriaItems == null ? '' : object.criteriaItems.map(p => '<criteriaItems>' + FilterItem(p, true) + '</criteriaItems>').join('')}
 	${object.accessLevel == null ? '' : '<accessLevel>' + object.accessLevel + '</accessLevel>'}
 	${object.accountSettings == null ? '' : '<accountSettings>' + AccountSharingRuleSettings(object.accountSettings, true) + '</accountSettings>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}

@@ -12,8 +12,8 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.displayCurrency == null ? '' : '<displayCurrency>' + DisplayCurrency(object.displayCurrency, true) + '</displayCurrency>'}
 	${object.enableForecasts == null ? '' : '<enableForecasts>' + object.enableForecasts + '</enableForecasts>'}
-	${object.forecastingCategoryMappings == null ? '' : object.forecastingCategoryMappings.map(p => '<forecastingCategoryMappings>' + ForecastingCategoryMapping(p, true) + '</forecastingCategoryMappings>')}
-	${object.forecastingTypeSettings == null ? '' : object.forecastingTypeSettings.map(p => '<forecastingTypeSettings>' + ForecastingTypeSettings(p, true) + '</forecastingTypeSettings>')}
+	${object.forecastingCategoryMappings == null ? '' : object.forecastingCategoryMappings.map(p => '<forecastingCategoryMappings>' + ForecastingCategoryMapping(p, true) + '</forecastingCategoryMappings>').join('')}
+	${object.forecastingTypeSettings == null ? '' : object.forecastingTypeSettings.map(p => '<forecastingTypeSettings>' + ForecastingTypeSettings(p, true) + '</forecastingTypeSettings>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

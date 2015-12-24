@@ -10,7 +10,7 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.isActive == null ? '' : '<isActive>' + object.isActive + '</isActive>'}
-	${object.values == null ? '' : object.values.map(p => '<values>' + PicklistValue(p, true) + '</values>')}
+	${object.values == null ? '' : object.values.map(p => '<values>' + PicklistValue(p, true) + '</values>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -12,7 +12,7 @@ module.exports = (object, asChild) => {
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.isPublished == null ? '' : '<isPublished>' + object.isPublished + '</isPublished>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
-	${object.licensedCustomPermissions == null ? '' : object.licensedCustomPermissions.map(p => '<licensedCustomPermissions>' + LicensedCustomPermissions(p, true) + '</licensedCustomPermissions>')}
+	${object.licensedCustomPermissions == null ? '' : object.licensedCustomPermissions.map(p => '<licensedCustomPermissions>' + LicensedCustomPermissions(p, true) + '</licensedCustomPermissions>').join('')}
 	${object.licensingAuthority == null ? '' : '<licensingAuthority>' + object.licensingAuthority + '</licensingAuthority>'}
 	${object.licensingAuthorityProvider == null ? '' : '<licensingAuthorityProvider>' + object.licensingAuthorityProvider + '</licensingAuthorityProvider>'}
 	${object.minPlatformVersion == null ? '' : '<minPlatformVersion>' + object.minPlatformVersion + '</minPlatformVersion>'}

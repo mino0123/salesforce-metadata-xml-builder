@@ -15,7 +15,7 @@ module.exports = (object, asChild) => {
 	${object.backgroundEndColor == null ? '' : '<backgroundEndColor>' + object.backgroundEndColor + '</backgroundEndColor>'}
 	${object.backgroundFadeDirection == null ? '' : '<backgroundFadeDirection>' + ChartBackgroundDirection(object.backgroundFadeDirection, true) + '</backgroundFadeDirection>'}
 	${object.backgroundStartColor == null ? '' : '<backgroundStartColor>' + object.backgroundStartColor + '</backgroundStartColor>'}
-	${object.dashboardFilters == null ? '' : object.dashboardFilters.map(p => '<dashboardFilters>' + DashboardFilter(p, true) + '</dashboardFilters>')}
+	${object.dashboardFilters == null ? '' : object.dashboardFilters.map(p => '<dashboardFilters>' + DashboardFilter(p, true) + '</dashboardFilters>').join('')}
 	${object.dashboardGridLayout == null ? '' : '<dashboardGridLayout>' + DashboardGridLayout(object.dashboardGridLayout, true) + '</dashboardGridLayout>'}
 	${object.dashboardResultRefreshedDate == null ? '' : '<dashboardResultRefreshedDate>' + object.dashboardResultRefreshedDate + '</dashboardResultRefreshedDate>'}
 	${object.dashboardResultRunningUser == null ? '' : '<dashboardResultRunningUser>' + object.dashboardResultRunningUser + '</dashboardResultRunningUser>'}

@@ -10,7 +10,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.booleanFilter == null ? '' : '<booleanFilter>' + object.booleanFilter + '</booleanFilter>'}
-	${object.criteriaItems == null ? '' : object.criteriaItems.map(p => '<criteriaItems>' + ReportFilterItem(p, true) + '</criteriaItems>')}
+	${object.criteriaItems == null ? '' : object.criteriaItems.map(p => '<criteriaItems>' + ReportFilterItem(p, true) + '</criteriaItems>').join('')}
 	${object.language == null ? '' : '<language>' + Language(object.language, true) + '</language>'}
 ${rootTagEnd}`;
 }

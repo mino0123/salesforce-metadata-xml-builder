@@ -56,7 +56,7 @@ module.exports = (object, asChild) => {
 	${object.startingNumber == null ? '' : '<startingNumber>' + object.startingNumber + '</startingNumber>'}
 	${object.stripMarkup == null ? '' : '<stripMarkup>' + object.stripMarkup + '</stripMarkup>'}
 	${object.summarizedField == null ? '' : '<summarizedField>' + object.summarizedField + '</summarizedField>'}
-	${object.summaryFilterItems == null ? '' : object.summaryFilterItems.map(p => '<summaryFilterItems>' + FilterItem(p, true) + '</summaryFilterItems>')}
+	${object.summaryFilterItems == null ? '' : object.summaryFilterItems.map(p => '<summaryFilterItems>' + FilterItem(p, true) + '</summaryFilterItems>').join('')}
 	${object.summaryForeignKey == null ? '' : '<summaryForeignKey>' + object.summaryForeignKey + '</summaryForeignKey>'}
 	${object.summaryOperation == null ? '' : '<summaryOperation>' + SummaryOperations(object.summaryOperation, true) + '</summaryOperation>'}
 	${object.trackFeedHistory == null ? '' : '<trackFeedHistory>' + object.trackFeedHistory + '</trackFeedHistory>'}

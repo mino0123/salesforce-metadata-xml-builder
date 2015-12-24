@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.autoResponseRule == null ? '' : object.autoResponseRule.map(p => '<autoResponseRule>' + AutoResponseRule(p, true) + '</autoResponseRule>')}
+	${object.autoResponseRule == null ? '' : object.autoResponseRule.map(p => '<autoResponseRule>' + AutoResponseRule(p, true) + '</autoResponseRule>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

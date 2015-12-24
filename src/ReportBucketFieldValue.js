@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.sourceValues == null ? '' : object.sourceValues.map(p => '<sourceValues>' + ReportBucketFieldSourceValue(p, true) + '</sourceValues>')}
+	${object.sourceValues == null ? '' : object.sourceValues.map(p => '<sourceValues>' + ReportBucketFieldSourceValue(p, true) + '</sourceValues>').join('')}
 	${object.value == null ? '' : '<value>' + object.value + '</value>'}
 ${rootTagEnd}`;
 }

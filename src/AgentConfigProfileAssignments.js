@@ -7,6 +7,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.profile == null ? '' : object.profile.map(p => '<profile>' + p + '</profile>')}
+	${object.profile == null ? '' : object.profile.map(p => '<profile>' + p + '</profile>').join('')}
 ${rootTagEnd}`;
 }

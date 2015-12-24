@@ -7,7 +7,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.fieldNames == null ? '' : object.fieldNames.map(p => '<fieldNames>' + p + '</fieldNames>')}
+	${object.fieldNames == null ? '' : object.fieldNames.map(p => '<fieldNames>' + p + '</fieldNames>').join('')}
 	${object.info == null ? '' : '<info>' + object.info + '</info>'}
 	${object.picklistValueName == null ? '' : '<picklistValueName>' + object.picklistValueName + '</picklistValueName>'}
 ${rootTagEnd}`;

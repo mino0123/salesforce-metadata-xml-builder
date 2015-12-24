@@ -9,7 +9,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.criteriaItems == null ? '' : object.criteriaItems.map(p => '<criteriaItems>' + ReportFilterItem(p, true) + '</criteriaItems>')}
+	${object.criteriaItems == null ? '' : object.criteriaItems.map(p => '<criteriaItems>' + ReportFilterItem(p, true) + '</criteriaItems>').join('')}
 	${object.operation == null ? '' : '<operation>' + ObjectFilterOperator(object.operation, true) + '</operation>'}
 	${object.primaryTableColumn == null ? '' : '<primaryTableColumn>' + object.primaryTableColumn + '</primaryTableColumn>'}
 	${object.relatedTable == null ? '' : '<relatedTable>' + object.relatedTable + '</relatedTable>'}

@@ -12,7 +12,7 @@ module.exports = (object, asChild) => {
 	${object.booleanFilter == null ? '' : '<booleanFilter>' + object.booleanFilter + '</booleanFilter>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
 	${object.objectType == null ? '' : '<objectType>' + object.objectType + '</objectType>'}
-	${object.ruleItems == null ? '' : object.ruleItems.map(p => '<ruleItems>' + Territory2RuleItem(p, true) + '</ruleItems>')}
+	${object.ruleItems == null ? '' : object.ruleItems.map(p => '<ruleItems>' + Territory2RuleItem(p, true) + '</ruleItems>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

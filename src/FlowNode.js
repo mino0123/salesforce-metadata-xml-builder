@@ -13,6 +13,6 @@ module.exports = (object, asChild) => {
 	${object.locationY == null ? '' : '<locationY>' + object.locationY + '</locationY>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
-	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>')}
+	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>').join('')}
 ${rootTagEnd}`;
 }

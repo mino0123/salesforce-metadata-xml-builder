@@ -9,7 +9,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.chatterAnswersReputationLevels == null ? '' : object.chatterAnswersReputationLevels.map(p => '<chatterAnswersReputationLevels>' + ChatterAnswersReputationLevel(p, true) + '</chatterAnswersReputationLevels>')}
-	${object.ideaReputationLevels == null ? '' : object.ideaReputationLevels.map(p => '<ideaReputationLevels>' + IdeaReputationLevel(p, true) + '</ideaReputationLevels>')}
+	${object.chatterAnswersReputationLevels == null ? '' : object.chatterAnswersReputationLevels.map(p => '<chatterAnswersReputationLevels>' + ChatterAnswersReputationLevel(p, true) + '</chatterAnswersReputationLevels>').join('')}
+	${object.ideaReputationLevels == null ? '' : object.ideaReputationLevels.map(p => '<ideaReputationLevels>' + IdeaReputationLevel(p, true) + '</ideaReputationLevels>').join('')}
 ${rootTagEnd}`;
 }

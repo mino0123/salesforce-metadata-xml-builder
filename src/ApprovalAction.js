@@ -8,6 +8,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.action == null ? '' : object.action.map(p => '<action>' + WorkflowActionReference(p, true) + '</action>')}
+	${object.action == null ? '' : object.action.map(p => '<action>' + WorkflowActionReference(p, true) + '</action>').join('')}
 ${rootTagEnd}`;
 }

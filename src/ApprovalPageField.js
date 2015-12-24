@@ -7,6 +7,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.field == null ? '' : object.field.map(p => '<field>' + p + '</field>')}
+	${object.field == null ? '' : object.field.map(p => '<field>' + p + '</field>').join('')}
 ${rootTagEnd}`;
 }

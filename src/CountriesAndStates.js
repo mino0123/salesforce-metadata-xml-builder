@@ -8,6 +8,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.countries == null ? '' : object.countries.map(p => '<countries>' + Country(p, true) + '</countries>')}
+	${object.countries == null ? '' : object.countries.map(p => '<countries>' + Country(p, true) + '</countries>').join('')}
 ${rootTagEnd}`;
 }

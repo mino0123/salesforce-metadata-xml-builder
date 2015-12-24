@@ -15,7 +15,7 @@ module.exports = (object, asChild) => {
 	${object.performRetrieve == null ? '' : '<performRetrieve>' + object.performRetrieve + '</performRetrieve>'}
 	${object.purgeOnDelete == null ? '' : '<purgeOnDelete>' + object.purgeOnDelete + '</purgeOnDelete>'}
 	${object.rollbackOnError == null ? '' : '<rollbackOnError>' + object.rollbackOnError + '</rollbackOnError>'}
-	${object.runTests == null ? '' : object.runTests.map(p => '<runTests>' + p + '</runTests>')}
+	${object.runTests == null ? '' : object.runTests.map(p => '<runTests>' + p + '</runTests>').join('')}
 	${object.singlePackage == null ? '' : '<singlePackage>' + object.singlePackage + '</singlePackage>'}
 	${object.testLevel == null ? '' : '<testLevel>' + TestLevel(object.testLevel, true) + '</testLevel>'}
 ${rootTagEnd}`;

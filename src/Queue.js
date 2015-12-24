@@ -11,7 +11,7 @@ module.exports = (object, asChild) => {
 	${object.doesSendEmailToMembers == null ? '' : '<doesSendEmailToMembers>' + object.doesSendEmailToMembers + '</doesSendEmailToMembers>'}
 	${object.email == null ? '' : '<email>' + object.email + '</email>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
-	${object.queueSobject == null ? '' : object.queueSobject.map(p => '<queueSobject>' + QueueSobject(p, true) + '</queueSobject>')}
+	${object.queueSobject == null ? '' : object.queueSobject.map(p => '<queueSobject>' + QueueSobject(p, true) + '</queueSobject>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

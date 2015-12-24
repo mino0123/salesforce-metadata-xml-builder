@@ -10,7 +10,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.actionLinkTemplates == null ? '' : object.actionLinkTemplates.map(p => '<actionLinkTemplates>' + ActionLinkTemplate(p, true) + '</actionLinkTemplates>')}
+	${object.actionLinkTemplates == null ? '' : object.actionLinkTemplates.map(p => '<actionLinkTemplates>' + ActionLinkTemplate(p, true) + '</actionLinkTemplates>').join('')}
 	${object.category == null ? '' : '<category>' + PlatformActionGroupCategory(object.category, true) + '</category>'}
 	${object.executionsAllowed == null ? '' : '<executionsAllowed>' + ActionLinkExecutionsAllowed(object.executionsAllowed, true) + '</executionsAllowed>'}
 	${object.hoursUntilExpiration == null ? '' : '<hoursUntilExpiration>' + object.hoursUntilExpiration + '</hoursUntilExpiration>'}

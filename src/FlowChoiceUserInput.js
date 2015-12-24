@@ -12,6 +12,6 @@ module.exports = (object, asChild) => {
 	${object.isRequired == null ? '' : '<isRequired>' + object.isRequired + '</isRequired>'}
 	${object.promptText == null ? '' : '<promptText>' + object.promptText + '</promptText>'}
 	${object.validationRule == null ? '' : '<validationRule>' + FlowInputValidationRule(object.validationRule, true) + '</validationRule>'}
-	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>')}
+	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>').join('')}
 ${rootTagEnd}`;
 }

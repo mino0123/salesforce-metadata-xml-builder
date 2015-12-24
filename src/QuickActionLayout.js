@@ -10,6 +10,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.layoutSectionStyle == null ? '' : '<layoutSectionStyle>' + LayoutSectionStyle(object.layoutSectionStyle, true) + '</layoutSectionStyle>'}
-	${object.quickActionLayoutColumns == null ? '' : object.quickActionLayoutColumns.map(p => '<quickActionLayoutColumns>' + QuickActionLayoutColumn(p, true) + '</quickActionLayoutColumns>')}
+	${object.quickActionLayoutColumns == null ? '' : object.quickActionLayoutColumns.map(p => '<quickActionLayoutColumns>' + QuickActionLayoutColumn(p, true) + '</quickActionLayoutColumns>').join('')}
 ${rootTagEnd}`;
 }

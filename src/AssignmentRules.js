@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.assignmentRule == null ? '' : object.assignmentRule.map(p => '<assignmentRule>' + AssignmentRule(p, true) + '</assignmentRule>')}
+	${object.assignmentRule == null ? '' : object.assignmentRule.map(p => '<assignmentRule>' + AssignmentRule(p, true) + '</assignmentRule>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

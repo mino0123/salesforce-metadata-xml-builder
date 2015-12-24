@@ -7,8 +7,8 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.customTab == null ? '' : object.customTab.map(p => '<customTab>' + p + '</customTab>')}
+	${object.customTab == null ? '' : object.customTab.map(p => '<customTab>' + p + '</customTab>').join('')}
 	${object.defaultTab == null ? '' : '<defaultTab>' + object.defaultTab + '</defaultTab>'}
-	${object.standardTab == null ? '' : object.standardTab.map(p => '<standardTab>' + p + '</standardTab>')}
+	${object.standardTab == null ? '' : object.standardTab.map(p => '<standardTab>' + p + '</standardTab>').join('')}
 ${rootTagEnd}`;
 }

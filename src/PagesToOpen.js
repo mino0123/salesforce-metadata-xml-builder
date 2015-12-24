@@ -7,6 +7,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.pageToOpen == null ? '' : object.pageToOpen.map(p => '<pageToOpen>' + p + '</pageToOpen>')}
+	${object.pageToOpen == null ? '' : object.pageToOpen.map(p => '<pageToOpen>' + p + '</pageToOpen>').join('')}
 ${rootTagEnd}`;
 }

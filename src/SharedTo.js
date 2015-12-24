@@ -10,21 +10,21 @@ module.exports = (object, asChild) => {
 	${object.allCustomerPortalUsers == null ? '' : '<allCustomerPortalUsers>' + object.allCustomerPortalUsers + '</allCustomerPortalUsers>'}
 	${object.allInternalUsers == null ? '' : '<allInternalUsers>' + object.allInternalUsers + '</allInternalUsers>'}
 	${object.allPartnerUsers == null ? '' : '<allPartnerUsers>' + object.allPartnerUsers + '</allPartnerUsers>'}
-	${object.group == null ? '' : object.group.map(p => '<group>' + p + '</group>')}
-	${object.groups == null ? '' : object.groups.map(p => '<groups>' + p + '</groups>')}
-	${object.managerSubordinates == null ? '' : object.managerSubordinates.map(p => '<managerSubordinates>' + p + '</managerSubordinates>')}
-	${object.managers == null ? '' : object.managers.map(p => '<managers>' + p + '</managers>')}
-	${object.portalRole == null ? '' : object.portalRole.map(p => '<portalRole>' + p + '</portalRole>')}
-	${object.portalRoleAndSubordinates == null ? '' : object.portalRoleAndSubordinates.map(p => '<portalRoleAndSubordinates>' + p + '</portalRoleAndSubordinates>')}
-	${object.queue == null ? '' : object.queue.map(p => '<queue>' + p + '</queue>')}
-	${object.role == null ? '' : object.role.map(p => '<role>' + p + '</role>')}
-	${object.roleAndSubordinates == null ? '' : object.roleAndSubordinates.map(p => '<roleAndSubordinates>' + p + '</roleAndSubordinates>')}
-	${object.roleAndSubordinatesInternal == null ? '' : object.roleAndSubordinatesInternal.map(p => '<roleAndSubordinatesInternal>' + p + '</roleAndSubordinatesInternal>')}
-	${object.roles == null ? '' : object.roles.map(p => '<roles>' + p + '</roles>')}
-	${object.rolesAndSubordinates == null ? '' : object.rolesAndSubordinates.map(p => '<rolesAndSubordinates>' + p + '</rolesAndSubordinates>')}
-	${object.territories == null ? '' : object.territories.map(p => '<territories>' + p + '</territories>')}
-	${object.territoriesAndSubordinates == null ? '' : object.territoriesAndSubordinates.map(p => '<territoriesAndSubordinates>' + p + '</territoriesAndSubordinates>')}
-	${object.territory == null ? '' : object.territory.map(p => '<territory>' + p + '</territory>')}
-	${object.territoryAndSubordinates == null ? '' : object.territoryAndSubordinates.map(p => '<territoryAndSubordinates>' + p + '</territoryAndSubordinates>')}
+	${object.group == null ? '' : object.group.map(p => '<group>' + p + '</group>').join('')}
+	${object.groups == null ? '' : object.groups.map(p => '<groups>' + p + '</groups>').join('')}
+	${object.managerSubordinates == null ? '' : object.managerSubordinates.map(p => '<managerSubordinates>' + p + '</managerSubordinates>').join('')}
+	${object.managers == null ? '' : object.managers.map(p => '<managers>' + p + '</managers>').join('')}
+	${object.portalRole == null ? '' : object.portalRole.map(p => '<portalRole>' + p + '</portalRole>').join('')}
+	${object.portalRoleAndSubordinates == null ? '' : object.portalRoleAndSubordinates.map(p => '<portalRoleAndSubordinates>' + p + '</portalRoleAndSubordinates>').join('')}
+	${object.queue == null ? '' : object.queue.map(p => '<queue>' + p + '</queue>').join('')}
+	${object.role == null ? '' : object.role.map(p => '<role>' + p + '</role>').join('')}
+	${object.roleAndSubordinates == null ? '' : object.roleAndSubordinates.map(p => '<roleAndSubordinates>' + p + '</roleAndSubordinates>').join('')}
+	${object.roleAndSubordinatesInternal == null ? '' : object.roleAndSubordinatesInternal.map(p => '<roleAndSubordinatesInternal>' + p + '</roleAndSubordinatesInternal>').join('')}
+	${object.roles == null ? '' : object.roles.map(p => '<roles>' + p + '</roles>').join('')}
+	${object.rolesAndSubordinates == null ? '' : object.rolesAndSubordinates.map(p => '<rolesAndSubordinates>' + p + '</rolesAndSubordinates>').join('')}
+	${object.territories == null ? '' : object.territories.map(p => '<territories>' + p + '</territories>').join('')}
+	${object.territoriesAndSubordinates == null ? '' : object.territoriesAndSubordinates.map(p => '<territoriesAndSubordinates>' + p + '</territoriesAndSubordinates>').join('')}
+	${object.territory == null ? '' : object.territory.map(p => '<territory>' + p + '</territory>').join('')}
+	${object.territoryAndSubordinates == null ? '' : object.territoryAndSubordinates.map(p => '<territoryAndSubordinates>' + p + '</territoryAndSubordinates>').join('')}
 ${rootTagEnd}`;
 }

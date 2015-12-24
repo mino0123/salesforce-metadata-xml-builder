@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.dashboardGridComponents == null ? '' : object.dashboardGridComponents.map(p => '<dashboardGridComponents>' + DashboardGridComponent(p, true) + '</dashboardGridComponents>')}
+	${object.dashboardGridComponents == null ? '' : object.dashboardGridComponents.map(p => '<dashboardGridComponents>' + DashboardGridComponent(p, true) + '</dashboardGridComponents>').join('')}
 	${object.numberOfColumns == null ? '' : '<numberOfColumns>' + object.numberOfColumns + '</numberOfColumns>'}
 	${object.rowHeight == null ? '' : '<rowHeight>' + object.rowHeight + '</rowHeight>'}
 ${rootTagEnd}`;

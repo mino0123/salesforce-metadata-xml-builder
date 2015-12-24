@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.items == null ? '' : object.items.map(p => '<items>' + CallCenterItem(p, true) + '</items>')}
+	${object.items == null ? '' : object.items.map(p => '<items>' + CallCenterItem(p, true) + '</items>').join('')}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
 ${rootTagEnd}`;

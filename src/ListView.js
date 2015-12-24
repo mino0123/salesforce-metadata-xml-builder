@@ -12,10 +12,10 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.booleanFilter == null ? '' : '<booleanFilter>' + object.booleanFilter + '</booleanFilter>'}
-	${object.columns == null ? '' : object.columns.map(p => '<columns>' + p + '</columns>')}
+	${object.columns == null ? '' : object.columns.map(p => '<columns>' + p + '</columns>').join('')}
 	${object.division == null ? '' : '<division>' + object.division + '</division>'}
 	${object.filterScope == null ? '' : '<filterScope>' + FilterScope(object.filterScope, true) + '</filterScope>'}
-	${object.filters == null ? '' : object.filters.map(p => '<filters>' + ListViewFilter(p, true) + '</filters>')}
+	${object.filters == null ? '' : object.filters.map(p => '<filters>' + ListViewFilter(p, true) + '</filters>').join('')}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.language == null ? '' : '<language>' + Language(object.language, true) + '</language>'}
 	${object.queue == null ? '' : '<queue>' + object.queue + '</queue>'}

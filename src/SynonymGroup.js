@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.languages == null ? '' : object.languages.map(p => '<languages>' + Language(p, true) + '</languages>')}
-	${object.terms == null ? '' : object.terms.map(p => '<terms>' + p + '</terms>')}
+	${object.languages == null ? '' : object.languages.map(p => '<languages>' + Language(p, true) + '</languages>').join('')}
+	${object.terms == null ? '' : object.terms.map(p => '<terms>' + p + '</terms>').join('')}
 ${rootTagEnd}`;
 }

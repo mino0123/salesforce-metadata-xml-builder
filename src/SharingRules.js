@@ -10,9 +10,9 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.sharingCriteriaRules == null ? '' : object.sharingCriteriaRules.map(p => '<sharingCriteriaRules>' + SharingCriteriaRule(p, true) + '</sharingCriteriaRules>')}
-	${object.sharingOwnerRules == null ? '' : object.sharingOwnerRules.map(p => '<sharingOwnerRules>' + SharingOwnerRule(p, true) + '</sharingOwnerRules>')}
-	${object.sharingTerritoryRules == null ? '' : object.sharingTerritoryRules.map(p => '<sharingTerritoryRules>' + SharingTerritoryRule(p, true) + '</sharingTerritoryRules>')}
+	${object.sharingCriteriaRules == null ? '' : object.sharingCriteriaRules.map(p => '<sharingCriteriaRules>' + SharingCriteriaRule(p, true) + '</sharingCriteriaRules>').join('')}
+	${object.sharingOwnerRules == null ? '' : object.sharingOwnerRules.map(p => '<sharingOwnerRules>' + SharingOwnerRule(p, true) + '</sharingOwnerRules>').join('')}
+	${object.sharingTerritoryRules == null ? '' : object.sharingTerritoryRules.map(p => '<sharingTerritoryRules>' + SharingTerritoryRule(p, true) + '</sharingTerritoryRules>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

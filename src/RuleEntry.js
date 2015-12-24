@@ -17,9 +17,9 @@ module.exports = (object, asChild) => {
 	${object.booleanFilter == null ? '' : '<booleanFilter>' + object.booleanFilter + '</booleanFilter>'}
 	${object.businessHours == null ? '' : '<businessHours>' + object.businessHours + '</businessHours>'}
 	${object.businessHoursSource == null ? '' : '<businessHoursSource>' + BusinessHoursSourceType(object.businessHoursSource, true) + '</businessHoursSource>'}
-	${object.criteriaItems == null ? '' : object.criteriaItems.map(p => '<criteriaItems>' + FilterItem(p, true) + '</criteriaItems>')}
+	${object.criteriaItems == null ? '' : object.criteriaItems.map(p => '<criteriaItems>' + FilterItem(p, true) + '</criteriaItems>').join('')}
 	${object.disableEscalationWhenModified == null ? '' : '<disableEscalationWhenModified>' + object.disableEscalationWhenModified + '</disableEscalationWhenModified>'}
-	${object.escalationAction == null ? '' : object.escalationAction.map(p => '<escalationAction>' + EscalationAction(p, true) + '</escalationAction>')}
+	${object.escalationAction == null ? '' : object.escalationAction.map(p => '<escalationAction>' + EscalationAction(p, true) + '</escalationAction>').join('')}
 	${object.escalationStartTime == null ? '' : '<escalationStartTime>' + EscalationStartTimeType(object.escalationStartTime, true) + '</escalationStartTime>'}
 	${object.formula == null ? '' : '<formula>' + object.formula + '</formula>'}
 	${object.notifyCcRecipients == null ? '' : '<notifyCcRecipients>' + object.notifyCcRecipients + '</notifyCcRecipients>'}
@@ -27,7 +27,7 @@ module.exports = (object, asChild) => {
 	${object.replyToEmail == null ? '' : '<replyToEmail>' + object.replyToEmail + '</replyToEmail>'}
 	${object.senderEmail == null ? '' : '<senderEmail>' + object.senderEmail + '</senderEmail>'}
 	${object.senderName == null ? '' : '<senderName>' + object.senderName + '</senderName>'}
-	${object.team == null ? '' : object.team.map(p => '<team>' + p + '</team>')}
+	${object.team == null ? '' : object.team.map(p => '<team>' + p + '</team>').join('')}
 	${object.template == null ? '' : '<template>' + object.template + '</template>'}
 ${rootTagEnd}`;
 }

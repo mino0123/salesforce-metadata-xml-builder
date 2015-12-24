@@ -9,6 +9,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.picklist == null ? '' : '<picklist>' + object.picklist + '</picklist>'}
-	${object.values == null ? '' : object.values.map(p => '<values>' + PicklistValue(p, true) + '</values>')}
+	${object.values == null ? '' : object.values.map(p => '<values>' + PicklistValue(p, true) + '</values>').join('')}
 ${rootTagEnd}`;
 }

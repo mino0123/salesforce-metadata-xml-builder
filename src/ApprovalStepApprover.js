@@ -9,7 +9,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.approver == null ? '' : object.approver.map(p => '<approver>' + Approver(p, true) + '</approver>')}
+	${object.approver == null ? '' : object.approver.map(p => '<approver>' + Approver(p, true) + '</approver>').join('')}
 	${object.whenMultipleApprovers == null ? '' : '<whenMultipleApprovers>' + RoutingType(object.whenMultipleApprovers, true) + '</whenMultipleApprovers>'}
 ${rootTagEnd}`;
 }

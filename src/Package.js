@@ -13,10 +13,10 @@ module.exports = (object, asChild) => {
 	${object.apiAccessLevel == null ? '' : '<apiAccessLevel>' + APIAccessLevel(object.apiAccessLevel, true) + '</apiAccessLevel>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.namespacePrefix == null ? '' : '<namespacePrefix>' + object.namespacePrefix + '</namespacePrefix>'}
-	${object.objectPermissions == null ? '' : object.objectPermissions.map(p => '<objectPermissions>' + ProfileObjectPermissions(p, true) + '</objectPermissions>')}
+	${object.objectPermissions == null ? '' : object.objectPermissions.map(p => '<objectPermissions>' + ProfileObjectPermissions(p, true) + '</objectPermissions>').join('')}
 	${object.postInstallClass == null ? '' : '<postInstallClass>' + object.postInstallClass + '</postInstallClass>'}
 	${object.setupWeblink == null ? '' : '<setupWeblink>' + object.setupWeblink + '</setupWeblink>'}
-	${object.types == null ? '' : object.types.map(p => '<types>' + PackageTypeMembers(p, true) + '</types>')}
+	${object.types == null ? '' : object.types.map(p => '<types>' + PackageTypeMembers(p, true) + '</types>').join('')}
 	${object.uninstallClass == null ? '' : '<uninstallClass>' + object.uninstallClass + '</uninstallClass>'}
 	${object.version == null ? '' : '<version>' + object.version + '</version>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}

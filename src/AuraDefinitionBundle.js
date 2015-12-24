@@ -18,7 +18,7 @@ module.exports = (object, asChild) => {
 	${object.helperContent == null ? '' : '<helperContent>' + object.helperContent + '</helperContent>'}
 	${object.markup == null ? '' : '<markup>' + object.markup + '</markup>'}
 	${object.modelContent == null ? '' : '<modelContent>' + object.modelContent + '</modelContent>'}
-	${object.packageVersions == null ? '' : object.packageVersions.map(p => '<packageVersions>' + PackageVersion(p, true) + '</packageVersions>')}
+	${object.packageVersions == null ? '' : object.packageVersions.map(p => '<packageVersions>' + PackageVersion(p, true) + '</packageVersions>').join('')}
 	${object.rendererContent == null ? '' : '<rendererContent>' + object.rendererContent + '</rendererContent>'}
 	${object.styleContent == null ? '' : '<styleContent>' + object.styleContent + '</styleContent>'}
 	${object.testsuiteContent == null ? '' : '<testsuiteContent>' + object.testsuiteContent + '</testsuiteContent>'}

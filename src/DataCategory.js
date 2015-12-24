@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.dataCategory == null ? '' : object.dataCategory.map(p => '<dataCategory>' + DataCategory(p, true) + '</dataCategory>')}
+	${object.dataCategory == null ? '' : object.dataCategory.map(p => '<dataCategory>' + DataCategory(p, true) + '</dataCategory>').join('')}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
 ${rootTagEnd}`;

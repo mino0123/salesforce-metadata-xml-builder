@@ -7,7 +7,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.permissionSet == null ? '' : object.permissionSet.map(p => '<permissionSet>' + p + '</permissionSet>')}
-	${object.profile == null ? '' : object.profile.map(p => '<profile>' + p + '</profile>')}
+	${object.permissionSet == null ? '' : object.permissionSet.map(p => '<permissionSet>' + p + '</permissionSet>').join('')}
+	${object.profile == null ? '' : object.profile.map(p => '<profile>' + p + '</profile>').join('')}
 ${rootTagEnd}`;
 }

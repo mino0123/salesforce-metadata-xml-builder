@@ -13,14 +13,14 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.apiVersion == null ? '' : '<apiVersion>' + object.apiVersion + '</apiVersion>'}
-	${object.attachedDocuments == null ? '' : object.attachedDocuments.map(p => '<attachedDocuments>' + p + '</attachedDocuments>')}
-	${object.attachments == null ? '' : object.attachments.map(p => '<attachments>' + Attachment(p, true) + '</attachments>')}
+	${object.attachedDocuments == null ? '' : object.attachedDocuments.map(p => '<attachedDocuments>' + p + '</attachedDocuments>').join('')}
+	${object.attachments == null ? '' : object.attachments.map(p => '<attachments>' + Attachment(p, true) + '</attachments>').join('')}
 	${object.available == null ? '' : '<available>' + object.available + '</available>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.encodingKey == null ? '' : '<encodingKey>' + Encoding(object.encodingKey, true) + '</encodingKey>'}
 	${object.letterhead == null ? '' : '<letterhead>' + object.letterhead + '</letterhead>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
-	${object.packageVersions == null ? '' : object.packageVersions.map(p => '<packageVersions>' + PackageVersion(p, true) + '</packageVersions>')}
+	${object.packageVersions == null ? '' : object.packageVersions.map(p => '<packageVersions>' + PackageVersion(p, true) + '</packageVersions>').join('')}
 	${object.style == null ? '' : '<style>' + EmailTemplateStyle(object.style, true) + '</style>'}
 	${object.subject == null ? '' : '<subject>' + object.subject + '</subject>'}
 	${object.textOnly == null ? '' : '<textOnly>' + object.textOnly + '</textOnly>'}

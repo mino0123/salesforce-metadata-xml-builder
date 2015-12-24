@@ -13,6 +13,6 @@ module.exports = (object, asChild) => {
 	${object.leftValueReference == null ? '' : '<leftValueReference>' + object.leftValueReference + '</leftValueReference>'}
 	${object.operator == null ? '' : '<operator>' + FlowComparisonOperator(object.operator, true) + '</operator>'}
 	${object.rightValue == null ? '' : '<rightValue>' + FlowElementReferenceOrValue(object.rightValue, true) + '</rightValue>'}
-	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>')}
+	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>').join('')}
 ${rootTagEnd}`;
 }

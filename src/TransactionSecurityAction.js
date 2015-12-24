@@ -10,7 +10,7 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.block == null ? '' : '<block>' + object.block + '</block>'}
 	${object.endSession == null ? '' : '<endSession>' + object.endSession + '</endSession>'}
-	${object.notifications == null ? '' : object.notifications.map(p => '<notifications>' + TransactionSecurityNotification(p, true) + '</notifications>')}
+	${object.notifications == null ? '' : object.notifications.map(p => '<notifications>' + TransactionSecurityNotification(p, true) + '</notifications>').join('')}
 	${object.twoFactorAuthentication == null ? '' : '<twoFactorAuthentication>' + object.twoFactorAuthentication + '</twoFactorAuthentication>'}
 ${rootTagEnd}`;
 }

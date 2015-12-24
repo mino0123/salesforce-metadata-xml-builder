@@ -9,7 +9,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.controllingField == null ? '' : '<controllingField>' + object.controllingField + '</controllingField>'}
-	${object.picklistValues == null ? '' : object.picklistValues.map(p => '<picklistValues>' + PicklistValue(p, true) + '</picklistValues>')}
+	${object.picklistValues == null ? '' : object.picklistValues.map(p => '<picklistValues>' + PicklistValue(p, true) + '</picklistValues>').join('')}
 	${object.sorted == null ? '' : '<sorted>' + object.sorted + '</sorted>'}
 ${rootTagEnd}`;
 }

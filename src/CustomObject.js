@@ -27,12 +27,12 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.actionOverrides == null ? '' : object.actionOverrides.map(p => '<actionOverrides>' + ActionOverride(p, true) + '</actionOverrides>')}
+	${object.actionOverrides == null ? '' : object.actionOverrides.map(p => '<actionOverrides>' + ActionOverride(p, true) + '</actionOverrides>').join('')}
 	${object.allowInChatterGroups == null ? '' : '<allowInChatterGroups>' + object.allowInChatterGroups + '</allowInChatterGroups>'}
 	${object.articleTypeChannelDisplay == null ? '' : '<articleTypeChannelDisplay>' + ArticleTypeChannelDisplay(object.articleTypeChannelDisplay, true) + '</articleTypeChannelDisplay>'}
-	${object.businessProcesses == null ? '' : object.businessProcesses.map(p => '<businessProcesses>' + BusinessProcess(p, true) + '</businessProcesses>')}
+	${object.businessProcesses == null ? '' : object.businessProcesses.map(p => '<businessProcesses>' + BusinessProcess(p, true) + '</businessProcesses>').join('')}
 	${object.compactLayoutAssignment == null ? '' : '<compactLayoutAssignment>' + object.compactLayoutAssignment + '</compactLayoutAssignment>'}
-	${object.compactLayouts == null ? '' : object.compactLayouts.map(p => '<compactLayouts>' + CompactLayout(p, true) + '</compactLayouts>')}
+	${object.compactLayouts == null ? '' : object.compactLayouts.map(p => '<compactLayouts>' + CompactLayout(p, true) + '</compactLayouts>').join('')}
 	${object.customHelp == null ? '' : '<customHelp>' + object.customHelp + '</customHelp>'}
 	${object.customHelpPage == null ? '' : '<customHelpPage>' + object.customHelpPage + '</customHelpPage>'}
 	${object.customSettingsType == null ? '' : '<customSettingsType>' + CustomSettingsType(object.customSettingsType, true) + '</customSettingsType>'}
@@ -53,26 +53,26 @@ module.exports = (object, asChild) => {
 	${object.externalName == null ? '' : '<externalName>' + object.externalName + '</externalName>'}
 	${object.externalRepository == null ? '' : '<externalRepository>' + object.externalRepository + '</externalRepository>'}
 	${object.externalSharingModel == null ? '' : '<externalSharingModel>' + SharingModel(object.externalSharingModel, true) + '</externalSharingModel>'}
-	${object.fieldSets == null ? '' : object.fieldSets.map(p => '<fieldSets>' + FieldSet(p, true) + '</fieldSets>')}
-	${object.fields == null ? '' : object.fields.map(p => '<fields>' + CustomField(p, true) + '</fields>')}
+	${object.fieldSets == null ? '' : object.fieldSets.map(p => '<fieldSets>' + FieldSet(p, true) + '</fieldSets>').join('')}
+	${object.fields == null ? '' : object.fields.map(p => '<fields>' + CustomField(p, true) + '</fields>').join('')}
 	${object.gender == null ? '' : '<gender>' + Gender(object.gender, true) + '</gender>'}
 	${object.historyRetentionPolicy == null ? '' : '<historyRetentionPolicy>' + HistoryRetentionPolicy(object.historyRetentionPolicy, true) + '</historyRetentionPolicy>'}
 	${object.household == null ? '' : '<household>' + object.household + '</household>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
-	${object.listViews == null ? '' : object.listViews.map(p => '<listViews>' + ListView(p, true) + '</listViews>')}
+	${object.listViews == null ? '' : object.listViews.map(p => '<listViews>' + ListView(p, true) + '</listViews>').join('')}
 	${object.nameField == null ? '' : '<nameField>' + CustomField(object.nameField, true) + '</nameField>'}
 	${object.pluralLabel == null ? '' : '<pluralLabel>' + object.pluralLabel + '</pluralLabel>'}
 	${object.recordTypeTrackFeedHistory == null ? '' : '<recordTypeTrackFeedHistory>' + object.recordTypeTrackFeedHistory + '</recordTypeTrackFeedHistory>'}
 	${object.recordTypeTrackHistory == null ? '' : '<recordTypeTrackHistory>' + object.recordTypeTrackHistory + '</recordTypeTrackHistory>'}
-	${object.recordTypes == null ? '' : object.recordTypes.map(p => '<recordTypes>' + RecordType(p, true) + '</recordTypes>')}
+	${object.recordTypes == null ? '' : object.recordTypes.map(p => '<recordTypes>' + RecordType(p, true) + '</recordTypes>').join('')}
 	${object.searchLayouts == null ? '' : '<searchLayouts>' + SearchLayouts(object.searchLayouts, true) + '</searchLayouts>'}
 	${object.sharingModel == null ? '' : '<sharingModel>' + SharingModel(object.sharingModel, true) + '</sharingModel>'}
-	${object.sharingReasons == null ? '' : object.sharingReasons.map(p => '<sharingReasons>' + SharingReason(p, true) + '</sharingReasons>')}
-	${object.sharingRecalculations == null ? '' : object.sharingRecalculations.map(p => '<sharingRecalculations>' + SharingRecalculation(p, true) + '</sharingRecalculations>')}
+	${object.sharingReasons == null ? '' : object.sharingReasons.map(p => '<sharingReasons>' + SharingReason(p, true) + '</sharingReasons>').join('')}
+	${object.sharingRecalculations == null ? '' : object.sharingRecalculations.map(p => '<sharingRecalculations>' + SharingRecalculation(p, true) + '</sharingRecalculations>').join('')}
 	${object.startsWith == null ? '' : '<startsWith>' + StartsWith(object.startsWith, true) + '</startsWith>'}
-	${object.validationRules == null ? '' : object.validationRules.map(p => '<validationRules>' + ValidationRule(p, true) + '</validationRules>')}
+	${object.validationRules == null ? '' : object.validationRules.map(p => '<validationRules>' + ValidationRule(p, true) + '</validationRules>').join('')}
 	${object.visibility == null ? '' : '<visibility>' + SetupObjectVisibility(object.visibility, true) + '</visibility>'}
-	${object.webLinks == null ? '' : object.webLinks.map(p => '<webLinks>' + WebLink(p, true) + '</webLinks>')}
+	${object.webLinks == null ? '' : object.webLinks.map(p => '<webLinks>' + WebLink(p, true) + '</webLinks>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

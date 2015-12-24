@@ -13,7 +13,7 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.canvas == null ? '' : '<canvas>' + object.canvas + '</canvas>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
-	${object.fieldOverrides == null ? '' : object.fieldOverrides.map(p => '<fieldOverrides>' + FieldOverride(p, true) + '</fieldOverrides>')}
+	${object.fieldOverrides == null ? '' : object.fieldOverrides.map(p => '<fieldOverrides>' + FieldOverride(p, true) + '</fieldOverrides>').join('')}
 	${object.height == null ? '' : '<height>' + object.height + '</height>'}
 	${object.icon == null ? '' : '<icon>' + object.icon + '</icon>'}
 	${object.isProtected == null ? '' : '<isProtected>' + object.isProtected + '</isProtected>'}

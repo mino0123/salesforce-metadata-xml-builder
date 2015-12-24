@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.aggregateTypes == null ? '' : object.aggregateTypes.map(p => '<aggregateTypes>' + ReportSummaryType(p, true) + '</aggregateTypes>')}
+	${object.aggregateTypes == null ? '' : object.aggregateTypes.map(p => '<aggregateTypes>' + ReportSummaryType(p, true) + '</aggregateTypes>').join('')}
 	${object.field == null ? '' : '<field>' + object.field + '</field>'}
 	${object.reverseColors == null ? '' : '<reverseColors>' + object.reverseColors + '</reverseColors>'}
 	${object.showChanges == null ? '' : '<showChanges>' + object.showChanges + '</showChanges>'}

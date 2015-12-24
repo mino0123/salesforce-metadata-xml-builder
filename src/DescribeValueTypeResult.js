@@ -8,6 +8,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.valueTypeFields == null ? '' : object.valueTypeFields.map(p => '<valueTypeFields>' + ValueTypeField(p, true) + '</valueTypeFields>')}
+	${object.valueTypeFields == null ? '' : object.valueTypeFields.map(p => '<valueTypeFields>' + ValueTypeField(p, true) + '</valueTypeFields>').join('')}
 ${rootTagEnd}`;
 }

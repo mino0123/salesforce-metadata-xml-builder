@@ -8,6 +8,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.level == null ? '' : object.level.map(p => '<level>' + ReputationLevel(p, true) + '</level>')}
+	${object.level == null ? '' : object.level.map(p => '<level>' + ReputationLevel(p, true) + '</level>').join('')}
 ${rootTagEnd}`;
 }

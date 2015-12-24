@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.escalationRule == null ? '' : object.escalationRule.map(p => '<escalationRule>' + EscalationRule(p, true) + '</escalationRule>')}
+	${object.escalationRule == null ? '' : object.escalationRule.map(p => '<escalationRule>' + EscalationRule(p, true) + '</escalationRule>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

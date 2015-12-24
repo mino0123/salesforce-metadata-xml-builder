@@ -9,7 +9,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.created == null ? '' : '<created>' + object.created + '</created>'}
-	${object.errors == null ? '' : object.errors.map(p => '<errors>' + Error(p, true) + '</errors>')}
+	${object.errors == null ? '' : object.errors.map(p => '<errors>' + Error(p, true) + '</errors>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 	${object.success == null ? '' : '<success>' + object.success + '</success>'}
 ${rootTagEnd}`;

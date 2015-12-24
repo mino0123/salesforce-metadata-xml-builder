@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.metadataObjects == null ? '' : object.metadataObjects.map(p => '<metadataObjects>' + DescribeMetadataObject(p, true) + '</metadataObjects>')}
+	${object.metadataObjects == null ? '' : object.metadataObjects.map(p => '<metadataObjects>' + DescribeMetadataObject(p, true) + '</metadataObjects>').join('')}
 	${object.organizationNamespace == null ? '' : '<organizationNamespace>' + object.organizationNamespace + '</organizationNamespace>'}
 	${object.partialSaveAllowed == null ? '' : '<partialSaveAllowed>' + object.partialSaveAllowed + '</partialSaveAllowed>'}
 	${object.testRequired == null ? '' : '<testRequired>' + object.testRequired + '</testRequired>'}

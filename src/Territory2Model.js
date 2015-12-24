@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.customFields == null ? '' : object.customFields.map(p => '<customFields>' + FieldValue(p, true) + '</customFields>')}
+	${object.customFields == null ? '' : object.customFields.map(p => '<customFields>' + FieldValue(p, true) + '</customFields>').join('')}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}

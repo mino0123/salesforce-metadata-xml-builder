@@ -12,7 +12,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
-	${object.flexiPageRegions == null ? '' : object.flexiPageRegions.map(p => '<flexiPageRegions>' + FlexiPageRegion(p, true) + '</flexiPageRegions>')}
+	${object.flexiPageRegions == null ? '' : object.flexiPageRegions.map(p => '<flexiPageRegions>' + FlexiPageRegion(p, true) + '</flexiPageRegions>').join('')}
 	${object.masterLabel == null ? '' : '<masterLabel>' + object.masterLabel + '</masterLabel>'}
 	${object.pageTemplate == null ? '' : '<pageTemplate>' + object.pageTemplate + '</pageTemplate>'}
 	${object.parentFlexiPage == null ? '' : '<parentFlexiPage>' + object.parentFlexiPage + '</parentFlexiPage>'}

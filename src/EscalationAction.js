@@ -13,7 +13,7 @@ module.exports = (object, asChild) => {
 	${object.assignedToType == null ? '' : '<assignedToType>' + AssignToLookupValueType(object.assignedToType, true) + '</assignedToType>'}
 	${object.minutesToEscalation == null ? '' : '<minutesToEscalation>' + object.minutesToEscalation + '</minutesToEscalation>'}
 	${object.notifyCaseOwner == null ? '' : '<notifyCaseOwner>' + object.notifyCaseOwner + '</notifyCaseOwner>'}
-	${object.notifyEmail == null ? '' : object.notifyEmail.map(p => '<notifyEmail>' + p + '</notifyEmail>')}
+	${object.notifyEmail == null ? '' : object.notifyEmail.map(p => '<notifyEmail>' + p + '</notifyEmail>').join('')}
 	${object.notifyTo == null ? '' : '<notifyTo>' + object.notifyTo + '</notifyTo>'}
 	${object.notifyToTemplate == null ? '' : '<notifyToTemplate>' + object.notifyToTemplate + '</notifyToTemplate>'}
 ${rootTagEnd}`;

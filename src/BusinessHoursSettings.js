@@ -9,8 +9,8 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.businessHours == null ? '' : object.businessHours.map(p => '<businessHours>' + BusinessHoursEntry(p, true) + '</businessHours>')}
-	${object.holidays == null ? '' : object.holidays.map(p => '<holidays>' + Holiday(p, true) + '</holidays>')}
+	${object.businessHours == null ? '' : object.businessHours.map(p => '<businessHours>' + BusinessHoursEntry(p, true) + '</businessHours>').join('')}
+	${object.holidays == null ? '' : object.holidays.map(p => '<holidays>' + Holiday(p, true) + '</holidays>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -8,6 +8,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.quickActionListItems == null ? '' : object.quickActionListItems.map(p => '<quickActionListItems>' + QuickActionListItem(p, true) + '</quickActionListItems>')}
+	${object.quickActionListItems == null ? '' : object.quickActionListItems.map(p => '<quickActionListItems>' + QuickActionListItem(p, true) + '</quickActionListItems>').join('')}
 ${rootTagEnd}`;
 }

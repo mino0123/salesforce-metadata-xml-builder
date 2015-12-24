@@ -7,6 +7,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.snapshot == null ? '' : object.snapshot.map(p => '<snapshot>' + p + '</snapshot>')}
+	${object.snapshot == null ? '' : object.snapshot.map(p => '<snapshot>' + p + '</snapshot>').join('')}
 ${rootTagEnd}`;
 }

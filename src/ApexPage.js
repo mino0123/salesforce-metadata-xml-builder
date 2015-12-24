@@ -13,7 +13,7 @@ module.exports = (object, asChild) => {
 	${object.confirmationTokenRequired == null ? '' : '<confirmationTokenRequired>' + object.confirmationTokenRequired + '</confirmationTokenRequired>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
-	${object.packageVersions == null ? '' : object.packageVersions.map(p => '<packageVersions>' + PackageVersion(p, true) + '</packageVersions>')}
+	${object.packageVersions == null ? '' : object.packageVersions.map(p => '<packageVersions>' + PackageVersion(p, true) + '</packageVersions>').join('')}
 	${object.content == null ? '' : '<content>' + object.content + '</content>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;

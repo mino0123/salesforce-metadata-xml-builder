@@ -17,7 +17,7 @@ module.exports = (object, asChild) => {
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.join == null ? '' : '<join>' + ObjectRelationship(object.join, true) + '</join>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
-	${object.sections == null ? '' : object.sections.map(p => '<sections>' + ReportLayoutSection(p, true) + '</sections>')}
+	${object.sections == null ? '' : object.sections.map(p => '<sections>' + ReportLayoutSection(p, true) + '</sections>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

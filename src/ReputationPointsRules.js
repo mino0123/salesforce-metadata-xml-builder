@@ -8,6 +8,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.pointsRule == null ? '' : object.pointsRule.map(p => '<pointsRule>' + ReputationPointsRule(p, true) + '</pointsRule>')}
+	${object.pointsRule == null ? '' : object.pointsRule.map(p => '<pointsRule>' + ReputationPointsRule(p, true) + '</pointsRule>').join('')}
 ${rootTagEnd}`;
 }

@@ -12,7 +12,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.choiceReferences == null ? '' : object.choiceReferences.map(p => '<choiceReferences>' + p + '</choiceReferences>')}
+	${object.choiceReferences == null ? '' : object.choiceReferences.map(p => '<choiceReferences>' + p + '</choiceReferences>').join('')}
 	${object.dataType == null ? '' : '<dataType>' + FlowDataType(object.dataType, true) + '</dataType>'}
 	${object.defaultSelectedChoiceReference == null ? '' : '<defaultSelectedChoiceReference>' + object.defaultSelectedChoiceReference + '</defaultSelectedChoiceReference>'}
 	${object.defaultValue == null ? '' : '<defaultValue>' + FlowElementReferenceOrValue(object.defaultValue, true) + '</defaultValue>'}
@@ -24,6 +24,6 @@ module.exports = (object, asChild) => {
 	${object.validationRule == null ? '' : '<validationRule>' + FlowInputValidationRule(object.validationRule, true) + '</validationRule>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
-	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>')}
+	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>').join('')}
 ${rootTagEnd}`;
 }

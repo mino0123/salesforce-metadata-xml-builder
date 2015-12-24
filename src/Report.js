@@ -24,26 +24,26 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.aggregates == null ? '' : object.aggregates.map(p => '<aggregates>' + ReportAggregate(p, true) + '</aggregates>')}
-	${object.block == null ? '' : object.block.map(p => '<block>' + Report(p, true) + '</block>')}
+	${object.aggregates == null ? '' : object.aggregates.map(p => '<aggregates>' + ReportAggregate(p, true) + '</aggregates>').join('')}
+	${object.block == null ? '' : object.block.map(p => '<block>' + Report(p, true) + '</block>').join('')}
 	${object.blockInfo == null ? '' : '<blockInfo>' + ReportBlockInfo(object.blockInfo, true) + '</blockInfo>'}
-	${object.buckets == null ? '' : object.buckets.map(p => '<buckets>' + ReportBucketField(p, true) + '</buckets>')}
+	${object.buckets == null ? '' : object.buckets.map(p => '<buckets>' + ReportBucketField(p, true) + '</buckets>').join('')}
 	${object.chart == null ? '' : '<chart>' + ReportChart(object.chart, true) + '</chart>'}
-	${object.colorRanges == null ? '' : object.colorRanges.map(p => '<colorRanges>' + ReportColorRange(p, true) + '</colorRanges>')}
-	${object.columns == null ? '' : object.columns.map(p => '<columns>' + ReportColumn(p, true) + '</columns>')}
-	${object.crossFilters == null ? '' : object.crossFilters.map(p => '<crossFilters>' + ReportCrossFilter(p, true) + '</crossFilters>')}
+	${object.colorRanges == null ? '' : object.colorRanges.map(p => '<colorRanges>' + ReportColorRange(p, true) + '</colorRanges>').join('')}
+	${object.columns == null ? '' : object.columns.map(p => '<columns>' + ReportColumn(p, true) + '</columns>').join('')}
+	${object.crossFilters == null ? '' : object.crossFilters.map(p => '<crossFilters>' + ReportCrossFilter(p, true) + '</crossFilters>').join('')}
 	${object.currency == null ? '' : '<currency>' + CurrencyIsoCode(object.currency, true) + '</currency>'}
-	${object.dataCategoryFilters == null ? '' : object.dataCategoryFilters.map(p => '<dataCategoryFilters>' + ReportDataCategoryFilter(p, true) + '</dataCategoryFilters>')}
+	${object.dataCategoryFilters == null ? '' : object.dataCategoryFilters.map(p => '<dataCategoryFilters>' + ReportDataCategoryFilter(p, true) + '</dataCategoryFilters>').join('')}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.division == null ? '' : '<division>' + object.division + '</division>'}
 	${object.filter == null ? '' : '<filter>' + ReportFilter(object.filter, true) + '</filter>'}
 	${object.folderName == null ? '' : '<folderName>' + object.folderName + '</folderName>'}
 	${object.format == null ? '' : '<format>' + ReportFormat(object.format, true) + '</format>'}
-	${object.groupingsAcross == null ? '' : object.groupingsAcross.map(p => '<groupingsAcross>' + ReportGrouping(p, true) + '</groupingsAcross>')}
-	${object.groupingsDown == null ? '' : object.groupingsDown.map(p => '<groupingsDown>' + ReportGrouping(p, true) + '</groupingsDown>')}
+	${object.groupingsAcross == null ? '' : object.groupingsAcross.map(p => '<groupingsAcross>' + ReportGrouping(p, true) + '</groupingsAcross>').join('')}
+	${object.groupingsDown == null ? '' : object.groupingsDown.map(p => '<groupingsDown>' + ReportGrouping(p, true) + '</groupingsDown>').join('')}
 	${object.historicalSelector == null ? '' : '<historicalSelector>' + ReportHistoricalSelector(object.historicalSelector, true) + '</historicalSelector>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
-	${object.params == null ? '' : object.params.map(p => '<params>' + ReportParam(p, true) + '</params>')}
+	${object.params == null ? '' : object.params.map(p => '<params>' + ReportParam(p, true) + '</params>').join('')}
 	${object.reportType == null ? '' : '<reportType>' + object.reportType + '</reportType>'}
 	${object.roleHierarchyFilter == null ? '' : '<roleHierarchyFilter>' + object.roleHierarchyFilter + '</roleHierarchyFilter>'}
 	${object.rowLimit == null ? '' : '<rowLimit>' + object.rowLimit + '</rowLimit>'}

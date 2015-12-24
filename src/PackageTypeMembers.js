@@ -7,7 +7,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.members == null ? '' : object.members.map(p => '<members>' + p + '</members>')}
+	${object.members == null ? '' : object.members.map(p => '<members>' + p + '</members>').join('')}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
 ${rootTagEnd}`;
 }

@@ -12,12 +12,12 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.apexLogId == null ? '' : '<apexLogId>' + object.apexLogId + '</apexLogId>'}
-	${object.codeCoverage == null ? '' : object.codeCoverage.map(p => '<codeCoverage>' + CodeCoverageResult(p, true) + '</codeCoverage>')}
-	${object.codeCoverageWarnings == null ? '' : object.codeCoverageWarnings.map(p => '<codeCoverageWarnings>' + CodeCoverageWarning(p, true) + '</codeCoverageWarnings>')}
-	${object.failures == null ? '' : object.failures.map(p => '<failures>' + RunTestFailure(p, true) + '</failures>')}
+	${object.codeCoverage == null ? '' : object.codeCoverage.map(p => '<codeCoverage>' + CodeCoverageResult(p, true) + '</codeCoverage>').join('')}
+	${object.codeCoverageWarnings == null ? '' : object.codeCoverageWarnings.map(p => '<codeCoverageWarnings>' + CodeCoverageWarning(p, true) + '</codeCoverageWarnings>').join('')}
+	${object.failures == null ? '' : object.failures.map(p => '<failures>' + RunTestFailure(p, true) + '</failures>').join('')}
 	${object.numFailures == null ? '' : '<numFailures>' + object.numFailures + '</numFailures>'}
 	${object.numTestsRun == null ? '' : '<numTestsRun>' + object.numTestsRun + '</numTestsRun>'}
-	${object.successes == null ? '' : object.successes.map(p => '<successes>' + RunTestSuccess(p, true) + '</successes>')}
+	${object.successes == null ? '' : object.successes.map(p => '<successes>' + RunTestSuccess(p, true) + '</successes>').join('')}
 	${object.totalTime == null ? '' : '<totalTime>' + object.totalTime + '</totalTime>'}
 ${rootTagEnd}`;
 }

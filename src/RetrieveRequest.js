@@ -9,9 +9,9 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.apiVersion == null ? '' : '<apiVersion>' + object.apiVersion + '</apiVersion>'}
-	${object.packageNames == null ? '' : object.packageNames.map(p => '<packageNames>' + p + '</packageNames>')}
+	${object.packageNames == null ? '' : object.packageNames.map(p => '<packageNames>' + p + '</packageNames>').join('')}
 	${object.singlePackage == null ? '' : '<singlePackage>' + object.singlePackage + '</singlePackage>'}
-	${object.specificFiles == null ? '' : object.specificFiles.map(p => '<specificFiles>' + p + '</specificFiles>')}
+	${object.specificFiles == null ? '' : object.specificFiles.map(p => '<specificFiles>' + p + '</specificFiles>').join('')}
 	${object.unpackaged == null ? '' : '<unpackaged>' + Package(object.unpackaged, true) + '</unpackaged>'}
 ${rootTagEnd}`;
 }

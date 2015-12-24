@@ -9,7 +9,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.actions == null ? '' : object.actions.map(p => '<actions>' + WorkflowActionReference(p, true) + '</actions>')}
+	${object.actions == null ? '' : object.actions.map(p => '<actions>' + WorkflowActionReference(p, true) + '</actions>').join('')}
 	${object.offsetFromField == null ? '' : '<offsetFromField>' + object.offsetFromField + '</offsetFromField>'}
 	${object.timeLength == null ? '' : '<timeLength>' + object.timeLength + '</timeLength>'}
 	${object.workflowTimeTriggerUnit == null ? '' : '<workflowTimeTriggerUnit>' + WorkflowTimeUnits(object.workflowTimeTriggerUnit, true) + '</workflowTimeTriggerUnit>'}

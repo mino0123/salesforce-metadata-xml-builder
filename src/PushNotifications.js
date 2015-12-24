@@ -8,6 +8,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.pushNotification == null ? '' : object.pushNotification.map(p => '<pushNotification>' + PushNotification(p, true) + '</pushNotification>')}
+	${object.pushNotification == null ? '' : object.pushNotification.map(p => '<pushNotification>' + PushNotification(p, true) + '</pushNotification>').join('')}
 ${rootTagEnd}`;
 }

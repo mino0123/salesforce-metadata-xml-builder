@@ -14,8 +14,8 @@ module.exports = (object, asChild) => {
 	${object.accessMethod == null ? '' : '<accessMethod>' + AccessMethod(object.accessMethod, true) + '</accessMethod>'}
 	${object.canvasUrl == null ? '' : '<canvasUrl>' + object.canvasUrl + '</canvasUrl>'}
 	${object.lifecycleClass == null ? '' : '<lifecycleClass>' + object.lifecycleClass + '</lifecycleClass>'}
-	${object.locations == null ? '' : object.locations.map(p => '<locations>' + CanvasLocationOptions(p, true) + '</locations>')}
-	${object.options == null ? '' : object.options.map(p => '<options>' + CanvasOptions(p, true) + '</options>')}
+	${object.locations == null ? '' : object.locations.map(p => '<locations>' + CanvasLocationOptions(p, true) + '</locations>').join('')}
+	${object.options == null ? '' : object.options.map(p => '<options>' + CanvasOptions(p, true) + '</options>').join('')}
 	${object.samlInitiationMethod == null ? '' : '<samlInitiationMethod>' + SamlInitiationMethod(object.samlInitiationMethod, true) + '</samlInitiationMethod>'}
 ${rootTagEnd}`;
 }

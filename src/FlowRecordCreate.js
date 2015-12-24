@@ -13,7 +13,7 @@ module.exports = (object, asChild) => {
 	${object.assignRecordIdToReference == null ? '' : '<assignRecordIdToReference>' + object.assignRecordIdToReference + '</assignRecordIdToReference>'}
 	${object.connector == null ? '' : '<connector>' + FlowConnector(object.connector, true) + '</connector>'}
 	${object.faultConnector == null ? '' : '<faultConnector>' + FlowConnector(object.faultConnector, true) + '</faultConnector>'}
-	${object.inputAssignments == null ? '' : object.inputAssignments.map(p => '<inputAssignments>' + FlowInputFieldAssignment(p, true) + '</inputAssignments>')}
+	${object.inputAssignments == null ? '' : object.inputAssignments.map(p => '<inputAssignments>' + FlowInputFieldAssignment(p, true) + '</inputAssignments>').join('')}
 	${object.inputReference == null ? '' : '<inputReference>' + object.inputReference + '</inputReference>'}
 	${object.object == null ? '' : '<object>' + object.object + '</object>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
@@ -21,6 +21,6 @@ module.exports = (object, asChild) => {
 	${object.locationY == null ? '' : '<locationY>' + object.locationY + '</locationY>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
-	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>')}
+	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>').join('')}
 ${rootTagEnd}`;
 }

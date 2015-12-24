@@ -10,7 +10,7 @@ module.exports = (object, asChild) => {
 	${object.apiVersion == null ? '' : '<apiVersion>' + object.apiVersion + '</apiVersion>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.endpointUrl == null ? '' : '<endpointUrl>' + object.endpointUrl + '</endpointUrl>'}
-	${object.fields == null ? '' : object.fields.map(p => '<fields>' + p + '</fields>')}
+	${object.fields == null ? '' : object.fields.map(p => '<fields>' + p + '</fields>').join('')}
 	${object.includeSessionId == null ? '' : '<includeSessionId>' + object.includeSessionId + '</includeSessionId>'}
 	${object.integrationUser == null ? '' : '<integrationUser>' + object.integrationUser + '</integrationUser>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}

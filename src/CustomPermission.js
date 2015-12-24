@@ -11,7 +11,7 @@ module.exports = (object, asChild) => {
 	${object.connectedApp == null ? '' : '<connectedApp>' + object.connectedApp + '</connectedApp>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
-	${object.requiredPermission == null ? '' : object.requiredPermission.map(p => '<requiredPermission>' + CustomPermissionDependencyRequired(p, true) + '</requiredPermission>')}
+	${object.requiredPermission == null ? '' : object.requiredPermission.map(p => '<requiredPermission>' + CustomPermissionDependencyRequired(p, true) + '</requiredPermission>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -27,7 +27,7 @@ module.exports = (object, asChild) => {
 	${object.chatterAnswersLoginPage == null ? '' : '<chatterAnswersLoginPage>' + object.chatterAnswersLoginPage + '</chatterAnswersLoginPage>'}
 	${object.chatterAnswersRegistrationPage == null ? '' : '<chatterAnswersRegistrationPage>' + object.chatterAnswersRegistrationPage + '</chatterAnswersRegistrationPage>'}
 	${object.clickjackProtectionLevel == null ? '' : '<clickjackProtectionLevel>' + SiteClickjackProtectionLevel(object.clickjackProtectionLevel, true) + '</clickjackProtectionLevel>'}
-	${object.customWebAddresses == null ? '' : object.customWebAddresses.map(p => '<customWebAddresses>' + SiteWebAddress(p, true) + '</customWebAddresses>')}
+	${object.customWebAddresses == null ? '' : object.customWebAddresses.map(p => '<customWebAddresses>' + SiteWebAddress(p, true) + '</customWebAddresses>').join('')}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.favoriteIcon == null ? '' : '<favoriteIcon>' + object.favoriteIcon + '</favoriteIcon>'}
 	${object.fileNotFoundPage == null ? '' : '<fileNotFoundPage>' + object.fileNotFoundPage + '</fileNotFoundPage>'}
@@ -47,7 +47,7 @@ module.exports = (object, asChild) => {
 	${object.selfRegPage == null ? '' : '<selfRegPage>' + object.selfRegPage + '</selfRegPage>'}
 	${object.serverIsDown == null ? '' : '<serverIsDown>' + object.serverIsDown + '</serverIsDown>'}
 	${object.siteAdmin == null ? '' : '<siteAdmin>' + object.siteAdmin + '</siteAdmin>'}
-	${object.siteRedirectMappings == null ? '' : object.siteRedirectMappings.map(p => '<siteRedirectMappings>' + SiteRedirectMapping(p, true) + '</siteRedirectMappings>')}
+	${object.siteRedirectMappings == null ? '' : object.siteRedirectMappings.map(p => '<siteRedirectMappings>' + SiteRedirectMapping(p, true) + '</siteRedirectMappings>').join('')}
 	${object.siteTemplate == null ? '' : '<siteTemplate>' + object.siteTemplate + '</siteTemplate>'}
 	${object.siteType == null ? '' : '<siteType>' + SiteType(object.siteType, true) + '</siteType>'}
 	${object.subdomain == null ? '' : '<subdomain>' + object.subdomain + '</subdomain>'}

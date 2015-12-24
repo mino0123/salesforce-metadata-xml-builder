@@ -7,6 +7,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.community == null ? '' : object.community.map(p => '<community>' + p + '</community>')}
+	${object.community == null ? '' : object.community.map(p => '<community>' + p + '</community>').join('')}
 ${rootTagEnd}`;
 }

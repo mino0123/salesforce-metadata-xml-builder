@@ -11,7 +11,7 @@ module.exports = (object, asChild) => {
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.isDefaultPartition == null ? '' : '<isDefaultPartition>' + object.isDefaultPartition + '</isDefaultPartition>'}
 	${object.masterLabel == null ? '' : '<masterLabel>' + object.masterLabel + '</masterLabel>'}
-	${object.platformCachePartitionTypes == null ? '' : object.platformCachePartitionTypes.map(p => '<platformCachePartitionTypes>' + PlatformCachePartitionType(p, true) + '</platformCachePartitionTypes>')}
+	${object.platformCachePartitionTypes == null ? '' : object.platformCachePartitionTypes.map(p => '<platformCachePartitionTypes>' + PlatformCachePartitionType(p, true) + '</platformCachePartitionTypes>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

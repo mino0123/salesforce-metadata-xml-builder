@@ -11,7 +11,7 @@ module.exports = (object, asChild) => {
 	${object.allowEmail == null ? '' : '<allowEmail>' + object.allowEmail + '</allowEmail>'}
 	${object.closed == null ? '' : '<closed>' + object.closed + '</closed>'}
 	${object.color == null ? '' : '<color>' + object.color + '</color>'}
-	${object.controllingFieldValues == null ? '' : object.controllingFieldValues.map(p => '<controllingFieldValues>' + p + '</controllingFieldValues>')}
+	${object.controllingFieldValues == null ? '' : object.controllingFieldValues.map(p => '<controllingFieldValues>' + p + '</controllingFieldValues>').join('')}
 	${object.converted == null ? '' : '<converted>' + object.converted + '</converted>'}
 	${object.cssExposed == null ? '' : '<cssExposed>' + object.cssExposed + '</cssExposed>'}
 	${object.default == null ? '' : '<default>' + object.default + '</default>'}

@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.componentInstanceProperties == null ? '' : object.componentInstanceProperties.map(p => '<componentInstanceProperties>' + ComponentInstanceProperty(p, true) + '</componentInstanceProperties>')}
+	${object.componentInstanceProperties == null ? '' : object.componentInstanceProperties.map(p => '<componentInstanceProperties>' + ComponentInstanceProperty(p, true) + '</componentInstanceProperties>').join('')}
 	${object.componentName == null ? '' : '<componentName>' + object.componentName + '</componentName>'}
 ${rootTagEnd}`;
 }

@@ -11,7 +11,7 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.body == null ? '' : '<body>' + object.body + '</body>'}
 	${object.height == null ? '' : '<height>' + object.height + '</height>'}
-	${object.links == null ? '' : object.links.map(p => '<links>' + p + '</links>')}
+	${object.links == null ? '' : object.links.map(p => '<links>' + p + '</links>').join('')}
 	${object.page == null ? '' : '<page>' + object.page + '</page>'}
 	${object.pageComponentType == null ? '' : '<pageComponentType>' + PageComponentType(object.pageComponentType, true) + '</pageComponentType>'}
 	${object.showLabel == null ? '' : '<showLabel>' + object.showLabel + '</showLabel>'}

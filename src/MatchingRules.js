@@ -8,7 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.matchingRules == null ? '' : object.matchingRules.map(p => '<matchingRules>' + MatchingRule(p, true) + '</matchingRules>')}
+	${object.matchingRules == null ? '' : object.matchingRules.map(p => '<matchingRules>' + MatchingRule(p, true) + '</matchingRules>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }
