@@ -1,6 +1,7 @@
 const KnowledgeAnswerSettings = require('./KnowledgeAnswerSettings');
 const KnowledgeCaseSettings = require('./KnowledgeCaseSettings');
 const KnowledgeLanguageSettings = require('./KnowledgeLanguageSettings');
+const KnowledgeSuggestedArticlesSettings = require('./KnowledgeSuggestedArticlesSettings');
 
 module.exports = (object, asChild) => {
   var rootTagStart = '<KnowledgeSettings>';
@@ -22,6 +23,7 @@ module.exports = (object, asChild) => {
 	${object.showArticleSummariesInternalApp == null ? '' : '<showArticleSummariesInternalApp>' + object.showArticleSummariesInternalApp + '</showArticleSummariesInternalApp>'}
 	${object.showArticleSummariesPartnerPortal == null ? '' : '<showArticleSummariesPartnerPortal>' + object.showArticleSummariesPartnerPortal + '</showArticleSummariesPartnerPortal>'}
 	${object.showValidationStatusField == null ? '' : '<showValidationStatusField>' + object.showValidationStatusField + '</showValidationStatusField>'}
+	${object.suggestedArticles == null ? '' : '<suggestedArticles>' + KnowledgeSuggestedArticlesSettings(object.suggestedArticles, true) + '</suggestedArticles>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

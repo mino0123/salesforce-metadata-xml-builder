@@ -24,7 +24,9 @@ module.exports = (object, asChild) => {
 	${object.enableAutoAwayOnPushTimeout == null ? '' : '<enableAutoAwayOnPushTimeout>' + object.enableAutoAwayOnPushTimeout + '</enableAutoAwayOnPushTimeout>'}
 	${object.enableChatConferencing == null ? '' : '<enableChatConferencing>' + object.enableChatConferencing + '</enableChatConferencing>'}
 	${object.enableChatMonitoring == null ? '' : '<enableChatMonitoring>' + object.enableChatMonitoring + '</enableChatMonitoring>'}
-	${object.enableChatTransfer == null ? '' : '<enableChatTransfer>' + object.enableChatTransfer + '</enableChatTransfer>'}
+	${object.enableChatTransferToAgent == null ? '' : '<enableChatTransferToAgent>' + object.enableChatTransferToAgent + '</enableChatTransferToAgent>'}
+	${object.enableChatTransferToButton == null ? '' : '<enableChatTransferToButton>' + object.enableChatTransferToButton + '</enableChatTransferToButton>'}
+	${object.enableChatTransferToSkill == null ? '' : '<enableChatTransferToSkill>' + object.enableChatTransferToSkill + '</enableChatTransferToSkill>'}
 	${object.enableLogoutSound == null ? '' : '<enableLogoutSound>' + object.enableLogoutSound + '</enableLogoutSound>'}
 	${object.enableNotifications == null ? '' : '<enableNotifications>' + object.enableNotifications + '</enableNotifications>'}
 	${object.enableRequestSound == null ? '' : '<enableRequestSound>' + object.enableRequestSound + '</enableRequestSound>'}

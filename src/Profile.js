@@ -8,6 +8,7 @@ const ProfileLoginHours = require('./ProfileLoginHours');
 const ProfileLoginIpRange = require('./ProfileLoginIpRange');
 const ProfileObjectPermissions = require('./ProfileObjectPermissions');
 const ProfileApexPageAccess = require('./ProfileApexPageAccess');
+const ProfileActionOverride = require('./ProfileActionOverride');
 const ProfileRecordTypeVisibility = require('./ProfileRecordTypeVisibility');
 const ProfileTabVisibility = require('./ProfileTabVisibility');
 const ProfileUserPermission = require('./ProfileUserPermission');
@@ -32,6 +33,7 @@ module.exports = (object, asChild) => {
 	${object.loginIpRanges == null ? '' : object.loginIpRanges.map(p => '<loginIpRanges>' + ProfileLoginIpRange(p, true) + '</loginIpRanges>').join('')}
 	${object.objectPermissions == null ? '' : object.objectPermissions.map(p => '<objectPermissions>' + ProfileObjectPermissions(p, true) + '</objectPermissions>').join('')}
 	${object.pageAccesses == null ? '' : object.pageAccesses.map(p => '<pageAccesses>' + ProfileApexPageAccess(p, true) + '</pageAccesses>').join('')}
+	${object.profileActionOverrides == null ? '' : object.profileActionOverrides.map(p => '<profileActionOverrides>' + ProfileActionOverride(p, true) + '</profileActionOverrides>').join('')}
 	${object.recordTypeVisibilities == null ? '' : object.recordTypeVisibilities.map(p => '<recordTypeVisibilities>' + ProfileRecordTypeVisibility(p, true) + '</recordTypeVisibilities>').join('')}
 	${object.tabVisibilities == null ? '' : object.tabVisibilities.map(p => '<tabVisibilities>' + ProfileTabVisibility(p, true) + '</tabVisibilities>').join('')}
 	${object.userLicense == null ? '' : '<userLicense>' + object.userLicense + '</userLicense>'}

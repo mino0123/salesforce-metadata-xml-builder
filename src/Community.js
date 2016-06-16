@@ -9,7 +9,9 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.active == null ? '' : '<active>' + object.active + '</active>'}
+	${object.chatterAnswersFacebookSsoUrl == null ? '' : '<chatterAnswersFacebookSsoUrl>' + object.chatterAnswersFacebookSsoUrl + '</chatterAnswersFacebookSsoUrl>'}
 	${object.communityFeedPage == null ? '' : '<communityFeedPage>' + object.communityFeedPage + '</communityFeedPage>'}
+	${object.dataCategoryName == null ? '' : '<dataCategoryName>' + object.dataCategoryName + '</dataCategoryName>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.emailFooterDocument == null ? '' : '<emailFooterDocument>' + object.emailFooterDocument + '</emailFooterDocument>'}
 	${object.emailHeaderDocument == null ? '' : '<emailHeaderDocument>' + object.emailHeaderDocument + '</emailHeaderDocument>'}

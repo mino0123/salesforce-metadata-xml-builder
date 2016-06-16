@@ -31,6 +31,7 @@ module.exports = (object, asChild) => {
 	${object.fieldManageability == null ? '' : '<fieldManageability>' + FieldManageability(object.fieldManageability, true) + '</fieldManageability>'}
 	${object.formula == null ? '' : '<formula>' + object.formula + '</formula>'}
 	${object.formulaTreatBlanksAs == null ? '' : '<formulaTreatBlanksAs>' + TreatBlanksAs(object.formulaTreatBlanksAs, true) + '</formulaTreatBlanksAs>'}
+	${object.globalPicklist == null ? '' : '<globalPicklist>' + object.globalPicklist + '</globalPicklist>'}
 	${object.inlineHelpText == null ? '' : '<inlineHelpText>' + object.inlineHelpText + '</inlineHelpText>'}
 	${object.isConvertLeadDisabled == null ? '' : '<isConvertLeadDisabled>' + object.isConvertLeadDisabled + '</isConvertLeadDisabled>'}
 	${object.isFilteringDisabled == null ? '' : '<isFilteringDisabled>' + object.isFilteringDisabled + '</isFilteringDisabled>'}

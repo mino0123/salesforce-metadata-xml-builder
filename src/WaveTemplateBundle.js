@@ -8,6 +8,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.assetIcon == null ? '' : '<assetIcon>' + object.assetIcon + '</assetIcon>'}
+	${object.assetVersion == null ? '' : '<assetVersion>' + object.assetVersion + '</assetVersion>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.templateType == null ? '' : '<templateType>' + object.templateType + '</templateType>'}

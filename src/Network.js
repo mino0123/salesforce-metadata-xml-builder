@@ -1,4 +1,5 @@
 const Branding = require('./Branding');
+const NavigationLinkSet = require('./NavigationLinkSet');
 const NetworkMemberGroup = require('./NetworkMemberGroup');
 const ReputationLevelDefinitions = require('./ReputationLevelDefinitions');
 const ReputationPointsRules = require('./ReputationPointsRules');
@@ -14,6 +15,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.allowMembersToFlag == null ? '' : '<allowMembersToFlag>' + object.allowMembersToFlag + '</allowMembersToFlag>'}
+	${object.allowedExtensions == null ? '' : '<allowedExtensions>' + object.allowedExtensions + '</allowedExtensions>'}
 	${object.branding == null ? '' : '<branding>' + Branding(object.branding, true) + '</branding>'}
 	${object.caseCommentEmailTemplate == null ? '' : '<caseCommentEmailTemplate>' + object.caseCommentEmailTemplate + '</caseCommentEmailTemplate>'}
 	${object.changePasswordTemplate == null ? '' : '<changePasswordTemplate>' + object.changePasswordTemplate + '</changePasswordTemplate>'}
@@ -29,6 +31,8 @@ module.exports = (object, asChild) => {
 	${object.feedChannel == null ? '' : '<feedChannel>' + object.feedChannel + '</feedChannel>'}
 	${object.forgotPasswordTemplate == null ? '' : '<forgotPasswordTemplate>' + object.forgotPasswordTemplate + '</forgotPasswordTemplate>'}
 	${object.logoutUrl == null ? '' : '<logoutUrl>' + object.logoutUrl + '</logoutUrl>'}
+	${object.maxFileSizeKb == null ? '' : '<maxFileSizeKb>' + object.maxFileSizeKb + '</maxFileSizeKb>'}
+	${object.navigationLinkSet == null ? '' : '<navigationLinkSet>' + NavigationLinkSet(object.navigationLinkSet, true) + '</navigationLinkSet>'}
 	${object.networkMemberGroups == null ? '' : '<networkMemberGroups>' + NetworkMemberGroup(object.networkMemberGroups, true) + '</networkMemberGroups>'}
 	${object.newSenderAddress == null ? '' : '<newSenderAddress>' + object.newSenderAddress + '</newSenderAddress>'}
 	${object.picassoSite == null ? '' : '<picassoSite>' + object.picassoSite + '</picassoSite>'}

@@ -9,6 +9,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.SObjectType == null ? '' : '<SObjectType>' + object.SObjectType + '</SObjectType>'}
 	${object.active == null ? '' : '<active>' + object.active + '</active>'}
 	${object.businessHours == null ? '' : '<businessHours>' + object.businessHours + '</businessHours>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}

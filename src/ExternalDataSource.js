@@ -10,7 +10,6 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.apiKey == null ? '' : '<apiKey>' + object.apiKey + '</apiKey>'}
 	${object.authProvider == null ? '' : '<authProvider>' + object.authProvider + '</authProvider>'}
 	${object.certificate == null ? '' : '<certificate>' + object.certificate + '</certificate>'}
 	${object.customConfiguration == null ? '' : '<customConfiguration>' + object.customConfiguration + '</customConfiguration>'}

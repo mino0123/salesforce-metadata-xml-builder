@@ -10,6 +10,7 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.controllingField == null ? '' : '<controllingField>' + object.controllingField + '</controllingField>'}
 	${object.picklistValues == null ? '' : object.picklistValues.map(p => '<picklistValues>' + PicklistValue(p, true) + '</picklistValues>').join('')}
+	${object.restrictedPicklist == null ? '' : '<restrictedPicklist>' + object.restrictedPicklist + '</restrictedPicklist>'}
 	${object.sorted == null ? '' : '<sorted>' + object.sorted + '</sorted>'}
 ${rootTagEnd}`;
 }

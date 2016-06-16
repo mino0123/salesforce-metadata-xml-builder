@@ -10,6 +10,7 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.allocatedCapacity == null ? '' : '<allocatedCapacity>' + object.allocatedCapacity + '</allocatedCapacity>'}
 	${object.allocatedPurchasedCapacity == null ? '' : '<allocatedPurchasedCapacity>' + object.allocatedPurchasedCapacity + '</allocatedPurchasedCapacity>'}
+	${object.allocatedTrialCapacity == null ? '' : '<allocatedTrialCapacity>' + object.allocatedTrialCapacity + '</allocatedTrialCapacity>'}
 	${object.cacheType == null ? '' : '<cacheType>' + PlatformCacheType(object.cacheType, true) + '</cacheType>'}
 ${rootTagEnd}`;
 }

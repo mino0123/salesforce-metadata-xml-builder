@@ -4,6 +4,7 @@ const KeyboardShortcuts = require('./KeyboardShortcuts');
 const ListPlacement = require('./ListPlacement');
 const LiveAgentConfig = require('./LiveAgentConfig');
 const PushNotifications = require('./PushNotifications');
+const TabLimitConfig = require('./TabLimitConfig');
 const WorkspaceMappings = require('./WorkspaceMappings');
 
 module.exports = (object, asChild) => {
@@ -24,6 +25,8 @@ module.exports = (object, asChild) => {
 	${object.enableListViewReskin == null ? '' : '<enableListViewReskin>' + object.enableListViewReskin + '</enableListViewReskin>'}
 	${object.enableMultiMonitorComponents == null ? '' : '<enableMultiMonitorComponents>' + object.enableMultiMonitorComponents + '</enableMultiMonitorComponents>'}
 	${object.enablePinTabs == null ? '' : '<enablePinTabs>' + object.enablePinTabs + '</enablePinTabs>'}
+	${object.enableTabHover == null ? '' : '<enableTabHover>' + object.enableTabHover + '</enableTabHover>'}
+	${object.enableTabLimits == null ? '' : '<enableTabLimits>' + object.enableTabLimits + '</enableTabLimits>'}
 	${object.footerColor == null ? '' : '<footerColor>' + object.footerColor + '</footerColor>'}
 	${object.headerColor == null ? '' : '<headerColor>' + object.headerColor + '</headerColor>'}
 	${object.isServiceCloudConsole == null ? '' : '<isServiceCloudConsole>' + object.isServiceCloudConsole + '</isServiceCloudConsole>'}
@@ -37,6 +40,7 @@ module.exports = (object, asChild) => {
 	${object.pushNotifications == null ? '' : '<pushNotifications>' + PushNotifications(object.pushNotifications, true) + '</pushNotifications>'}
 	${object.saveUserSessions == null ? '' : '<saveUserSessions>' + object.saveUserSessions + '</saveUserSessions>'}
 	${object.tab == null ? '' : object.tab.map(p => '<tab>' + p + '</tab>').join('')}
+	${object.tabLimitConfig == null ? '' : '<tabLimitConfig>' + TabLimitConfig(object.tabLimitConfig, true) + '</tabLimitConfig>'}
 	${object.workspaceMappings == null ? '' : '<workspaceMappings>' + WorkspaceMappings(object.workspaceMappings, true) + '</workspaceMappings>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;

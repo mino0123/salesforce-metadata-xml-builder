@@ -1,3 +1,4 @@
+const ActionOverride = require('./ActionOverride');
 const Encoding = require('./Encoding');
 
 module.exports = (object, asChild) => {
@@ -8,6 +9,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.actionOverrides == null ? '' : object.actionOverrides.map(p => '<actionOverrides>' + ActionOverride(p, true) + '</actionOverrides>').join('')}
 	${object.auraComponent == null ? '' : '<auraComponent>' + object.auraComponent + '</auraComponent>'}
 	${object.customObject == null ? '' : '<customObject>' + object.customObject + '</customObject>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}

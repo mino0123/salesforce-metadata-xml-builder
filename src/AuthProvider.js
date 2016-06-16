@@ -11,6 +11,7 @@ module.exports = (object, asChild) => {
 	${object.authorizeUrl == null ? '' : '<authorizeUrl>' + object.authorizeUrl + '</authorizeUrl>'}
 	${object.consumerKey == null ? '' : '<consumerKey>' + object.consumerKey + '</consumerKey>'}
 	${object.consumerSecret == null ? '' : '<consumerSecret>' + object.consumerSecret + '</consumerSecret>'}
+	${object.customMetadataTypeRecord == null ? '' : '<customMetadataTypeRecord>' + object.customMetadataTypeRecord + '</customMetadataTypeRecord>'}
 	${object.defaultScopes == null ? '' : '<defaultScopes>' + object.defaultScopes + '</defaultScopes>'}
 	${object.errorUrl == null ? '' : '<errorUrl>' + object.errorUrl + '</errorUrl>'}
 	${object.executionUser == null ? '' : '<executionUser>' + object.executionUser + '</executionUser>'}
@@ -19,6 +20,7 @@ module.exports = (object, asChild) => {
 	${object.idTokenIssuer == null ? '' : '<idTokenIssuer>' + object.idTokenIssuer + '</idTokenIssuer>'}
 	${object.includeOrgIdInIdentifier == null ? '' : '<includeOrgIdInIdentifier>' + object.includeOrgIdInIdentifier + '</includeOrgIdInIdentifier>'}
 	${object.logoutUrl == null ? '' : '<logoutUrl>' + object.logoutUrl + '</logoutUrl>'}
+	${object.plugin == null ? '' : '<plugin>' + object.plugin + '</plugin>'}
 	${object.portal == null ? '' : '<portal>' + object.portal + '</portal>'}
 	${object.providerType == null ? '' : '<providerType>' + AuthProviderType(object.providerType, true) + '</providerType>'}
 	${object.registrationHandler == null ? '' : '<registrationHandler>' + object.registrationHandler + '</registrationHandler>'}

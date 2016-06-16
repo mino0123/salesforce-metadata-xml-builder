@@ -25,6 +25,7 @@ module.exports = (object, asChild) => {
 	${object.lockSessionsToDomain == null ? '' : '<lockSessionsToDomain>' + object.lockSessionsToDomain + '</lockSessionsToDomain>'}
 	${object.lockSessionsToIp == null ? '' : '<lockSessionsToIp>' + object.lockSessionsToIp + '</lockSessionsToIp>'}
 	${object.logoutURL == null ? '' : '<logoutURL>' + object.logoutURL + '</logoutURL>'}
+	${object.securityCentralKillSession == null ? '' : '<securityCentralKillSession>' + object.securityCentralKillSession + '</securityCentralKillSession>'}
 	${object.sessionTimeout == null ? '' : '<sessionTimeout>' + SessionTimeout(object.sessionTimeout, true) + '</sessionTimeout>'}
 ${rootTagEnd}`;
 }

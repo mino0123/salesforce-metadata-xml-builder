@@ -14,6 +14,7 @@ module.exports = (object, asChild) => {
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.namespacePrefix == null ? '' : '<namespacePrefix>' + object.namespacePrefix + '</namespacePrefix>'}
 	${object.objectPermissions == null ? '' : object.objectPermissions.map(p => '<objectPermissions>' + ProfileObjectPermissions(p, true) + '</objectPermissions>').join('')}
+	${object.packageType == null ? '' : '<packageType>' + object.packageType + '</packageType>'}
 	${object.postInstallClass == null ? '' : '<postInstallClass>' + object.postInstallClass + '</postInstallClass>'}
 	${object.setupWeblink == null ? '' : '<setupWeblink>' + object.setupWeblink + '</setupWeblink>'}
 	${object.types == null ? '' : object.types.map(p => '<types>' + PackageTypeMembers(p, true) + '</types>').join('')}

@@ -23,6 +23,7 @@ module.exports = (object, asChild) => {
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.externalDataSourceAccesses == null ? '' : object.externalDataSourceAccesses.map(p => '<externalDataSourceAccesses>' + PermissionSetExternalDataSourceAccess(p, true) + '</externalDataSourceAccesses>').join('')}
 	${object.fieldPermissions == null ? '' : object.fieldPermissions.map(p => '<fieldPermissions>' + PermissionSetFieldPermissions(p, true) + '</fieldPermissions>').join('')}
+	${object.hasActivationRequired == null ? '' : '<hasActivationRequired>' + object.hasActivationRequired + '</hasActivationRequired>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.objectPermissions == null ? '' : object.objectPermissions.map(p => '<objectPermissions>' + PermissionSetObjectPermissions(p, true) + '</objectPermissions>').join('')}
 	${object.pageAccesses == null ? '' : object.pageAccesses.map(p => '<pageAccesses>' + PermissionSetApexPageAccess(p, true) + '</pageAccesses>').join('')}
