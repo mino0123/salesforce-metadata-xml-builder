@@ -25,11 +25,11 @@ module.exports = (object, asChild) => {
 	${object.fieldPermissions == null ? '' : object.fieldPermissions.map(p => '<fieldPermissions>' + PermissionSetFieldPermissions(p, true) + '</fieldPermissions>').join('')}
 	${object.hasActivationRequired == null ? '' : '<hasActivationRequired>' + object.hasActivationRequired + '</hasActivationRequired>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
+	${object.license == null ? '' : '<license>' + object.license + '</license>'}
 	${object.objectPermissions == null ? '' : object.objectPermissions.map(p => '<objectPermissions>' + PermissionSetObjectPermissions(p, true) + '</objectPermissions>').join('')}
 	${object.pageAccesses == null ? '' : object.pageAccesses.map(p => '<pageAccesses>' + PermissionSetApexPageAccess(p, true) + '</pageAccesses>').join('')}
 	${object.recordTypeVisibilities == null ? '' : object.recordTypeVisibilities.map(p => '<recordTypeVisibilities>' + PermissionSetRecordTypeVisibility(p, true) + '</recordTypeVisibilities>').join('')}
 	${object.tabSettings == null ? '' : object.tabSettings.map(p => '<tabSettings>' + PermissionSetTabSetting(p, true) + '</tabSettings>').join('')}
-	${object.userLicense == null ? '' : '<userLicense>' + object.userLicense + '</userLicense>'}
 	${object.userPermissions == null ? '' : object.userPermissions.map(p => '<userPermissions>' + PermissionSetUserPermission(p, true) + '</userPermissions>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;

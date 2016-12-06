@@ -1,5 +1,6 @@
 const FieldOverride = require('./FieldOverride');
 const QuickActionLayout = require('./QuickActionLayout');
+const QuickActionSendEmailOptions = require('./QuickActionSendEmailOptions');
 const QuickActionLabel = require('./QuickActionLabel');
 const QuickActionType = require('./QuickActionType');
 
@@ -18,9 +19,11 @@ module.exports = (object, asChild) => {
 	${object.icon == null ? '' : '<icon>' + object.icon + '</icon>'}
 	${object.isProtected == null ? '' : '<isProtected>' + object.isProtected + '</isProtected>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
+	${object.lightningComponent == null ? '' : '<lightningComponent>' + object.lightningComponent + '</lightningComponent>'}
 	${object.optionsCreateFeedItem == null ? '' : '<optionsCreateFeedItem>' + object.optionsCreateFeedItem + '</optionsCreateFeedItem>'}
 	${object.page == null ? '' : '<page>' + object.page + '</page>'}
 	${object.quickActionLayout == null ? '' : '<quickActionLayout>' + QuickActionLayout(object.quickActionLayout, true) + '</quickActionLayout>'}
+	${object.quickActionSendEmailOptions == null ? '' : '<quickActionSendEmailOptions>' + QuickActionSendEmailOptions(object.quickActionSendEmailOptions, true) + '</quickActionSendEmailOptions>'}
 	${object.standardLabel == null ? '' : '<standardLabel>' + QuickActionLabel(object.standardLabel, true) + '</standardLabel>'}
 	${object.successMessage == null ? '' : '<successMessage>' + object.successMessage + '</successMessage>'}
 	${object.targetObject == null ? '' : '<targetObject>' + object.targetObject + '</targetObject>'}

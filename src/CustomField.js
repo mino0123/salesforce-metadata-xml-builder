@@ -8,6 +8,7 @@ const Picklist = require('./Picklist');
 const FilterItem = require('./FilterItem');
 const SummaryOperations = require('./SummaryOperations');
 const FieldType = require('./FieldType');
+const ValueSet = require('./ValueSet');
 
 module.exports = (object, asChild) => {
   var rootTagStart = '<CustomField>';
@@ -31,7 +32,6 @@ module.exports = (object, asChild) => {
 	${object.fieldManageability == null ? '' : '<fieldManageability>' + FieldManageability(object.fieldManageability, true) + '</fieldManageability>'}
 	${object.formula == null ? '' : '<formula>' + object.formula + '</formula>'}
 	${object.formulaTreatBlanksAs == null ? '' : '<formulaTreatBlanksAs>' + TreatBlanksAs(object.formulaTreatBlanksAs, true) + '</formulaTreatBlanksAs>'}
-	${object.globalPicklist == null ? '' : '<globalPicklist>' + object.globalPicklist + '</globalPicklist>'}
 	${object.inlineHelpText == null ? '' : '<inlineHelpText>' + object.inlineHelpText + '</inlineHelpText>'}
 	${object.isConvertLeadDisabled == null ? '' : '<isConvertLeadDisabled>' + object.isConvertLeadDisabled + '</isConvertLeadDisabled>'}
 	${object.isFilteringDisabled == null ? '' : '<isFilteringDisabled>' + object.isFilteringDisabled + '</isFilteringDisabled>'}
@@ -65,6 +65,7 @@ module.exports = (object, asChild) => {
 	${object.trackTrending == null ? '' : '<trackTrending>' + object.trackTrending + '</trackTrending>'}
 	${object.type == null ? '' : '<type>' + FieldType(object.type, true) + '</type>'}
 	${object.unique == null ? '' : '<unique>' + object.unique + '</unique>'}
+	${object.valueSet == null ? '' : '<valueSet>' + ValueSet(object.valueSet, true) + '</valueSet>'}
 	${object.visibleLines == null ? '' : '<visibleLines>' + object.visibleLines + '</visibleLines>'}
 	${object.writeRequiresMasterRead == null ? '' : '<writeRequiresMasterRead>' + object.writeRequiresMasterRead + '</writeRequiresMasterRead>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}

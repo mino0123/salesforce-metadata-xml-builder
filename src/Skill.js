@@ -9,6 +9,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.assignments == null ? '' : '<assignments>' + SkillAssignments(object.assignments, true) + '</assignments>'}
+	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;

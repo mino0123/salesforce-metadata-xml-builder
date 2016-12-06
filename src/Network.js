@@ -28,6 +28,7 @@ module.exports = (object, asChild) => {
 	${object.enableNicknameDisplay == null ? '' : '<enableNicknameDisplay>' + object.enableNicknameDisplay + '</enableNicknameDisplay>'}
 	${object.enablePrivateMessages == null ? '' : '<enablePrivateMessages>' + object.enablePrivateMessages + '</enablePrivateMessages>'}
 	${object.enableReputation == null ? '' : '<enableReputation>' + object.enableReputation + '</enableReputation>'}
+	${object.enableSiteAsContainer == null ? '' : '<enableSiteAsContainer>' + object.enableSiteAsContainer + '</enableSiteAsContainer>'}
 	${object.feedChannel == null ? '' : '<feedChannel>' + object.feedChannel + '</feedChannel>'}
 	${object.forgotPasswordTemplate == null ? '' : '<forgotPasswordTemplate>' + object.forgotPasswordTemplate + '</forgotPasswordTemplate>'}
 	${object.logoutUrl == null ? '' : '<logoutUrl>' + object.logoutUrl + '</logoutUrl>'}

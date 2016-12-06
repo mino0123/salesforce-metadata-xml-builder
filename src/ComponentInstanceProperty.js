@@ -1,3 +1,4 @@
+const ComponentInstancePropertyTypeEnum = require('./ComponentInstancePropertyTypeEnum');
 
 module.exports = (object, asChild) => {
   var rootTagStart = '<ComponentInstanceProperty>';
@@ -8,6 +9,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
+	${object.type == null ? '' : '<type>' + ComponentInstancePropertyTypeEnum(object.type, true) + '</type>'}
 	${object.value == null ? '' : '<value>' + object.value + '</value>'}
 ${rootTagEnd}`;
 }

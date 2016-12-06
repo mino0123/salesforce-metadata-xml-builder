@@ -16,6 +16,8 @@ module.exports = (object, asChild) => {
 	${object.casePriority == null ? '' : '<casePriority>' + object.casePriority + '</casePriority>'}
 	${object.createTask == null ? '' : '<createTask>' + object.createTask + '</createTask>'}
 	${object.emailAddress == null ? '' : '<emailAddress>' + object.emailAddress + '</emailAddress>'}
+	${object.emailServicesAddress == null ? '' : '<emailServicesAddress>' + object.emailServicesAddress + '</emailServicesAddress>'}
+	${object.isVerified == null ? '' : '<isVerified>' + object.isVerified + '</isVerified>'}
 	${object.routingName == null ? '' : '<routingName>' + object.routingName + '</routingName>'}
 	${object.saveEmailHeaders == null ? '' : '<saveEmailHeaders>' + object.saveEmailHeaders + '</saveEmailHeaders>'}
 	${object.taskStatus == null ? '' : '<taskStatus>' + object.taskStatus + '</taskStatus>'}

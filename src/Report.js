@@ -43,6 +43,7 @@ module.exports = (object, asChild) => {
 	${object.groupingsDown == null ? '' : object.groupingsDown.map(p => '<groupingsDown>' + ReportGrouping(p, true) + '</groupingsDown>').join('')}
 	${object.historicalSelector == null ? '' : '<historicalSelector>' + ReportHistoricalSelector(object.historicalSelector, true) + '</historicalSelector>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
+	${object.numSubscriptions == null ? '' : '<numSubscriptions>' + object.numSubscriptions + '</numSubscriptions>'}
 	${object.params == null ? '' : object.params.map(p => '<params>' + ReportParam(p, true) + '</params>').join('')}
 	${object.reportType == null ? '' : '<reportType>' + object.reportType + '</reportType>'}
 	${object.roleHierarchyFilter == null ? '' : '<roleHierarchyFilter>' + object.roleHierarchyFilter + '</roleHierarchyFilter>'}
