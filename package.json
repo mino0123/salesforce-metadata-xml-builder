@@ -1,6 +1,6 @@
 {
   "name": "salesforce-metadata-xml-builder",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Generate Salesforce.com metadata xml",
   "main": "index.js",
   "scripts": {
