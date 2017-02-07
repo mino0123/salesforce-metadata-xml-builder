@@ -8,6 +8,9 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.insightsApplication == null ? '' : object.insightsApplication.map(p => '<insightsApplication>' + ContentAssetLink(p, true) + '</insightsApplication>').join('')}
+	${object.network == null ? '' : object.network.map(p => '<network>' + ContentAssetLink(p, true) + '</network>').join('')}
 	${object.organization == null ? '' : '<organization>' + ContentAssetLink(object.organization, true) + '</organization>'}
+	${object.workspace == null ? '' : object.workspace.map(p => '<workspace>' + ContentAssetLink(p, true) + '</workspace>').join('')}
 ${rootTagEnd}`;
 }

@@ -4,7 +4,6 @@ const TreatBlanksAs = require('./TreatBlanksAs');
 const LookupFilter = require('./LookupFilter');
 const EncryptedFieldMaskChar = require('./EncryptedFieldMaskChar');
 const EncryptedFieldMaskType = require('./EncryptedFieldMaskType');
-const Picklist = require('./Picklist');
 const FilterItem = require('./FilterItem');
 const SummaryOperations = require('./SummaryOperations');
 const FieldType = require('./FieldType');
@@ -42,7 +41,7 @@ module.exports = (object, asChild) => {
 	${object.lookupFilter == null ? '' : '<lookupFilter>' + LookupFilter(object.lookupFilter, true) + '</lookupFilter>'}
 	${object.maskChar == null ? '' : '<maskChar>' + EncryptedFieldMaskChar(object.maskChar, true) + '</maskChar>'}
 	${object.maskType == null ? '' : '<maskType>' + EncryptedFieldMaskType(object.maskType, true) + '</maskType>'}
-	${object.picklist == null ? '' : '<picklist>' + Picklist(object.picklist, true) + '</picklist>'}
+	${object.metadataRelationshipControllingField == null ? '' : '<metadataRelationshipControllingField>' + object.metadataRelationshipControllingField + '</metadataRelationshipControllingField>'}
 	${object.populateExistingRows == null ? '' : '<populateExistingRows>' + object.populateExistingRows + '</populateExistingRows>'}
 	${object.precision == null ? '' : '<precision>' + object.precision + '</precision>'}
 	${object.referenceTargetField == null ? '' : '<referenceTargetField>' + object.referenceTargetField + '</referenceTargetField>'}

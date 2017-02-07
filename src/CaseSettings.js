@@ -35,7 +35,9 @@ module.exports = (object, asChild) => {
 	${object.notifyOwnerOnCaseComment == null ? '' : '<notifyOwnerOnCaseComment>' + object.notifyOwnerOnCaseComment + '</notifyOwnerOnCaseComment>'}
 	${object.notifyOwnerOnCaseOwnerChange == null ? '' : '<notifyOwnerOnCaseOwnerChange>' + object.notifyOwnerOnCaseOwnerChange + '</notifyOwnerOnCaseOwnerChange>'}
 	${object.showFewerCloseActions == null ? '' : '<showFewerCloseActions>' + object.showFewerCloseActions + '</showFewerCloseActions>'}
+	${object.systemUserEmail == null ? '' : '<systemUserEmail>' + object.systemUserEmail + '</systemUserEmail>'}
 	${object.useSystemEmailAddress == null ? '' : '<useSystemEmailAddress>' + object.useSystemEmailAddress + '</useSystemEmailAddress>'}
+	${object.useSystemUserAsDefaultCaseUser == null ? '' : '<useSystemUserAsDefaultCaseUser>' + object.useSystemUserAsDefaultCaseUser + '</useSystemUserAsDefaultCaseUser>'}
 	${object.webToCase == null ? '' : '<webToCase>' + WebToCaseSettings(object.webToCase, true) + '</webToCase>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;

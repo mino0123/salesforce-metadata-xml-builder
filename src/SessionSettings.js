@@ -17,8 +17,10 @@ module.exports = (object, asChild) => {
 	${object.enableClickjackNonsetupUser == null ? '' : '<enableClickjackNonsetupUser>' + object.enableClickjackNonsetupUser + '</enableClickjackNonsetupUser>'}
 	${object.enableClickjackNonsetupUserHeaderless == null ? '' : '<enableClickjackNonsetupUserHeaderless>' + object.enableClickjackNonsetupUserHeaderless + '</enableClickjackNonsetupUserHeaderless>'}
 	${object.enableClickjackSetup == null ? '' : '<enableClickjackSetup>' + object.enableClickjackSetup + '</enableClickjackSetup>'}
+	${object.enableContentSniffingProtection == null ? '' : '<enableContentSniffingProtection>' + object.enableContentSniffingProtection + '</enableContentSniffingProtection>'}
 	${object.enablePostForSessions == null ? '' : '<enablePostForSessions>' + object.enablePostForSessions + '</enablePostForSessions>'}
 	${object.enableSMSIdentity == null ? '' : '<enableSMSIdentity>' + object.enableSMSIdentity + '</enableSMSIdentity>'}
+	${object.enableXssProtection == null ? '' : '<enableXssProtection>' + object.enableXssProtection + '</enableXssProtection>'}
 	${object.enforceIpRangesEveryRequest == null ? '' : '<enforceIpRangesEveryRequest>' + object.enforceIpRangesEveryRequest + '</enforceIpRangesEveryRequest>'}
 	${object.forceLogoutOnSessionTimeout == null ? '' : '<forceLogoutOnSessionTimeout>' + object.forceLogoutOnSessionTimeout + '</forceLogoutOnSessionTimeout>'}
 	${object.forceRelogin == null ? '' : '<forceRelogin>' + object.forceRelogin + '</forceRelogin>'}

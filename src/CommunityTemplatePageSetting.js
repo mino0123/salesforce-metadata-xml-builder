@@ -8,5 +8,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.page == null ? '' : '<page>' + object.page + '</page>'}
+	${object.themeLayout == null ? '' : '<themeLayout>' + object.themeLayout + '</themeLayout>'}
 ${rootTagEnd}`;
 }
