@@ -8,6 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.customThemeLayoutType == null ? '' : '<customThemeLayoutType>' + object.customThemeLayoutType + '</customThemeLayoutType>'}
 	${object.themeLayout == null ? '' : '<themeLayout>' + object.themeLayout + '</themeLayout>'}
 	${object.themeLayoutType == null ? '' : '<themeLayoutType>' + CommunityThemeLayoutType(object.themeLayoutType, true) + '</themeLayoutType>'}
 ${rootTagEnd}`;

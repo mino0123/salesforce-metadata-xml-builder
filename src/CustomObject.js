@@ -9,6 +9,7 @@ const FieldSet = require('./FieldSet');
 const CustomField = require('./CustomField');
 const Gender = require('./Gender');
 const HistoryRetentionPolicy = require('./HistoryRetentionPolicy');
+const Index = require('./Index');
 const ListView = require('./ListView');
 const RecordType = require('./RecordType');
 const SearchLayouts = require('./SearchLayouts');
@@ -58,6 +59,7 @@ module.exports = (object, asChild) => {
 	${object.gender == null ? '' : '<gender>' + Gender(object.gender, true) + '</gender>'}
 	${object.historyRetentionPolicy == null ? '' : '<historyRetentionPolicy>' + HistoryRetentionPolicy(object.historyRetentionPolicy, true) + '</historyRetentionPolicy>'}
 	${object.household == null ? '' : '<household>' + object.household + '</household>'}
+	${object.indexes == null ? '' : object.indexes.map(p => '<indexes>' + Index(p, true) + '</indexes>').join('')}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.listViews == null ? '' : object.listViews.map(p => '<listViews>' + ListView(p, true) + '</listViews>').join('')}
 	${object.nameField == null ? '' : '<nameField>' + CustomField(object.nameField, true) + '</nameField>'}

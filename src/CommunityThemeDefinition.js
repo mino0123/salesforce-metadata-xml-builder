@@ -1,3 +1,4 @@
+const CommunityCustomThemeLayoutType = require('./CommunityCustomThemeLayoutType');
 const CommunityThemeSetting = require('./CommunityThemeSetting');
 
 module.exports = (object, asChild) => {
@@ -8,6 +9,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.customThemeLayoutType == null ? '' : object.customThemeLayoutType.map(p => '<customThemeLayoutType>' + CommunityCustomThemeLayoutType(p, true) + '</customThemeLayoutType>').join('')}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.enableExtendedCleanUpOnDelete == null ? '' : '<enableExtendedCleanUpOnDelete>' + object.enableExtendedCleanUpOnDelete + '</enableExtendedCleanUpOnDelete>'}
 	${object.masterLabel == null ? '' : '<masterLabel>' + object.masterLabel + '</masterLabel>'}
