@@ -26,10 +26,12 @@ module.exports = (object, asChild) => {
 	${object.forceLogoutOnSessionTimeout == null ? '' : '<forceLogoutOnSessionTimeout>' + object.forceLogoutOnSessionTimeout + '</forceLogoutOnSessionTimeout>'}
 	${object.forceRelogin == null ? '' : '<forceRelogin>' + object.forceRelogin + '</forceRelogin>'}
 	${object.hstsOnForcecomSites == null ? '' : '<hstsOnForcecomSites>' + object.hstsOnForcecomSites + '</hstsOnForcecomSites>'}
+	${object.identityConfirmationOnEmailChange == null ? '' : '<identityConfirmationOnEmailChange>' + object.identityConfirmationOnEmailChange + '</identityConfirmationOnEmailChange>'}
 	${object.identityConfirmationOnTwoFactorRegistrationEnabled == null ? '' : '<identityConfirmationOnTwoFactorRegistrationEnabled>' + object.identityConfirmationOnTwoFactorRegistrationEnabled + '</identityConfirmationOnTwoFactorRegistrationEnabled>'}
 	${object.lockSessionsToDomain == null ? '' : '<lockSessionsToDomain>' + object.lockSessionsToDomain + '</lockSessionsToDomain>'}
 	${object.lockSessionsToIp == null ? '' : '<lockSessionsToIp>' + object.lockSessionsToIp + '</lockSessionsToIp>'}
 	${object.logoutURL == null ? '' : '<logoutURL>' + object.logoutURL + '</logoutURL>'}
+	${object.redirectionWarning == null ? '' : '<redirectionWarning>' + object.redirectionWarning + '</redirectionWarning>'}
 	${object.referrerPolicy == null ? '' : '<referrerPolicy>' + object.referrerPolicy + '</referrerPolicy>'}
 	${object.requireHttpOnly == null ? '' : '<requireHttpOnly>' + object.requireHttpOnly + '</requireHttpOnly>'}
 	${object.requireHttps == null ? '' : '<requireHttps>' + object.requireHttps + '</requireHttps>'}

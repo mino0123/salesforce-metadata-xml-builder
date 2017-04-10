@@ -7,6 +7,8 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.eventType == null ? '' : '<eventType>' + object.eventType + '</eventType>'}
+	${object.orchestrationEvent == null ? '' : '<orchestrationEvent>' + object.orchestrationEvent + '</orchestrationEvent>'}
 	${object.platformEvent == null ? '' : '<platformEvent>' + object.platformEvent + '</platformEvent>'}
 	${object.platformEventPrimaryKey == null ? '' : '<platformEventPrimaryKey>' + object.platformEventPrimaryKey + '</platformEventPrimaryKey>'}
 ${rootTagEnd}`;

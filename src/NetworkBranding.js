@@ -10,6 +10,7 @@ module.exports = (object, asChild) => {
 	${object.loginFooterText == null ? '' : '<loginFooterText>' + object.loginFooterText + '</loginFooterText>'}
 	${object.loginLogo == null ? '' : '<loginLogo>' + object.loginLogo + '</loginLogo>'}
 	${object.loginLogoName == null ? '' : '<loginLogoName>' + object.loginLogoName + '</loginLogoName>'}
+	${object.loginPrimaryColor == null ? '' : '<loginPrimaryColor>' + object.loginPrimaryColor + '</loginPrimaryColor>'}
 	${object.loginQuaternaryColor == null ? '' : '<loginQuaternaryColor>' + object.loginQuaternaryColor + '</loginQuaternaryColor>'}
 	${object.loginRightFrameUrl == null ? '' : '<loginRightFrameUrl>' + object.loginRightFrameUrl + '</loginRightFrameUrl>'}
 	${object.network == null ? '' : '<network>' + object.network + '</network>'}

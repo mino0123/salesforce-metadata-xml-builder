@@ -19,6 +19,8 @@ module.exports = (object, asChild) => {
 	${object.helpText == null ? '' : '<helpText>' + object.helpText + '</helpText>'}
 	${object.pausedText == null ? '' : '<pausedText>' + object.pausedText + '</pausedText>'}
 	${object.rules == null ? '' : object.rules.map(p => '<rules>' + FlowScreenRule(p, true) + '</rules>').join('')}
+	${object.showFooter == null ? '' : '<showFooter>' + object.showFooter + '</showFooter>'}
+	${object.showHeader == null ? '' : '<showHeader>' + object.showHeader + '</showHeader>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.locationX == null ? '' : '<locationX>' + object.locationX + '</locationX>'}
 	${object.locationY == null ? '' : '<locationY>' + object.locationY + '</locationY>'}

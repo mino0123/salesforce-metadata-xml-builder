@@ -1,4 +1,3 @@
-const PagesToOpen = require('./PagesToOpen');
 
 module.exports = (object, asChild) => {
   var rootTagStart = '<LiveAgentConfig>';
@@ -14,7 +13,7 @@ module.exports = (object, asChild) => {
 	${object.openNewContactSubtab == null ? '' : '<openNewContactSubtab>' + object.openNewContactSubtab + '</openNewContactSubtab>'}
 	${object.openNewLeadSubtab == null ? '' : '<openNewLeadSubtab>' + object.openNewLeadSubtab + '</openNewLeadSubtab>'}
 	${object.openNewVFPageSubtab == null ? '' : '<openNewVFPageSubtab>' + object.openNewVFPageSubtab + '</openNewVFPageSubtab>'}
-	${object.pagesToOpen == null ? '' : '<pagesToOpen>' + PagesToOpen(object.pagesToOpen, true) + '</pagesToOpen>'}
+	${object.pageNamesToOpen == null ? '' : object.pageNamesToOpen.map(p => '<pageNamesToOpen>' + p + '</pageNamesToOpen>').join('')}
 	${object.showKnowledgeArticles == null ? '' : '<showKnowledgeArticles>' + object.showKnowledgeArticles + '</showKnowledgeArticles>'}
 ${rootTagEnd}`;
 }

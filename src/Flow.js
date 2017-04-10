@@ -14,6 +14,7 @@ const FlowRecordDelete = require('./FlowRecordDelete');
 const FlowRecordLookup = require('./FlowRecordLookup');
 const FlowRecordUpdate = require('./FlowRecordUpdate');
 const FlowScreen = require('./FlowScreen');
+const FlowStage = require('./FlowStage');
 const FlowStep = require('./FlowStep');
 const FlowSubflow = require('./FlowSubflow');
 const FlowTextTemplate = require('./FlowTextTemplate');
@@ -47,6 +48,7 @@ module.exports = (object, asChild) => {
 	${object.recordLookups == null ? '' : object.recordLookups.map(p => '<recordLookups>' + FlowRecordLookup(p, true) + '</recordLookups>').join('')}
 	${object.recordUpdates == null ? '' : object.recordUpdates.map(p => '<recordUpdates>' + FlowRecordUpdate(p, true) + '</recordUpdates>').join('')}
 	${object.screens == null ? '' : object.screens.map(p => '<screens>' + FlowScreen(p, true) + '</screens>').join('')}
+	${object.stages == null ? '' : object.stages.map(p => '<stages>' + FlowStage(p, true) + '</stages>').join('')}
 	${object.startElementReference == null ? '' : '<startElementReference>' + object.startElementReference + '</startElementReference>'}
 	${object.steps == null ? '' : object.steps.map(p => '<steps>' + FlowStep(p, true) + '</steps>').join('')}
 	${object.subflows == null ? '' : object.subflows.map(p => '<subflows>' + FlowSubflow(p, true) + '</subflows>').join('')}

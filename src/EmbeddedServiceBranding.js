@@ -7,6 +7,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.contrastInvertedColor == null ? '' : '<contrastInvertedColor>' + object.contrastInvertedColor + '</contrastInvertedColor>'}
 	${object.contrastPrimaryColor == null ? '' : '<contrastPrimaryColor>' + object.contrastPrimaryColor + '</contrastPrimaryColor>'}
 	${object.embeddedServiceConfig == null ? '' : '<embeddedServiceConfig>' + object.embeddedServiceConfig + '</embeddedServiceConfig>'}
 	${object.font == null ? '' : '<font>' + object.font + '</font>'}
