@@ -25,6 +25,7 @@ module.exports = (object, asChild) => {
 	${object.isGridLayout == null ? '' : '<isGridLayout>' + object.isGridLayout + '</isGridLayout>'}
 	${object.leftSection == null ? '' : '<leftSection>' + DashboardComponentSection(object.leftSection, true) + '</leftSection>'}
 	${object.middleSection == null ? '' : '<middleSection>' + DashboardComponentSection(object.middleSection, true) + '</middleSection>'}
+	${object.numSubscriptions == null ? '' : '<numSubscriptions>' + object.numSubscriptions + '</numSubscriptions>'}
 	${object.rightSection == null ? '' : '<rightSection>' + DashboardComponentSection(object.rightSection, true) + '</rightSection>'}
 	${object.runningUser == null ? '' : '<runningUser>' + object.runningUser + '</runningUser>'}
 	${object.textColor == null ? '' : '<textColor>' + object.textColor + '</textColor>'}

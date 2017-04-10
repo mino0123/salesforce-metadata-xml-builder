@@ -25,10 +25,12 @@ module.exports = (object, asChild) => {
 	${object.enforceIpRangesEveryRequest == null ? '' : '<enforceIpRangesEveryRequest>' + object.enforceIpRangesEveryRequest + '</enforceIpRangesEveryRequest>'}
 	${object.forceLogoutOnSessionTimeout == null ? '' : '<forceLogoutOnSessionTimeout>' + object.forceLogoutOnSessionTimeout + '</forceLogoutOnSessionTimeout>'}
 	${object.forceRelogin == null ? '' : '<forceRelogin>' + object.forceRelogin + '</forceRelogin>'}
+	${object.hstsOnForcecomSites == null ? '' : '<hstsOnForcecomSites>' + object.hstsOnForcecomSites + '</hstsOnForcecomSites>'}
 	${object.identityConfirmationOnTwoFactorRegistrationEnabled == null ? '' : '<identityConfirmationOnTwoFactorRegistrationEnabled>' + object.identityConfirmationOnTwoFactorRegistrationEnabled + '</identityConfirmationOnTwoFactorRegistrationEnabled>'}
 	${object.lockSessionsToDomain == null ? '' : '<lockSessionsToDomain>' + object.lockSessionsToDomain + '</lockSessionsToDomain>'}
 	${object.lockSessionsToIp == null ? '' : '<lockSessionsToIp>' + object.lockSessionsToIp + '</lockSessionsToIp>'}
 	${object.logoutURL == null ? '' : '<logoutURL>' + object.logoutURL + '</logoutURL>'}
+	${object.referrerPolicy == null ? '' : '<referrerPolicy>' + object.referrerPolicy + '</referrerPolicy>'}
 	${object.requireHttpOnly == null ? '' : '<requireHttpOnly>' + object.requireHttpOnly + '</requireHttpOnly>'}
 	${object.requireHttps == null ? '' : '<requireHttps>' + object.requireHttps + '</requireHttps>'}
 	${object.securityCentralKillSession == null ? '' : '<securityCentralKillSession>' + object.securityCentralKillSession + '</securityCentralKillSession>'}

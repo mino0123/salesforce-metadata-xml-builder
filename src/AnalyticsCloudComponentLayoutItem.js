@@ -13,6 +13,7 @@ module.exports = (object, asChild) => {
 	${object.filter == null ? '' : '<filter>' + object.filter + '</filter>'}
 	${object.height == null ? '' : '<height>' + object.height + '</height>'}
 	${object.hideOnError == null ? '' : '<hideOnError>' + object.hideOnError + '</hideOnError>'}
+	${object.showHeader == null ? '' : '<showHeader>' + object.showHeader + '</showHeader>'}
 	${object.showSharing == null ? '' : '<showSharing>' + object.showSharing + '</showSharing>'}
 	${object.showTitle == null ? '' : '<showTitle>' + object.showTitle + '</showTitle>'}
 	${object.width == null ? '' : '<width>' + object.width + '</width>'}

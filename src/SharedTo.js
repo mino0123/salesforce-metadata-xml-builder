@@ -10,6 +10,8 @@ module.exports = (object, asChild) => {
 	${object.allCustomerPortalUsers == null ? '' : '<allCustomerPortalUsers>' + object.allCustomerPortalUsers + '</allCustomerPortalUsers>'}
 	${object.allInternalUsers == null ? '' : '<allInternalUsers>' + object.allInternalUsers + '</allInternalUsers>'}
 	${object.allPartnerUsers == null ? '' : '<allPartnerUsers>' + object.allPartnerUsers + '</allPartnerUsers>'}
+	${object.channelProgramGroup == null ? '' : object.channelProgramGroup.map(p => '<channelProgramGroup>' + p + '</channelProgramGroup>').join('')}
+	${object.channelProgramGroups == null ? '' : object.channelProgramGroups.map(p => '<channelProgramGroups>' + p + '</channelProgramGroups>').join('')}
 	${object.group == null ? '' : object.group.map(p => '<group>' + p + '</group>').join('')}
 	${object.groups == null ? '' : object.groups.map(p => '<groups>' + p + '</groups>').join('')}
 	${object.managerSubordinates == null ? '' : object.managerSubordinates.map(p => '<managerSubordinates>' + p + '</managerSubordinates>').join('')}

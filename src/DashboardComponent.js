@@ -4,6 +4,7 @@ const DashboardComponentType = require('./DashboardComponentType');
 const DashboardFilterColumn = require('./DashboardFilterColumn');
 const DashboardTableColumn = require('./DashboardTableColumn');
 const ChartUnits = require('./ChartUnits');
+const DashboardFlexTableComponentProperties = require('./DashboardFlexTableComponentProperties');
 const ChartLegendPosition = require('./ChartLegendPosition');
 const DashboardComponentFilter = require('./DashboardComponentFilter');
 
@@ -29,6 +30,7 @@ module.exports = (object, asChild) => {
 	${object.drillToDetailEnabled == null ? '' : '<drillToDetailEnabled>' + object.drillToDetailEnabled + '</drillToDetailEnabled>'}
 	${object.enableHover == null ? '' : '<enableHover>' + object.enableHover + '</enableHover>'}
 	${object.expandOthers == null ? '' : '<expandOthers>' + object.expandOthers + '</expandOthers>'}
+	${object.flexComponentProperties == null ? '' : '<flexComponentProperties>' + DashboardFlexTableComponentProperties(object.flexComponentProperties, true) + '</flexComponentProperties>'}
 	${object.footer == null ? '' : '<footer>' + object.footer + '</footer>'}
 	${object.gaugeMax == null ? '' : '<gaugeMax>' + object.gaugeMax + '</gaugeMax>'}
 	${object.gaugeMin == null ? '' : '<gaugeMin>' + object.gaugeMin + '</gaugeMin>'}

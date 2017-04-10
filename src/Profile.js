@@ -1,4 +1,5 @@
 const ProfileApplicationVisibility = require('./ProfileApplicationVisibility');
+const ProfileCategoryGroupVisibility = require('./ProfileCategoryGroupVisibility');
 const ProfileApexClassAccess = require('./ProfileApexClassAccess');
 const ProfileCustomPermissions = require('./ProfileCustomPermissions');
 const ProfileExternalDataSourceAccess = require('./ProfileExternalDataSourceAccess');
@@ -22,6 +23,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.applicationVisibilities == null ? '' : object.applicationVisibilities.map(p => '<applicationVisibilities>' + ProfileApplicationVisibility(p, true) + '</applicationVisibilities>').join('')}
+	${object.categoryGroupVisibilities == null ? '' : object.categoryGroupVisibilities.map(p => '<categoryGroupVisibilities>' + ProfileCategoryGroupVisibility(p, true) + '</categoryGroupVisibilities>').join('')}
 	${object.classAccesses == null ? '' : object.classAccesses.map(p => '<classAccesses>' + ProfileApexClassAccess(p, true) + '</classAccesses>').join('')}
 	${object.custom == null ? '' : '<custom>' + object.custom + '</custom>'}
 	${object.customPermissions == null ? '' : object.customPermissions.map(p => '<customPermissions>' + ProfileCustomPermissions(p, true) + '</customPermissions>').join('')}

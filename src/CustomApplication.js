@@ -52,6 +52,7 @@ module.exports = (object, asChild) => {
 	${object.pushNotifications == null ? '' : '<pushNotifications>' + PushNotifications(object.pushNotifications, true) + '</pushNotifications>'}
 	${object.saveUserSessions == null ? '' : '<saveUserSessions>' + object.saveUserSessions + '</saveUserSessions>'}
 	${object.setupExperience == null ? '' : '<setupExperience>' + object.setupExperience + '</setupExperience>'}
+	${object.subscriberTabs == null ? '' : object.subscriberTabs.map(p => '<subscriberTabs>' + p + '</subscriberTabs>').join('')}
 	${object.tab == null ? '' : object.tab.map(p => '<tab>' + p + '</tab>').join('')}
 	${object.tabLimitConfig == null ? '' : '<tabLimitConfig>' + TabLimitConfig(object.tabLimitConfig, true) + '</tabLimitConfig>'}
 	${object.uiType == null ? '' : '<uiType>' + UiType(object.uiType, true) + '</uiType>'}

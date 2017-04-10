@@ -1,3 +1,4 @@
+const CommunityBaseTemplate = require('./CommunityBaseTemplate');
 const CommunityTemplateBundleInfo = require('./CommunityTemplateBundleInfo');
 const CommunityTemplateCategory = require('./CommunityTemplateCategory');
 const NavigationLinkSet = require('./NavigationLinkSet');
@@ -11,6 +12,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.baseTemplate == null ? '' : '<baseTemplate>' + CommunityBaseTemplate(object.baseTemplate, true) + '</baseTemplate>'}
 	${object.bundlesInfo == null ? '' : object.bundlesInfo.map(p => '<bundlesInfo>' + CommunityTemplateBundleInfo(p, true) + '</bundlesInfo>').join('')}
 	${object.category == null ? '' : '<category>' + CommunityTemplateCategory(object.category, true) + '</category>'}
 	${object.defaultBrandingSet == null ? '' : '<defaultBrandingSet>' + object.defaultBrandingSet + '</defaultBrandingSet>'}

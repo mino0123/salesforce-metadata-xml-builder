@@ -12,5 +12,6 @@ module.exports = (object, asChild) => {
 	${object.forgotPasswordPageOverrideSetting == null ? '' : '<forgotPasswordPageOverrideSetting>' + NetworkPageOverrideSetting(object.forgotPasswordPageOverrideSetting, true) + '</forgotPasswordPageOverrideSetting>'}
 	${object.homePageOverrideSetting == null ? '' : '<homePageOverrideSetting>' + NetworkPageOverrideSetting(object.homePageOverrideSetting, true) + '</homePageOverrideSetting>'}
 	${object.loginPageOverrideSetting == null ? '' : '<loginPageOverrideSetting>' + NetworkPageOverrideSetting(object.loginPageOverrideSetting, true) + '</loginPageOverrideSetting>'}
+	${object.selfRegProfilePageOverrideSetting == null ? '' : '<selfRegProfilePageOverrideSetting>' + NetworkPageOverrideSetting(object.selfRegProfilePageOverrideSetting, true) + '</selfRegProfilePageOverrideSetting>'}
 ${rootTagEnd}`;
 }

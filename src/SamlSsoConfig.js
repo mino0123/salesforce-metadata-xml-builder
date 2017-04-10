@@ -1,6 +1,7 @@
 const SamlIdentityLocationType = require('./SamlIdentityLocationType');
 const SamlIdentityType = require('./SamlIdentityType');
 const SamlType = require('./SamlType');
+const SamlSpSLOBinding = require('./SamlSpSLOBinding');
 
 module.exports = (object, asChild) => {
   var rootTagStart = '<SamlSsoConfig>';
@@ -29,6 +30,8 @@ module.exports = (object, asChild) => {
 	${object.samlEntityId == null ? '' : '<samlEntityId>' + object.samlEntityId + '</samlEntityId>'}
 	${object.samlJitHandlerId == null ? '' : '<samlJitHandlerId>' + object.samlJitHandlerId + '</samlJitHandlerId>'}
 	${object.samlVersion == null ? '' : '<samlVersion>' + SamlType(object.samlVersion, true) + '</samlVersion>'}
+	${object.singleLogoutBinding == null ? '' : '<singleLogoutBinding>' + SamlSpSLOBinding(object.singleLogoutBinding, true) + '</singleLogoutBinding>'}
+	${object.singleLogoutUrl == null ? '' : '<singleLogoutUrl>' + object.singleLogoutUrl + '</singleLogoutUrl>'}
 	${object.userProvisioning == null ? '' : '<userProvisioning>' + object.userProvisioning + '</userProvisioning>'}
 	${object.validationCert == null ? '' : '<validationCert>' + object.validationCert + '</validationCert>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
