@@ -8,6 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.groupingStringEnum == null ? '' : '<groupingStringEnum>' + object.groupingStringEnum + '</groupingStringEnum>'}
 	${object.sorted == null ? '' : '<sorted>' + object.sorted + '</sorted>'}
 	${object.standardValue == null ? '' : object.standardValue.map(p => '<standardValue>' + StandardValue(p, true) + '</standardValue>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}

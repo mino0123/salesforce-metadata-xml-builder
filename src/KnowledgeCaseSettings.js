@@ -20,6 +20,7 @@ module.exports = (object, asChild) => {
 	${object.editor == null ? '' : '<editor>' + KnowledgeCaseEditor(object.editor, true) + '</editor>'}
 	${object.enableArticleCreation == null ? '' : '<enableArticleCreation>' + object.enableArticleCreation + '</enableArticleCreation>'}
 	${object.enableArticlePublicSharingSites == null ? '' : '<enableArticlePublicSharingSites>' + object.enableArticlePublicSharingSites + '</enableArticlePublicSharingSites>'}
+	${object.enableCaseDataCategoryMapping == null ? '' : '<enableCaseDataCategoryMapping>' + object.enableCaseDataCategoryMapping + '</enableCaseDataCategoryMapping>'}
 	${object.useProfileForPDFCreation == null ? '' : '<useProfileForPDFCreation>' + object.useProfileForPDFCreation + '</useProfileForPDFCreation>'}
 ${rootTagEnd}`;
 }
