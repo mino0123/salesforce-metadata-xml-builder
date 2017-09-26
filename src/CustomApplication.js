@@ -7,6 +7,7 @@ const KeyboardShortcuts = require('./KeyboardShortcuts');
 const ListPlacement = require('./ListPlacement');
 const LiveAgentConfig = require('./LiveAgentConfig');
 const NavType = require('./NavType');
+const AppProfileActionOverride = require('./AppProfileActionOverride');
 const PushNotifications = require('./PushNotifications');
 const TabLimitConfig = require('./TabLimitConfig');
 const UiType = require('./UiType');
@@ -47,8 +48,10 @@ module.exports = (object, asChild) => {
 	${object.logo == null ? '' : '<logo>' + object.logo + '</logo>'}
 	${object.navType == null ? '' : '<navType>' + NavType(object.navType, true) + '</navType>'}
 	${object.primaryTabColor == null ? '' : '<primaryTabColor>' + object.primaryTabColor + '</primaryTabColor>'}
+	${object.profileActionOverrides == null ? '' : object.profileActionOverrides.map(p => '<profileActionOverrides>' + AppProfileActionOverride(p, true) + '</profileActionOverrides>').join('')}
 	${object.pushNotifications == null ? '' : '<pushNotifications>' + PushNotifications(object.pushNotifications, true) + '</pushNotifications>'}
 	${object.saveUserSessions == null ? '' : '<saveUserSessions>' + object.saveUserSessions + '</saveUserSessions>'}
+	${object.setupExperience == null ? '' : '<setupExperience>' + object.setupExperience + '</setupExperience>'}
 	${object.tab == null ? '' : object.tab.map(p => '<tab>' + p + '</tab>').join('')}
 	${object.tabLimitConfig == null ? '' : '<tabLimitConfig>' + TabLimitConfig(object.tabLimitConfig, true) + '</tabLimitConfig>'}
 	${object.uiType == null ? '' : '<uiType>' + UiType(object.uiType, true) + '</uiType>'}

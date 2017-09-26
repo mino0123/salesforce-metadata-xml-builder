@@ -16,6 +16,7 @@ module.exports = (object, asChild) => {
 	${object.allowStandardAnswersPages == null ? '' : '<allowStandardAnswersPages>' + object.allowStandardAnswersPages + '</allowStandardAnswersPages>'}
 	${object.allowStandardIdeasPages == null ? '' : '<allowStandardIdeasPages>' + object.allowStandardIdeasPages + '</allowStandardIdeasPages>'}
 	${object.allowStandardLookups == null ? '' : '<allowStandardLookups>' + object.allowStandardLookups + '</allowStandardLookups>'}
+	${object.allowStandardPortalPages == null ? '' : '<allowStandardPortalPages>' + object.allowStandardPortalPages + '</allowStandardPortalPages>'}
 	${object.allowStandardSearch == null ? '' : '<allowStandardSearch>' + object.allowStandardSearch + '</allowStandardSearch>'}
 	${object.analyticsTrackingCode == null ? '' : '<analyticsTrackingCode>' + object.analyticsTrackingCode + '</analyticsTrackingCode>'}
 	${object.authorizationRequiredPage == null ? '' : '<authorizationRequiredPage>' + object.authorizationRequiredPage + '</authorizationRequiredPage>'}

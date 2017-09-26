@@ -20,6 +20,7 @@ module.exports = (object, asChild) => {
 	${object.fieldType == null ? '' : '<fieldType>' + FlowScreenFieldType(object.fieldType, true) + '</fieldType>'}
 	${object.helpText == null ? '' : '<helpText>' + object.helpText + '</helpText>'}
 	${object.isRequired == null ? '' : '<isRequired>' + object.isRequired + '</isRequired>'}
+	${object.isVisible == null ? '' : '<isVisible>' + object.isVisible + '</isVisible>'}
 	${object.scale == null ? '' : '<scale>' + object.scale + '</scale>'}
 	${object.validationRule == null ? '' : '<validationRule>' + FlowInputValidationRule(object.validationRule, true) + '</validationRule>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}

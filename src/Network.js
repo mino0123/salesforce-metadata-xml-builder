@@ -1,6 +1,7 @@
 const Branding = require('./Branding');
 const NavigationLinkSet = require('./NavigationLinkSet');
 const NetworkMemberGroup = require('./NetworkMemberGroup');
+const NetworkPageOverride = require('./NetworkPageOverride');
 const ReputationLevelDefinitions = require('./ReputationLevelDefinitions');
 const ReputationPointsRules = require('./ReputationPointsRules');
 const NetworkStatus = require('./NetworkStatus');
@@ -14,6 +15,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.allowInternalUserLogin == null ? '' : '<allowInternalUserLogin>' + object.allowInternalUserLogin + '</allowInternalUserLogin>'}
 	${object.allowMembersToFlag == null ? '' : '<allowMembersToFlag>' + object.allowMembersToFlag + '</allowMembersToFlag>'}
 	${object.allowedExtensions == null ? '' : '<allowedExtensions>' + object.allowedExtensions + '</allowedExtensions>'}
 	${object.branding == null ? '' : '<branding>' + Branding(object.branding, true) + '</branding>'}
@@ -29,12 +31,15 @@ module.exports = (object, asChild) => {
 	${object.enablePrivateMessages == null ? '' : '<enablePrivateMessages>' + object.enablePrivateMessages + '</enablePrivateMessages>'}
 	${object.enableReputation == null ? '' : '<enableReputation>' + object.enableReputation + '</enableReputation>'}
 	${object.enableSiteAsContainer == null ? '' : '<enableSiteAsContainer>' + object.enableSiteAsContainer + '</enableSiteAsContainer>'}
+	${object.enableTopicAssignmentRules == null ? '' : '<enableTopicAssignmentRules>' + object.enableTopicAssignmentRules + '</enableTopicAssignmentRules>'}
 	${object.feedChannel == null ? '' : '<feedChannel>' + object.feedChannel + '</feedChannel>'}
 	${object.forgotPasswordTemplate == null ? '' : '<forgotPasswordTemplate>' + object.forgotPasswordTemplate + '</forgotPasswordTemplate>'}
+	${object.gatherCustomerSentimentData == null ? '' : '<gatherCustomerSentimentData>' + object.gatherCustomerSentimentData + '</gatherCustomerSentimentData>'}
 	${object.logoutUrl == null ? '' : '<logoutUrl>' + object.logoutUrl + '</logoutUrl>'}
 	${object.maxFileSizeKb == null ? '' : '<maxFileSizeKb>' + object.maxFileSizeKb + '</maxFileSizeKb>'}
 	${object.navigationLinkSet == null ? '' : '<navigationLinkSet>' + NavigationLinkSet(object.navigationLinkSet, true) + '</navigationLinkSet>'}
 	${object.networkMemberGroups == null ? '' : '<networkMemberGroups>' + NetworkMemberGroup(object.networkMemberGroups, true) + '</networkMemberGroups>'}
+	${object.networkPageOverrides == null ? '' : '<networkPageOverrides>' + NetworkPageOverride(object.networkPageOverrides, true) + '</networkPageOverrides>'}
 	${object.newSenderAddress == null ? '' : '<newSenderAddress>' + object.newSenderAddress + '</newSenderAddress>'}
 	${object.picassoSite == null ? '' : '<picassoSite>' + object.picassoSite + '</picassoSite>'}
 	${object.reputationLevels == null ? '' : '<reputationLevels>' + ReputationLevelDefinitions(object.reputationLevels, true) + '</reputationLevels>'}

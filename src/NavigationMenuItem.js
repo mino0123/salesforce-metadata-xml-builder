@@ -1,3 +1,4 @@
+const NavigationSubMenu = require('./NavigationSubMenu');
 
 module.exports = (object, asChild) => {
   var rootTagStart = '<NavigationMenuItem>';
@@ -11,6 +12,7 @@ module.exports = (object, asChild) => {
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.position == null ? '' : '<position>' + object.position + '</position>'}
 	${object.publiclyAvailable == null ? '' : '<publiclyAvailable>' + object.publiclyAvailable + '</publiclyAvailable>'}
+	${object.subMenu == null ? '' : '<subMenu>' + NavigationSubMenu(object.subMenu, true) + '</subMenu>'}
 	${object.target == null ? '' : '<target>' + object.target + '</target>'}
 	${object.targetPreference == null ? '' : '<targetPreference>' + object.targetPreference + '</targetPreference>'}
 	${object.type == null ? '' : '<type>' + object.type + '</type>'}

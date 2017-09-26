@@ -13,6 +13,7 @@ module.exports = (object, asChild) => {
 	${object.converted == null ? '' : '<converted>' + object.converted + '</converted>'}
 	${object.cssExposed == null ? '' : '<cssExposed>' + object.cssExposed + '</cssExposed>'}
 	${object.forecastCategory == null ? '' : '<forecastCategory>' + ForecastCategories(object.forecastCategory, true) + '</forecastCategory>'}
+	${object.groupingString == null ? '' : '<groupingString>' + object.groupingString + '</groupingString>'}
 	${object.highPriority == null ? '' : '<highPriority>' + object.highPriority + '</highPriority>'}
 	${object.probability == null ? '' : '<probability>' + object.probability + '</probability>'}
 	${object.reverseRole == null ? '' : '<reverseRole>' + object.reverseRole + '</reverseRole>'}
@@ -22,6 +23,7 @@ module.exports = (object, asChild) => {
 	${object.default == null ? '' : '<default>' + object.default + '</default>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.isActive == null ? '' : '<isActive>' + object.isActive + '</isActive>'}
+	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }
