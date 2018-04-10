@@ -20,13 +20,17 @@ module.exports = (object, asChild) => {
 	${object.enableContentSniffingProtection == null ? '' : '<enableContentSniffingProtection>' + object.enableContentSniffingProtection + '</enableContentSniffingProtection>'}
 	${object.enablePostForSessions == null ? '' : '<enablePostForSessions>' + object.enablePostForSessions + '</enablePostForSessions>'}
 	${object.enableSMSIdentity == null ? '' : '<enableSMSIdentity>' + object.enableSMSIdentity + '</enableSMSIdentity>'}
+	${object.enableUpgradeInsecureRequests == null ? '' : '<enableUpgradeInsecureRequests>' + object.enableUpgradeInsecureRequests + '</enableUpgradeInsecureRequests>'}
 	${object.enableXssProtection == null ? '' : '<enableXssProtection>' + object.enableXssProtection + '</enableXssProtection>'}
 	${object.enforceIpRangesEveryRequest == null ? '' : '<enforceIpRangesEveryRequest>' + object.enforceIpRangesEveryRequest + '</enforceIpRangesEveryRequest>'}
 	${object.forceLogoutOnSessionTimeout == null ? '' : '<forceLogoutOnSessionTimeout>' + object.forceLogoutOnSessionTimeout + '</forceLogoutOnSessionTimeout>'}
 	${object.forceRelogin == null ? '' : '<forceRelogin>' + object.forceRelogin + '</forceRelogin>'}
+	${object.identityConfirmationOnTwoFactorRegistrationEnabled == null ? '' : '<identityConfirmationOnTwoFactorRegistrationEnabled>' + object.identityConfirmationOnTwoFactorRegistrationEnabled + '</identityConfirmationOnTwoFactorRegistrationEnabled>'}
 	${object.lockSessionsToDomain == null ? '' : '<lockSessionsToDomain>' + object.lockSessionsToDomain + '</lockSessionsToDomain>'}
 	${object.lockSessionsToIp == null ? '' : '<lockSessionsToIp>' + object.lockSessionsToIp + '</lockSessionsToIp>'}
 	${object.logoutURL == null ? '' : '<logoutURL>' + object.logoutURL + '</logoutURL>'}
+	${object.requireHttpOnly == null ? '' : '<requireHttpOnly>' + object.requireHttpOnly + '</requireHttpOnly>'}
+	${object.requireHttps == null ? '' : '<requireHttps>' + object.requireHttps + '</requireHttps>'}
 	${object.securityCentralKillSession == null ? '' : '<securityCentralKillSession>' + object.securityCentralKillSession + '</securityCentralKillSession>'}
 	${object.sessionTimeout == null ? '' : '<sessionTimeout>' + SessionTimeout(object.sessionTimeout, true) + '</sessionTimeout>'}
 ${rootTagEnd}`;

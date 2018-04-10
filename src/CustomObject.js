@@ -42,6 +42,7 @@ module.exports = (object, asChild) => {
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.enableActivities == null ? '' : '<enableActivities>' + object.enableActivities + '</enableActivities>'}
 	${object.enableBulkApi == null ? '' : '<enableBulkApi>' + object.enableBulkApi + '</enableBulkApi>'}
+	${object.enableChangeDataCapture == null ? '' : '<enableChangeDataCapture>' + object.enableChangeDataCapture + '</enableChangeDataCapture>'}
 	${object.enableDivisions == null ? '' : '<enableDivisions>' + object.enableDivisions + '</enableDivisions>'}
 	${object.enableEnhancedLookup == null ? '' : '<enableEnhancedLookup>' + object.enableEnhancedLookup + '</enableEnhancedLookup>'}
 	${object.enableFeeds == null ? '' : '<enableFeeds>' + object.enableFeeds + '</enableFeeds>'}

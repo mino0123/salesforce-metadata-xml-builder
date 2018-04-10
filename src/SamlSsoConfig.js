@@ -24,6 +24,7 @@ module.exports = (object, asChild) => {
 	${object.oauthTokenEndpoint == null ? '' : '<oauthTokenEndpoint>' + object.oauthTokenEndpoint + '</oauthTokenEndpoint>'}
 	${object.redirectBinding == null ? '' : '<redirectBinding>' + object.redirectBinding + '</redirectBinding>'}
 	${object.requestSignatureMethod == null ? '' : '<requestSignatureMethod>' + object.requestSignatureMethod + '</requestSignatureMethod>'}
+	${object.requestSigningCertId == null ? '' : '<requestSigningCertId>' + object.requestSigningCertId + '</requestSigningCertId>'}
 	${object.salesforceLoginUrl == null ? '' : '<salesforceLoginUrl>' + object.salesforceLoginUrl + '</salesforceLoginUrl>'}
 	${object.samlEntityId == null ? '' : '<samlEntityId>' + object.samlEntityId + '</samlEntityId>'}
 	${object.samlJitHandlerId == null ? '' : '<samlJitHandlerId>' + object.samlJitHandlerId + '</samlJitHandlerId>'}

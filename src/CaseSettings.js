@@ -34,6 +34,7 @@ module.exports = (object, asChild) => {
 	${object.notifyDefaultCaseOwner == null ? '' : '<notifyDefaultCaseOwner>' + object.notifyDefaultCaseOwner + '</notifyDefaultCaseOwner>'}
 	${object.notifyOwnerOnCaseComment == null ? '' : '<notifyOwnerOnCaseComment>' + object.notifyOwnerOnCaseComment + '</notifyOwnerOnCaseComment>'}
 	${object.notifyOwnerOnCaseOwnerChange == null ? '' : '<notifyOwnerOnCaseOwnerChange>' + object.notifyOwnerOnCaseOwnerChange + '</notifyOwnerOnCaseOwnerChange>'}
+	${object.showEmailAttachmentsInCaseAttachmentsRL == null ? '' : '<showEmailAttachmentsInCaseAttachmentsRL>' + object.showEmailAttachmentsInCaseAttachmentsRL + '</showEmailAttachmentsInCaseAttachmentsRL>'}
 	${object.showFewerCloseActions == null ? '' : '<showFewerCloseActions>' + object.showFewerCloseActions + '</showFewerCloseActions>'}
 	${object.systemUserEmail == null ? '' : '<systemUserEmail>' + object.systemUserEmail + '</systemUserEmail>'}
 	${object.useSystemEmailAddress == null ? '' : '<useSystemEmailAddress>' + object.useSystemEmailAddress + '</useSystemEmailAddress>'}

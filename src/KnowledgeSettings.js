@@ -18,6 +18,7 @@ module.exports = (object, asChild) => {
 	${object.enableCreateEditOnArticlesTab == null ? '' : '<enableCreateEditOnArticlesTab>' + object.enableCreateEditOnArticlesTab + '</enableCreateEditOnArticlesTab>'}
 	${object.enableExternalMediaContent == null ? '' : '<enableExternalMediaContent>' + object.enableExternalMediaContent + '</enableExternalMediaContent>'}
 	${object.enableKnowledge == null ? '' : '<enableKnowledge>' + object.enableKnowledge + '</enableKnowledge>'}
+	${object.enableLightningKnowledge == null ? '' : '<enableLightningKnowledge>' + object.enableLightningKnowledge + '</enableLightningKnowledge>'}
 	${object.languages == null ? '' : '<languages>' + KnowledgeLanguageSettings(object.languages, true) + '</languages>'}
 	${object.showArticleSummariesCustomerPortal == null ? '' : '<showArticleSummariesCustomerPortal>' + object.showArticleSummariesCustomerPortal + '</showArticleSummariesCustomerPortal>'}
 	${object.showArticleSummariesInternalApp == null ? '' : '<showArticleSummariesInternalApp>' + object.showArticleSummariesInternalApp + '</showArticleSummariesInternalApp>'}
