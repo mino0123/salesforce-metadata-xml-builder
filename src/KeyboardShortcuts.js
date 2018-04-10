@@ -9,7 +9,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
-	${object.customShortcut == null ? '' : object.customShortcut.map(p => '<customShortcut>' + CustomShortcut(p, true) + '</customShortcut>').join('')}
-	${object.defaultShortcut == null ? '' : object.defaultShortcut.map(p => '<defaultShortcut>' + DefaultShortcut(p, true) + '</defaultShortcut>').join('')}
+	${object.customShortcuts == null ? '' : object.customShortcuts.map(p => '<customShortcuts>' + CustomShortcut(p, true) + '</customShortcuts>').join('')}
+	${object.defaultShortcuts == null ? '' : object.defaultShortcuts.map(p => '<defaultShortcuts>' + DefaultShortcut(p, true) + '</defaultShortcuts>').join('')}
 ${rootTagEnd}`;
 }

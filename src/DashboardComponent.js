@@ -1,5 +1,6 @@
 const ChartRangeType = require('./ChartRangeType');
 const ChartSummary = require('./ChartSummary');
+const ChartTheme = require('./ChartTheme');
 const DashboardComponentType = require('./DashboardComponentType');
 const DashboardFilterColumn = require('./DashboardFilterColumn');
 const DashboardTableColumn = require('./DashboardTableColumn');
@@ -21,6 +22,7 @@ module.exports = (object, asChild) => {
 	${object.chartAxisRangeMax == null ? '' : '<chartAxisRangeMax>' + object.chartAxisRangeMax + '</chartAxisRangeMax>'}
 	${object.chartAxisRangeMin == null ? '' : '<chartAxisRangeMin>' + object.chartAxisRangeMin + '</chartAxisRangeMin>'}
 	${object.chartSummary == null ? '' : object.chartSummary.map(p => '<chartSummary>' + ChartSummary(p, true) + '</chartSummary>').join('')}
+	${object.componentChartTheme == null ? '' : '<componentChartTheme>' + ChartTheme(object.componentChartTheme, true) + '</componentChartTheme>'}
 	${object.componentType == null ? '' : '<componentType>' + DashboardComponentType(object.componentType, true) + '</componentType>'}
 	${object.dashboardFilterColumns == null ? '' : object.dashboardFilterColumns.map(p => '<dashboardFilterColumns>' + DashboardFilterColumn(p, true) + '</dashboardFilterColumns>').join('')}
 	${object.dashboardTableColumn == null ? '' : object.dashboardTableColumn.map(p => '<dashboardTableColumn>' + DashboardTableColumn(p, true) + '</dashboardTableColumn>').join('')}
@@ -52,6 +54,7 @@ module.exports = (object, asChild) => {
 	${object.showPercentage == null ? '' : '<showPercentage>' + object.showPercentage + '</showPercentage>'}
 	${object.showPicturesOnCharts == null ? '' : '<showPicturesOnCharts>' + object.showPicturesOnCharts + '</showPicturesOnCharts>'}
 	${object.showPicturesOnTables == null ? '' : '<showPicturesOnTables>' + object.showPicturesOnTables + '</showPicturesOnTables>'}
+	${object.showRange == null ? '' : '<showRange>' + object.showRange + '</showRange>'}
 	${object.showTotal == null ? '' : '<showTotal>' + object.showTotal + '</showTotal>'}
 	${object.showValues == null ? '' : '<showValues>' + object.showValues + '</showValues>'}
 	${object.sortBy == null ? '' : '<sortBy>' + DashboardComponentFilter(object.sortBy, true) + '</sortBy>'}

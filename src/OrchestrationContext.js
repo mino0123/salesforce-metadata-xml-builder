@@ -11,7 +11,7 @@ module.exports = (object, asChild) => {
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.events == null ? '' : object.events.map(p => '<events>' + OrchestrationContextEvent(p, true) + '</events>').join('')}
 	${object.masterLabel == null ? '' : '<masterLabel>' + object.masterLabel + '</masterLabel>'}
-	${object.primaryKeyDataType == null ? '' : '<primaryKeyDataType>' + object.primaryKeyDataType + '</primaryKeyDataType>'}
+	${object.runtimeType == null ? '' : '<runtimeType>' + object.runtimeType + '</runtimeType>'}
 	${object.salesforceObject == null ? '' : '<salesforceObject>' + object.salesforceObject + '</salesforceObject>'}
 	${object.salesforceObjectPrimaryKey == null ? '' : '<salesforceObjectPrimaryKey>' + object.salesforceObjectPrimaryKey + '</salesforceObjectPrimaryKey>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}

@@ -8,6 +8,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.allowUsersToRelateMultipleContactsToTasksAndEvents == null ? '' : '<allowUsersToRelateMultipleContactsToTasksAndEvents>' + object.allowUsersToRelateMultipleContactsToTasksAndEvents + '</allowUsersToRelateMultipleContactsToTasksAndEvents>'}
+	${object.autoRelateEventAttendees == null ? '' : '<autoRelateEventAttendees>' + object.autoRelateEventAttendees + '</autoRelateEventAttendees>'}
 	${object.enableActivityReminders == null ? '' : '<enableActivityReminders>' + object.enableActivityReminders + '</enableActivityReminders>'}
 	${object.enableClickCreateEvents == null ? '' : '<enableClickCreateEvents>' + object.enableClickCreateEvents + '</enableClickCreateEvents>'}
 	${object.enableDragAndDropScheduling == null ? '' : '<enableDragAndDropScheduling>' + object.enableDragAndDropScheduling + '</enableDragAndDropScheduling>'}

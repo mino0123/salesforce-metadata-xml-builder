@@ -11,5 +11,6 @@ module.exports = (object, asChild) => {
 	${object.headerColor == null ? '' : '<headerColor>' + object.headerColor + '</headerColor>'}
 	${object.logo == null ? '' : '<logo>' + object.logo + '</logo>'}
 	${object.logoVersion == null ? '' : '<logoVersion>' + object.logoVersion + '</logoVersion>'}
+	${object.shouldOverrideOrgTheme == null ? '' : '<shouldOverrideOrgTheme>' + object.shouldOverrideOrgTheme + '</shouldOverrideOrgTheme>'}
 ${rootTagEnd}`;
 }

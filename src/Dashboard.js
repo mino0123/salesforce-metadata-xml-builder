@@ -1,4 +1,6 @@
 const ChartBackgroundDirection = require('./ChartBackgroundDirection');
+const ChartTheme = require('./ChartTheme');
+const ChartColorPalettes = require('./ChartColorPalettes');
 const DashboardFilter = require('./DashboardFilter');
 const DashboardGridLayout = require('./DashboardGridLayout');
 const DashboardType = require('./DashboardType');
@@ -15,6 +17,10 @@ module.exports = (object, asChild) => {
 	${object.backgroundEndColor == null ? '' : '<backgroundEndColor>' + object.backgroundEndColor + '</backgroundEndColor>'}
 	${object.backgroundFadeDirection == null ? '' : '<backgroundFadeDirection>' + ChartBackgroundDirection(object.backgroundFadeDirection, true) + '</backgroundFadeDirection>'}
 	${object.backgroundStartColor == null ? '' : '<backgroundStartColor>' + object.backgroundStartColor + '</backgroundStartColor>'}
+	${object.chartTheme == null ? '' : '<chartTheme>' + ChartTheme(object.chartTheme, true) + '</chartTheme>'}
+	${object.colorPalette == null ? '' : '<colorPalette>' + ChartColorPalettes(object.colorPalette, true) + '</colorPalette>'}
+	${object.dashboardChartTheme == null ? '' : '<dashboardChartTheme>' + ChartTheme(object.dashboardChartTheme, true) + '</dashboardChartTheme>'}
+	${object.dashboardColorPalette == null ? '' : '<dashboardColorPalette>' + ChartColorPalettes(object.dashboardColorPalette, true) + '</dashboardColorPalette>'}
 	${object.dashboardFilters == null ? '' : object.dashboardFilters.map(p => '<dashboardFilters>' + DashboardFilter(p, true) + '</dashboardFilters>').join('')}
 	${object.dashboardGridLayout == null ? '' : '<dashboardGridLayout>' + DashboardGridLayout(object.dashboardGridLayout, true) + '</dashboardGridLayout>'}
 	${object.dashboardResultRefreshedDate == null ? '' : '<dashboardResultRefreshedDate>' + object.dashboardResultRefreshedDate + '</dashboardResultRefreshedDate>'}
