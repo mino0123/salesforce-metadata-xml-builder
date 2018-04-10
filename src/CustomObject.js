@@ -4,6 +4,7 @@ const BusinessProcess = require('./BusinessProcess');
 const CompactLayout = require('./CompactLayout');
 const CustomSettingsType = require('./CustomSettingsType');
 const DeploymentStatus = require('./DeploymentStatus');
+const PlatformEventType = require('./PlatformEventType');
 const SharingModel = require('./SharingModel');
 const FieldSet = require('./FieldSet');
 const CustomField = require('./CustomField');
@@ -37,6 +38,8 @@ module.exports = (object, asChild) => {
 	${object.customHelp == null ? '' : '<customHelp>' + object.customHelp + '</customHelp>'}
 	${object.customHelpPage == null ? '' : '<customHelpPage>' + object.customHelpPage + '</customHelpPage>'}
 	${object.customSettingsType == null ? '' : '<customSettingsType>' + CustomSettingsType(object.customSettingsType, true) + '</customSettingsType>'}
+	${object.dataStewardGroup == null ? '' : '<dataStewardGroup>' + object.dataStewardGroup + '</dataStewardGroup>'}
+	${object.dataStewardUser == null ? '' : '<dataStewardUser>' + object.dataStewardUser + '</dataStewardUser>'}
 	${object.deploymentStatus == null ? '' : '<deploymentStatus>' + DeploymentStatus(object.deploymentStatus, true) + '</deploymentStatus>'}
 	${object.deprecated == null ? '' : '<deprecated>' + object.deprecated + '</deprecated>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
@@ -51,6 +54,7 @@ module.exports = (object, asChild) => {
 	${object.enableSearch == null ? '' : '<enableSearch>' + object.enableSearch + '</enableSearch>'}
 	${object.enableSharing == null ? '' : '<enableSharing>' + object.enableSharing + '</enableSharing>'}
 	${object.enableStreamingApi == null ? '' : '<enableStreamingApi>' + object.enableStreamingApi + '</enableStreamingApi>'}
+	${object.eventType == null ? '' : '<eventType>' + PlatformEventType(object.eventType, true) + '</eventType>'}
 	${object.externalDataSource == null ? '' : '<externalDataSource>' + object.externalDataSource + '</externalDataSource>'}
 	${object.externalName == null ? '' : '<externalName>' + object.externalName + '</externalName>'}
 	${object.externalRepository == null ? '' : '<externalRepository>' + object.externalRepository + '</externalRepository>'}

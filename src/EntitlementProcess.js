@@ -17,9 +17,11 @@ module.exports = (object, asChild) => {
 	${object.exitCriteriaBooleanFilter == null ? '' : '<exitCriteriaBooleanFilter>' + object.exitCriteriaBooleanFilter + '</exitCriteriaBooleanFilter>'}
 	${object.exitCriteriaFilterItems == null ? '' : object.exitCriteriaFilterItems.map(p => '<exitCriteriaFilterItems>' + FilterItem(p, true) + '</exitCriteriaFilterItems>').join('')}
 	${object.exitCriteriaFormula == null ? '' : '<exitCriteriaFormula>' + object.exitCriteriaFormula + '</exitCriteriaFormula>'}
+	${object.isRecordTypeApplied == null ? '' : '<isRecordTypeApplied>' + object.isRecordTypeApplied + '</isRecordTypeApplied>'}
 	${object.isVersionDefault == null ? '' : '<isVersionDefault>' + object.isVersionDefault + '</isVersionDefault>'}
 	${object.milestones == null ? '' : object.milestones.map(p => '<milestones>' + EntitlementProcessMilestoneItem(p, true) + '</milestones>').join('')}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
+	${object.recordType == null ? '' : '<recordType>' + object.recordType + '</recordType>'}
 	${object.versionMaster == null ? '' : '<versionMaster>' + object.versionMaster + '</versionMaster>'}
 	${object.versionNotes == null ? '' : '<versionNotes>' + object.versionNotes + '</versionNotes>'}
 	${object.versionNumber == null ? '' : '<versionNumber>' + object.versionNumber + '</versionNumber>'}

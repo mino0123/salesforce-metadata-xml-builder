@@ -4,6 +4,7 @@ const TreatBlanksAs = require('./TreatBlanksAs');
 const LookupFilter = require('./LookupFilter');
 const EncryptedFieldMaskChar = require('./EncryptedFieldMaskChar');
 const EncryptedFieldMaskType = require('./EncryptedFieldMaskType');
+const SecurityClassification = require('./SecurityClassification');
 const FilterItem = require('./FilterItem');
 const SummaryOperations = require('./SummaryOperations');
 const FieldType = require('./FieldType');
@@ -17,6 +18,9 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.businessOwnerGroup == null ? '' : '<businessOwnerGroup>' + object.businessOwnerGroup + '</businessOwnerGroup>'}
+	${object.businessOwnerUser == null ? '' : '<businessOwnerUser>' + object.businessOwnerUser + '</businessOwnerUser>'}
+	${object.businessStatus == null ? '' : '<businessStatus>' + object.businessStatus + '</businessStatus>'}
 	${object.caseSensitive == null ? '' : '<caseSensitive>' + object.caseSensitive + '</caseSensitive>'}
 	${object.customDataType == null ? '' : '<customDataType>' + object.customDataType + '</customDataType>'}
 	${object.defaultValue == null ? '' : '<defaultValue>' + object.defaultValue + '</defaultValue>'}
@@ -53,6 +57,7 @@ module.exports = (object, asChild) => {
 	${object.required == null ? '' : '<required>' + object.required + '</required>'}
 	${object.restrictedAdminField == null ? '' : '<restrictedAdminField>' + object.restrictedAdminField + '</restrictedAdminField>'}
 	${object.scale == null ? '' : '<scale>' + object.scale + '</scale>'}
+	${object.securityClassification == null ? '' : '<securityClassification>' + SecurityClassification(object.securityClassification, true) + '</securityClassification>'}
 	${object.startingNumber == null ? '' : '<startingNumber>' + object.startingNumber + '</startingNumber>'}
 	${object.stripMarkup == null ? '' : '<stripMarkup>' + object.stripMarkup + '</stripMarkup>'}
 	${object.summarizedField == null ? '' : '<summarizedField>' + object.summarizedField + '</summarizedField>'}

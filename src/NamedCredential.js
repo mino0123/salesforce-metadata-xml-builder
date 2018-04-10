@@ -9,9 +9,12 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.allowMergeFieldsInBody == null ? '' : '<allowMergeFieldsInBody>' + object.allowMergeFieldsInBody + '</allowMergeFieldsInBody>'}
+	${object.allowMergeFieldsInHeader == null ? '' : '<allowMergeFieldsInHeader>' + object.allowMergeFieldsInHeader + '</allowMergeFieldsInHeader>'}
 	${object.authProvider == null ? '' : '<authProvider>' + object.authProvider + '</authProvider>'}
 	${object.certificate == null ? '' : '<certificate>' + object.certificate + '</certificate>'}
 	${object.endpoint == null ? '' : '<endpoint>' + object.endpoint + '</endpoint>'}
+	${object.generateAuthorizationHeader == null ? '' : '<generateAuthorizationHeader>' + object.generateAuthorizationHeader + '</generateAuthorizationHeader>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.oauthRefreshToken == null ? '' : '<oauthRefreshToken>' + object.oauthRefreshToken + '</oauthRefreshToken>'}
 	${object.oauthScope == null ? '' : '<oauthScope>' + object.oauthScope + '</oauthScope>'}

@@ -21,6 +21,7 @@ module.exports = (object, asChild) => {
 	${object.analyticsTrackingCode == null ? '' : '<analyticsTrackingCode>' + object.analyticsTrackingCode + '</analyticsTrackingCode>'}
 	${object.authorizationRequiredPage == null ? '' : '<authorizationRequiredPage>' + object.authorizationRequiredPage + '</authorizationRequiredPage>'}
 	${object.bandwidthExceededPage == null ? '' : '<bandwidthExceededPage>' + object.bandwidthExceededPage + '</bandwidthExceededPage>'}
+	${object.browserXssProtection == null ? '' : '<browserXssProtection>' + object.browserXssProtection + '</browserXssProtection>'}
 	${object.changePasswordPage == null ? '' : '<changePasswordPage>' + object.changePasswordPage + '</changePasswordPage>'}
 	${object.chatterAnswersForgotPasswordConfirmPage == null ? '' : '<chatterAnswersForgotPasswordConfirmPage>' + object.chatterAnswersForgotPasswordConfirmPage + '</chatterAnswersForgotPasswordConfirmPage>'}
 	${object.chatterAnswersForgotPasswordPage == null ? '' : '<chatterAnswersForgotPasswordPage>' + object.chatterAnswersForgotPasswordPage + '</chatterAnswersForgotPasswordPage>'}
@@ -28,6 +29,8 @@ module.exports = (object, asChild) => {
 	${object.chatterAnswersLoginPage == null ? '' : '<chatterAnswersLoginPage>' + object.chatterAnswersLoginPage + '</chatterAnswersLoginPage>'}
 	${object.chatterAnswersRegistrationPage == null ? '' : '<chatterAnswersRegistrationPage>' + object.chatterAnswersRegistrationPage + '</chatterAnswersRegistrationPage>'}
 	${object.clickjackProtectionLevel == null ? '' : '<clickjackProtectionLevel>' + SiteClickjackProtectionLevel(object.clickjackProtectionLevel, true) + '</clickjackProtectionLevel>'}
+	${object.contentSniffingProtection == null ? '' : '<contentSniffingProtection>' + object.contentSniffingProtection + '</contentSniffingProtection>'}
+	${object.cspUpgradeInsecureRequests == null ? '' : '<cspUpgradeInsecureRequests>' + object.cspUpgradeInsecureRequests + '</cspUpgradeInsecureRequests>'}
 	${object.customWebAddresses == null ? '' : object.customWebAddresses.map(p => '<customWebAddresses>' + SiteWebAddress(p, true) + '</customWebAddresses>').join('')}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.favoriteIcon == null ? '' : '<favoriteIcon>' + object.favoriteIcon + '</favoriteIcon>'}
@@ -41,6 +44,7 @@ module.exports = (object, asChild) => {
 	${object.masterLabel == null ? '' : '<masterLabel>' + object.masterLabel + '</masterLabel>'}
 	${object.myProfilePage == null ? '' : '<myProfilePage>' + object.myProfilePage + '</myProfilePage>'}
 	${object.portal == null ? '' : '<portal>' + object.portal + '</portal>'}
+	${object.referrerPolicyOriginWhenCrossOrigin == null ? '' : '<referrerPolicyOriginWhenCrossOrigin>' + object.referrerPolicyOriginWhenCrossOrigin + '</referrerPolicyOriginWhenCrossOrigin>'}
 	${object.requireHttps == null ? '' : '<requireHttps>' + object.requireHttps + '</requireHttps>'}
 	${object.requireInsecurePortalAccess == null ? '' : '<requireInsecurePortalAccess>' + object.requireInsecurePortalAccess + '</requireInsecurePortalAccess>'}
 	${object.robotsTxtPage == null ? '' : '<robotsTxtPage>' + object.robotsTxtPage + '</robotsTxtPage>'}

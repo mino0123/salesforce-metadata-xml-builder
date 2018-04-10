@@ -13,5 +13,6 @@ module.exports = (object, asChild) => {
 	${object.consumerKey == null ? '' : '<consumerKey>' + object.consumerKey + '</consumerKey>'}
 	${object.consumerSecret == null ? '' : '<consumerSecret>' + object.consumerSecret + '</consumerSecret>'}
 	${object.scopes == null ? '' : object.scopes.map(p => '<scopes>' + ConnectedAppOauthAccessScope(p, true) + '</scopes>').join('')}
+	${object.singleLogoutUrl == null ? '' : '<singleLogoutUrl>' + object.singleLogoutUrl + '</singleLogoutUrl>'}
 ${rootTagEnd}`;
 }

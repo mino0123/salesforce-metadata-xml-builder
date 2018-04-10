@@ -1,4 +1,5 @@
 const ObjectNameCaseValue = require('./ObjectNameCaseValue');
+const FieldSetTranslation = require('./FieldSetTranslation');
 const CustomFieldTranslation = require('./CustomFieldTranslation');
 const Gender = require('./Gender');
 const LayoutTranslation = require('./LayoutTranslation');
@@ -20,6 +21,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.caseValues == null ? '' : object.caseValues.map(p => '<caseValues>' + ObjectNameCaseValue(p, true) + '</caseValues>').join('')}
+	${object.fieldSets == null ? '' : object.fieldSets.map(p => '<fieldSets>' + FieldSetTranslation(p, true) + '</fieldSets>').join('')}
 	${object.fields == null ? '' : object.fields.map(p => '<fields>' + CustomFieldTranslation(p, true) + '</fields>').join('')}
 	${object.gender == null ? '' : '<gender>' + Gender(object.gender, true) + '</gender>'}
 	${object.layouts == null ? '' : object.layouts.map(p => '<layouts>' + LayoutTranslation(p, true) + '</layouts>').join('')}

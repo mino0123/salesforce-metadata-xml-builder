@@ -11,6 +11,8 @@ module.exports = (object, asChild) => {
 	${object.assetVersion == null ? '' : '<assetVersion>' + object.assetVersion + '</assetVersion>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
+	${object.templateBadgeIcon == null ? '' : '<templateBadgeIcon>' + object.templateBadgeIcon + '</templateBadgeIcon>'}
+	${object.templateDetailIcon == null ? '' : '<templateDetailIcon>' + object.templateDetailIcon + '</templateDetailIcon>'}
 	${object.templateType == null ? '' : '<templateType>' + object.templateType + '</templateType>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
