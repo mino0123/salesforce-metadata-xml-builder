@@ -7,6 +7,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.loginBackgroundImageUrl == null ? '' : '<loginBackgroundImageUrl>' + object.loginBackgroundImageUrl + '</loginBackgroundImageUrl>'}
 	${object.loginFooterText == null ? '' : '<loginFooterText>' + object.loginFooterText + '</loginFooterText>'}
 	${object.loginLogo == null ? '' : '<loginLogo>' + object.loginLogo + '</loginLogo>'}
 	${object.loginLogoName == null ? '' : '<loginLogoName>' + object.loginLogoName + '</loginLogoName>'}

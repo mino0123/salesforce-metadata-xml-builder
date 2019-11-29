@@ -4,6 +4,7 @@ const FlowScreenFieldType = require('./FlowScreenFieldType');
 const FlowScreenFieldInputParameter = require('./FlowScreenFieldInputParameter');
 const FlowScreenFieldOutputParameter = require('./FlowScreenFieldOutputParameter');
 const FlowInputValidationRule = require('./FlowInputValidationRule');
+const FlowVisibilityRule = require('./FlowVisibilityRule');
 const FlowMetadataValue = require('./FlowMetadataValue');
 
 module.exports = (object, asChild) => {
@@ -27,7 +28,9 @@ module.exports = (object, asChild) => {
 	${object.isVisible == null ? '' : '<isVisible>' + object.isVisible + '</isVisible>'}
 	${object.outputParameters == null ? '' : object.outputParameters.map(p => '<outputParameters>' + FlowScreenFieldOutputParameter(p, true) + '</outputParameters>').join('')}
 	${object.scale == null ? '' : '<scale>' + object.scale + '</scale>'}
+	${object.storeOutputAutomatically == null ? '' : '<storeOutputAutomatically>' + object.storeOutputAutomatically + '</storeOutputAutomatically>'}
 	${object.validationRule == null ? '' : '<validationRule>' + FlowInputValidationRule(object.validationRule, true) + '</validationRule>'}
+	${object.visibilityRule == null ? '' : '<visibilityRule>' + FlowVisibilityRule(object.visibilityRule, true) + '</visibilityRule>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.name == null ? '' : '<name>' + object.name + '</name>'}
 	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>').join('')}

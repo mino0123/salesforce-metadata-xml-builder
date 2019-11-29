@@ -8,6 +8,10 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.color == null ? '' : '<color>' + object.color + '</color>'}
+	${object.default == null ? '' : '<default>' + object.default + '</default>'}
+	${object.description == null ? '' : '<description>' + object.description + '</description>'}
+	${object.isActive == null ? '' : '<isActive>' + object.isActive + '</isActive>'}
 	${object.allowEmail == null ? '' : '<allowEmail>' + object.allowEmail + '</allowEmail>'}
 	${object.closed == null ? '' : '<closed>' + object.closed + '</closed>'}
 	${object.controllingFieldValues == null ? '' : object.controllingFieldValues.map(p => '<controllingFieldValues>' + p + '</controllingFieldValues>').join('')}
@@ -19,10 +23,6 @@ module.exports = (object, asChild) => {
 	${object.reverseRole == null ? '' : '<reverseRole>' + object.reverseRole + '</reverseRole>'}
 	${object.reviewed == null ? '' : '<reviewed>' + object.reviewed + '</reviewed>'}
 	${object.won == null ? '' : '<won>' + object.won + '</won>'}
-	${object.color == null ? '' : '<color>' + object.color + '</color>'}
-	${object.default == null ? '' : '<default>' + object.default + '</default>'}
-	${object.description == null ? '' : '<description>' + object.description + '</description>'}
-	${object.isActive == null ? '' : '<isActive>' + object.isActive + '</isActive>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

@@ -33,8 +33,10 @@ module.exports = (object, asChild) => {
 	${object.enableDirectMessages == null ? '' : '<enableDirectMessages>' + object.enableDirectMessages + '</enableDirectMessages>'}
 	${object.enableGuestChatter == null ? '' : '<enableGuestChatter>' + object.enableGuestChatter + '</enableGuestChatter>'}
 	${object.enableGuestFileAccess == null ? '' : '<enableGuestFileAccess>' + object.enableGuestFileAccess + '</enableGuestFileAccess>'}
+	${object.enableGuestMemberVisibility == null ? '' : '<enableGuestMemberVisibility>' + object.enableGuestMemberVisibility + '</enableGuestMemberVisibility>'}
 	${object.enableInvitation == null ? '' : '<enableInvitation>' + object.enableInvitation + '</enableInvitation>'}
 	${object.enableKnowledgeable == null ? '' : '<enableKnowledgeable>' + object.enableKnowledgeable + '</enableKnowledgeable>'}
+	${object.enableMemberVisibility == null ? '' : '<enableMemberVisibility>' + object.enableMemberVisibility + '</enableMemberVisibility>'}
 	${object.enableNicknameDisplay == null ? '' : '<enableNicknameDisplay>' + object.enableNicknameDisplay + '</enableNicknameDisplay>'}
 	${object.enablePrivateMessages == null ? '' : '<enablePrivateMessages>' + object.enablePrivateMessages + '</enablePrivateMessages>'}
 	${object.enableReputation == null ? '' : '<enableReputation>' + object.enableReputation + '</enableReputation>'}
@@ -47,6 +49,7 @@ module.exports = (object, asChild) => {
 	${object.feedChannel == null ? '' : '<feedChannel>' + object.feedChannel + '</feedChannel>'}
 	${object.forgotPasswordTemplate == null ? '' : '<forgotPasswordTemplate>' + object.forgotPasswordTemplate + '</forgotPasswordTemplate>'}
 	${object.gatherCustomerSentimentData == null ? '' : '<gatherCustomerSentimentData>' + object.gatherCustomerSentimentData + '</gatherCustomerSentimentData>'}
+	${object.lockoutTemplate == null ? '' : '<lockoutTemplate>' + object.lockoutTemplate + '</lockoutTemplate>'}
 	${object.logoutUrl == null ? '' : '<logoutUrl>' + object.logoutUrl + '</logoutUrl>'}
 	${object.maxFileSizeKb == null ? '' : '<maxFileSizeKb>' + object.maxFileSizeKb + '</maxFileSizeKb>'}
 	${object.navigationLinkSet == null ? '' : '<navigationLinkSet>' + NavigationLinkSet(object.navigationLinkSet, true) + '</navigationLinkSet>'}
@@ -65,6 +68,7 @@ module.exports = (object, asChild) => {
 	${object.status == null ? '' : '<status>' + NetworkStatus(object.status, true) + '</status>'}
 	${object.tabs == null ? '' : '<tabs>' + NetworkTabSet(object.tabs, true) + '</tabs>'}
 	${object.urlPathPrefix == null ? '' : '<urlPathPrefix>' + object.urlPathPrefix + '</urlPathPrefix>'}
+	${object.verificationTemplate == null ? '' : '<verificationTemplate>' + object.verificationTemplate + '</verificationTemplate>'}
 	${object.welcomeTemplate == null ? '' : '<welcomeTemplate>' + object.welcomeTemplate + '</welcomeTemplate>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;

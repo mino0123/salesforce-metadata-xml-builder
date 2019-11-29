@@ -11,6 +11,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.format == null ? '' : '<format>' + ContentAssetFormat(object.format, true) + '</format>'}
+	${object.isVisibleByExternalUsers == null ? '' : '<isVisibleByExternalUsers>' + object.isVisibleByExternalUsers + '</isVisibleByExternalUsers>'}
 	${object.language == null ? '' : '<language>' + object.language + '</language>'}
 	${object.masterLabel == null ? '' : '<masterLabel>' + object.masterLabel + '</masterLabel>'}
 	${object.originNetwork == null ? '' : '<originNetwork>' + object.originNetwork + '</originNetwork>'}

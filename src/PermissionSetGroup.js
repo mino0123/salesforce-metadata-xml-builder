@@ -8,9 +8,10 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
-	${object.isCalculatingChanges == null ? '' : '<isCalculatingChanges>' + object.isCalculatingChanges + '</isCalculatingChanges>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
+	${object.mutingPermissionSets == null ? '' : object.mutingPermissionSets.map(p => '<mutingPermissionSets>' + p + '</mutingPermissionSets>').join('')}
 	${object.permissionSets == null ? '' : object.permissionSets.map(p => '<permissionSets>' + p + '</permissionSets>').join('')}
+	${object.status == null ? '' : '<status>' + object.status + '</status>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

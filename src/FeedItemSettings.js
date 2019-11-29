@@ -10,7 +10,6 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.characterLimit == null ? '' : '<characterLimit>' + object.characterLimit + '</characterLimit>'}
-	${object.collapseThread == null ? '' : '<collapseThread>' + object.collapseThread + '</collapseThread>'}
 	${object.displayFormat == null ? '' : '<displayFormat>' + FeedItemDisplayFormat(object.displayFormat, true) + '</displayFormat>'}
 	${object.feedItemType == null ? '' : '<feedItemType>' + FeedItemType(object.feedItemType, true) + '</feedItemType>'}
 ${rootTagEnd}`;

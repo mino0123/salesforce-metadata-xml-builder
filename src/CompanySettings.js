@@ -8,6 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.enableCustomFiscalYear == null ? '' : '<enableCustomFiscalYear>' + object.enableCustomFiscalYear + '</enableCustomFiscalYear>'}
 	${object.fiscalYear == null ? '' : '<fiscalYear>' + FiscalYearSettings(object.fiscalYear, true) + '</fiscalYear>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;

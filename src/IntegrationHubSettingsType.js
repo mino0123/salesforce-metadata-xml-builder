@@ -20,6 +20,7 @@ module.exports = (object, asChild) => {
 	${object.versionBuild == null ? '' : '<versionBuild>' + object.versionBuild + '</versionBuild>'}
 	${object.versionMajor == null ? '' : '<versionMajor>' + object.versionMajor + '</versionMajor>'}
 	${object.versionMinor == null ? '' : '<versionMinor>' + object.versionMinor + '</versionMinor>'}
+	${object.versionSetUuid == null ? '' : '<versionSetUuid>' + object.versionSetUuid + '</versionSetUuid>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

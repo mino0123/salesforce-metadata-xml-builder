@@ -8,6 +8,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.enableCascadeActivateToRelatedPrices == null ? '' : '<enableCascadeActivateToRelatedPrices>' + object.enableCascadeActivateToRelatedPrices + '</enableCascadeActivateToRelatedPrices>'}
+	${object.enableMySettings == null ? '' : '<enableMySettings>' + object.enableMySettings + '</enableMySettings>'}
 	${object.enableQuantitySchedule == null ? '' : '<enableQuantitySchedule>' + object.enableQuantitySchedule + '</enableQuantitySchedule>'}
 	${object.enableRevenueSchedule == null ? '' : '<enableRevenueSchedule>' + object.enableRevenueSchedule + '</enableRevenueSchedule>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}

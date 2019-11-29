@@ -19,9 +19,11 @@ module.exports = (object, asChild) => {
 	${object.enableMultidayEvents == null ? '' : '<enableMultidayEvents>' + object.enableMultidayEvents + '</enableMultidayEvents>'}
 	${object.enableRecurringEvents == null ? '' : '<enableRecurringEvents>' + object.enableRecurringEvents + '</enableRecurringEvents>'}
 	${object.enableRecurringTasks == null ? '' : '<enableRecurringTasks>' + object.enableRecurringTasks + '</enableRecurringTasks>'}
+	${object.enableRollUpActivToContactsAcct == null ? '' : '<enableRollUpActivToContactsAcct>' + object.enableRollUpActivToContactsAcct + '</enableRollUpActivToContactsAcct>'}
 	${object.enableSidebarCalendarShortcut == null ? '' : '<enableSidebarCalendarShortcut>' + object.enableSidebarCalendarShortcut + '</enableSidebarCalendarShortcut>'}
 	${object.enableSimpleTaskCreateUI == null ? '' : '<enableSimpleTaskCreateUI>' + object.enableSimpleTaskCreateUI + '</enableSimpleTaskCreateUI>'}
 	${object.enableUNSTaskDelegatedToNotifications == null ? '' : '<enableUNSTaskDelegatedToNotifications>' + object.enableUNSTaskDelegatedToNotifications + '</enableUNSTaskDelegatedToNotifications>'}
+	${object.enableUserListViewCalendars == null ? '' : '<enableUserListViewCalendars>' + object.enableUserListViewCalendars + '</enableUserListViewCalendars>'}
 	${object.meetingRequestsLogo == null ? '' : '<meetingRequestsLogo>' + object.meetingRequestsLogo + '</meetingRequestsLogo>'}
 	${object.showCustomLogoMeetingRequests == null ? '' : '<showCustomLogoMeetingRequests>' + object.showCustomLogoMeetingRequests + '</showCustomLogoMeetingRequests>'}
 	${object.showEventDetailsMultiUserCalendar == null ? '' : '<showEventDetailsMultiUserCalendar>' + object.showEventDetailsMultiUserCalendar + '</showEventDetailsMultiUserCalendar>'}

@@ -1,6 +1,6 @@
 module.exports = (value) => {
   if (!value) { return ''; }
-  if (["Db","Workflow","Validation","Callout","Apex_code","Apex_profiling","Visualforce","System","Wave","All"].indexOf(value) < 0) {
+  if (["Db","Workflow","Validation","Callout","Apex_code","Apex_profiling","Visualforce","System","Wave","Nba","All"].indexOf(value) < 0) {
     throw new Error('Invalid LogCategory value: ' + value);
   }
   return value;

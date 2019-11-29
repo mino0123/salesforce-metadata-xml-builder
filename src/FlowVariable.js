@@ -10,6 +10,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.apexClass == null ? '' : '<apexClass>' + object.apexClass + '</apexClass>'}
 	${object.dataType == null ? '' : '<dataType>' + FlowDataType(object.dataType, true) + '</dataType>'}
 	${object.isCollection == null ? '' : '<isCollection>' + object.isCollection + '</isCollection>'}
 	${object.isInput == null ? '' : '<isInput>' + object.isInput + '</isInput>'}

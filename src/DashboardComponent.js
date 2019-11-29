@@ -6,6 +6,7 @@ const DashboardFilterColumn = require('./DashboardFilterColumn');
 const DashboardTableColumn = require('./DashboardTableColumn');
 const ChartUnits = require('./ChartUnits');
 const DashboardFlexTableComponentProperties = require('./DashboardFlexTableComponentProperties');
+const DashboardComponentGroupingSortProperties = require('./DashboardComponentGroupingSortProperties');
 const ChartLegendPosition = require('./ChartLegendPosition');
 const DashboardComponentFilter = require('./DashboardComponentFilter');
 
@@ -26,6 +27,7 @@ module.exports = (object, asChild) => {
 	${object.componentType == null ? '' : '<componentType>' + DashboardComponentType(object.componentType, true) + '</componentType>'}
 	${object.dashboardFilterColumns == null ? '' : object.dashboardFilterColumns.map(p => '<dashboardFilterColumns>' + DashboardFilterColumn(p, true) + '</dashboardFilterColumns>').join('')}
 	${object.dashboardTableColumn == null ? '' : object.dashboardTableColumn.map(p => '<dashboardTableColumn>' + DashboardTableColumn(p, true) + '</dashboardTableColumn>').join('')}
+	${object.decimalPrecision == null ? '' : '<decimalPrecision>' + object.decimalPrecision + '</decimalPrecision>'}
 	${object.displayUnits == null ? '' : '<displayUnits>' + ChartUnits(object.displayUnits, true) + '</displayUnits>'}
 	${object.drillDownUrl == null ? '' : '<drillDownUrl>' + object.drillDownUrl + '</drillDownUrl>'}
 	${object.drillEnabled == null ? '' : '<drillEnabled>' + object.drillEnabled + '</drillEnabled>'}
@@ -37,6 +39,7 @@ module.exports = (object, asChild) => {
 	${object.gaugeMax == null ? '' : '<gaugeMax>' + object.gaugeMax + '</gaugeMax>'}
 	${object.gaugeMin == null ? '' : '<gaugeMin>' + object.gaugeMin + '</gaugeMin>'}
 	${object.groupingColumn == null ? '' : object.groupingColumn.map(p => '<groupingColumn>' + p + '</groupingColumn>').join('')}
+	${object.groupingSortProperties == null ? '' : '<groupingSortProperties>' + DashboardComponentGroupingSortProperties(object.groupingSortProperties, true) + '</groupingSortProperties>'}
 	${object.header == null ? '' : '<header>' + object.header + '</header>'}
 	${object.indicatorBreakpoint1 == null ? '' : '<indicatorBreakpoint1>' + object.indicatorBreakpoint1 + '</indicatorBreakpoint1>'}
 	${object.indicatorBreakpoint2 == null ? '' : '<indicatorBreakpoint2>' + object.indicatorBreakpoint2 + '</indicatorBreakpoint2>'}

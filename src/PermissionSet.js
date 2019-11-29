@@ -1,8 +1,10 @@
 const PermissionSetApplicationVisibility = require('./PermissionSetApplicationVisibility');
 const PermissionSetApexClassAccess = require('./PermissionSetApexClassAccess');
+const PermissionSetCustomMetadataTypeAccess = require('./PermissionSetCustomMetadataTypeAccess');
 const PermissionSetCustomPermissions = require('./PermissionSetCustomPermissions');
 const PermissionSetExternalDataSourceAccess = require('./PermissionSetExternalDataSourceAccess');
 const PermissionSetFieldPermissions = require('./PermissionSetFieldPermissions');
+const PermissionSetFlowAccess = require('./PermissionSetFlowAccess');
 const PermissionSetObjectPermissions = require('./PermissionSetObjectPermissions');
 const PermissionSetApexPageAccess = require('./PermissionSetApexPageAccess');
 const PermissionSetRecordTypeVisibility = require('./PermissionSetRecordTypeVisibility');
@@ -19,10 +21,12 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.applicationVisibilities == null ? '' : object.applicationVisibilities.map(p => '<applicationVisibilities>' + PermissionSetApplicationVisibility(p, true) + '</applicationVisibilities>').join('')}
 	${object.classAccesses == null ? '' : object.classAccesses.map(p => '<classAccesses>' + PermissionSetApexClassAccess(p, true) + '</classAccesses>').join('')}
+	${object.customMetadataTypeAccesses == null ? '' : object.customMetadataTypeAccesses.map(p => '<customMetadataTypeAccesses>' + PermissionSetCustomMetadataTypeAccess(p, true) + '</customMetadataTypeAccesses>').join('')}
 	${object.customPermissions == null ? '' : object.customPermissions.map(p => '<customPermissions>' + PermissionSetCustomPermissions(p, true) + '</customPermissions>').join('')}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.externalDataSourceAccesses == null ? '' : object.externalDataSourceAccesses.map(p => '<externalDataSourceAccesses>' + PermissionSetExternalDataSourceAccess(p, true) + '</externalDataSourceAccesses>').join('')}
 	${object.fieldPermissions == null ? '' : object.fieldPermissions.map(p => '<fieldPermissions>' + PermissionSetFieldPermissions(p, true) + '</fieldPermissions>').join('')}
+	${object.flowAccesses == null ? '' : object.flowAccesses.map(p => '<flowAccesses>' + PermissionSetFlowAccess(p, true) + '</flowAccesses>').join('')}
 	${object.hasActivationRequired == null ? '' : '<hasActivationRequired>' + object.hasActivationRequired + '</hasActivationRequired>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.license == null ? '' : '<license>' + object.license + '</license>'}

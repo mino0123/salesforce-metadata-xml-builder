@@ -1,3 +1,4 @@
+const NavigationMenuItemBranding = require('./NavigationMenuItemBranding');
 const NavigationSubMenu = require('./NavigationSubMenu');
 
 module.exports = (object, asChild) => {
@@ -10,6 +11,7 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.defaultListViewId == null ? '' : '<defaultListViewId>' + object.defaultListViewId + '</defaultListViewId>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
+	${object.menuItemBranding == null ? '' : '<menuItemBranding>' + NavigationMenuItemBranding(object.menuItemBranding, true) + '</menuItemBranding>'}
 	${object.position == null ? '' : '<position>' + object.position + '</position>'}
 	${object.publiclyAvailable == null ? '' : '<publiclyAvailable>' + object.publiclyAvailable + '</publiclyAvailable>'}
 	${object.subMenu == null ? '' : '<subMenu>' + NavigationSubMenu(object.subMenu, true) + '</subMenu>'}

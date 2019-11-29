@@ -13,6 +13,7 @@ module.exports = (object, asChild) => {
 	${object.enforceOn == null ? '' : '<enforceOn>' + object.enforceOn + '</enforceOn>'}
 	${object.isEnabled == null ? '' : '<isEnabled>' + object.isEnabled + '</isEnabled>'}
 	${object.pattern == null ? '' : '<pattern>' + object.pattern + '</pattern>'}
+	${object.priority == null ? '' : '<priority>' + object.priority + '</priority>'}
 	${object.replacement == null ? '' : '<replacement>' + object.replacement + '</replacement>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;

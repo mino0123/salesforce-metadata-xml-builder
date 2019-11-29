@@ -8,6 +8,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.enableAdvancedSearch == null ? '' : '<enableAdvancedSearch>' + object.enableAdvancedSearch + '</enableAdvancedSearch>'}
+	${object.macrosInFolders == null ? '' : '<macrosInFolders>' + object.macrosInFolders + '</macrosInFolders>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

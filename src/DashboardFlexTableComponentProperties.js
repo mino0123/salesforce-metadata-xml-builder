@@ -9,6 +9,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.decimalPrecision == null ? '' : '<decimalPrecision>' + object.decimalPrecision + '</decimalPrecision>'}
 	${object.flexTableColumn == null ? '' : object.flexTableColumn.map(p => '<flexTableColumn>' + DashboardComponentColumn(p, true) + '</flexTableColumn>').join('')}
 	${object.flexTableSortInfo == null ? '' : '<flexTableSortInfo>' + DashboardComponentSortInfo(object.flexTableSortInfo, true) + '</flexTableSortInfo>'}
 	${object.hideChatterPhotos == null ? '' : '<hideChatterPhotos>' + object.hideChatterPhotos + '</hideChatterPhotos>'}

@@ -1,4 +1,5 @@
 const ConnectedAppAttribute = require('./ConnectedAppAttribute');
+const CanvasMetadata = require('./CanvasMetadata');
 const ConnectedAppCanvasConfig = require('./ConnectedAppCanvasConfig');
 const ConnectedAppIpRange = require('./ConnectedAppIpRange');
 const ConnectedAppMobileDetailConfig = require('./ConnectedAppMobileDetailConfig');
@@ -14,6 +15,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.attributes == null ? '' : object.attributes.map(p => '<attributes>' + ConnectedAppAttribute(p, true) + '</attributes>').join('')}
+	${object.canvas == null ? '' : '<canvas>' + CanvasMetadata(object.canvas, true) + '</canvas>'}
 	${object.canvasConfig == null ? '' : '<canvasConfig>' + ConnectedAppCanvasConfig(object.canvasConfig, true) + '</canvasConfig>'}
 	${object.contactEmail == null ? '' : '<contactEmail>' + object.contactEmail + '</contactEmail>'}
 	${object.contactPhone == null ? '' : '<contactPhone>' + object.contactPhone + '</contactPhone>'}
@@ -26,7 +28,10 @@ module.exports = (object, asChild) => {
 	${object.mobileAppConfig == null ? '' : '<mobileAppConfig>' + ConnectedAppMobileDetailConfig(object.mobileAppConfig, true) + '</mobileAppConfig>'}
 	${object.mobileStartUrl == null ? '' : '<mobileStartUrl>' + object.mobileStartUrl + '</mobileStartUrl>'}
 	${object.oauthConfig == null ? '' : '<oauthConfig>' + ConnectedAppOauthConfig(object.oauthConfig, true) + '</oauthConfig>'}
+	${object.permissionSetName == null ? '' : object.permissionSetName.map(p => '<permissionSetName>' + p + '</permissionSetName>').join('')}
 	${object.plugin == null ? '' : '<plugin>' + object.plugin + '</plugin>'}
+	${object.pluginExecutionUser == null ? '' : '<pluginExecutionUser>' + object.pluginExecutionUser + '</pluginExecutionUser>'}
+	${object.profileName == null ? '' : object.profileName.map(p => '<profileName>' + p + '</profileName>').join('')}
 	${object.samlConfig == null ? '' : '<samlConfig>' + ConnectedAppSamlConfig(object.samlConfig, true) + '</samlConfig>'}
 	${object.startUrl == null ? '' : '<startUrl>' + object.startUrl + '</startUrl>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}

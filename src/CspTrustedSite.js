@@ -1,3 +1,4 @@
+const CspTrustedSiteContext = require('./CspTrustedSiteContext');
 
 module.exports = (object, asChild) => {
   var rootTagStart = '<CspTrustedSite>';
@@ -7,6 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.context == null ? '' : '<context>' + CspTrustedSiteContext(object.context, true) + '</context>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.endpointUrl == null ? '' : '<endpointUrl>' + object.endpointUrl + '</endpointUrl>'}
 	${object.isActive == null ? '' : '<isActive>' + object.isActive + '</isActive>'}

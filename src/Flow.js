@@ -15,6 +15,8 @@ const FlowRecordLookup = require('./FlowRecordLookup');
 const FlowRecordUpdate = require('./FlowRecordUpdate');
 const FlowScreen = require('./FlowScreen');
 const FlowStage = require('./FlowStage');
+const FlowStart = require('./FlowStart');
+const FlowVersionStatus = require('./FlowVersionStatus');
 const FlowStep = require('./FlowStep');
 const FlowSubflow = require('./FlowSubflow');
 const FlowTextTemplate = require('./FlowTextTemplate');
@@ -39,6 +41,8 @@ module.exports = (object, asChild) => {
 	${object.dynamicChoiceSets == null ? '' : object.dynamicChoiceSets.map(p => '<dynamicChoiceSets>' + FlowDynamicChoiceSet(p, true) + '</dynamicChoiceSets>').join('')}
 	${object.formulas == null ? '' : object.formulas.map(p => '<formulas>' + FlowFormula(p, true) + '</formulas>').join('')}
 	${object.interviewLabel == null ? '' : '<interviewLabel>' + object.interviewLabel + '</interviewLabel>'}
+	${object.isAdditionalPermissionRequiredToRun == null ? '' : '<isAdditionalPermissionRequiredToRun>' + object.isAdditionalPermissionRequiredToRun + '</isAdditionalPermissionRequiredToRun>'}
+	${object.isTemplate == null ? '' : '<isTemplate>' + object.isTemplate + '</isTemplate>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.loops == null ? '' : object.loops.map(p => '<loops>' + FlowLoop(p, true) + '</loops>').join('')}
 	${object.processMetadataValues == null ? '' : object.processMetadataValues.map(p => '<processMetadataValues>' + FlowMetadataValue(p, true) + '</processMetadataValues>').join('')}
@@ -49,7 +53,9 @@ module.exports = (object, asChild) => {
 	${object.recordUpdates == null ? '' : object.recordUpdates.map(p => '<recordUpdates>' + FlowRecordUpdate(p, true) + '</recordUpdates>').join('')}
 	${object.screens == null ? '' : object.screens.map(p => '<screens>' + FlowScreen(p, true) + '</screens>').join('')}
 	${object.stages == null ? '' : object.stages.map(p => '<stages>' + FlowStage(p, true) + '</stages>').join('')}
+	${object.start == null ? '' : '<start>' + FlowStart(object.start, true) + '</start>'}
 	${object.startElementReference == null ? '' : '<startElementReference>' + object.startElementReference + '</startElementReference>'}
+	${object.status == null ? '' : '<status>' + FlowVersionStatus(object.status, true) + '</status>'}
 	${object.steps == null ? '' : object.steps.map(p => '<steps>' + FlowStep(p, true) + '</steps>').join('')}
 	${object.subflows == null ? '' : object.subflows.map(p => '<subflows>' + FlowSubflow(p, true) + '</subflows>').join('')}
 	${object.textTemplates == null ? '' : object.textTemplates.map(p => '<textTemplates>' + FlowTextTemplate(p, true) + '</textTemplates>').join('')}

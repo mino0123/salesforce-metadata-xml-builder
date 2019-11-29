@@ -1,3 +1,4 @@
+const CustomHttpHeader = require('./CustomHttpHeader');
 const ExternalPrincipalType = require('./ExternalPrincipalType');
 const AuthenticationProtocol = require('./AuthenticationProtocol');
 const ExternalDataSourceType = require('./ExternalDataSourceType');
@@ -13,6 +14,7 @@ module.exports = (object, asChild) => {
 	${object.authProvider == null ? '' : '<authProvider>' + object.authProvider + '</authProvider>'}
 	${object.certificate == null ? '' : '<certificate>' + object.certificate + '</certificate>'}
 	${object.customConfiguration == null ? '' : '<customConfiguration>' + object.customConfiguration + '</customConfiguration>'}
+	${object.customHttpHeaders == null ? '' : object.customHttpHeaders.map(p => '<customHttpHeaders>' + CustomHttpHeader(p, true) + '</customHttpHeaders>').join('')}
 	${object.endpoint == null ? '' : '<endpoint>' + object.endpoint + '</endpoint>'}
 	${object.isWritable == null ? '' : '<isWritable>' + object.isWritable + '</isWritable>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}

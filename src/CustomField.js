@@ -1,10 +1,10 @@
 const DeleteConstraint = require('./DeleteConstraint');
+const EncryptionScheme = require('./EncryptionScheme');
 const FieldManageability = require('./FieldManageability');
 const TreatBlanksAs = require('./TreatBlanksAs');
 const LookupFilter = require('./LookupFilter');
 const EncryptedFieldMaskChar = require('./EncryptedFieldMaskChar');
 const EncryptedFieldMaskType = require('./EncryptedFieldMaskType');
-const SecurityClassification = require('./SecurityClassification');
 const FilterItem = require('./FilterItem');
 const SummaryOperations = require('./SummaryOperations');
 const FieldType = require('./FieldType');
@@ -22,13 +22,14 @@ module.exports = (object, asChild) => {
 	${object.businessOwnerUser == null ? '' : '<businessOwnerUser>' + object.businessOwnerUser + '</businessOwnerUser>'}
 	${object.businessStatus == null ? '' : '<businessStatus>' + object.businessStatus + '</businessStatus>'}
 	${object.caseSensitive == null ? '' : '<caseSensitive>' + object.caseSensitive + '</caseSensitive>'}
+	${object.complianceGroup == null ? '' : '<complianceGroup>' + object.complianceGroup + '</complianceGroup>'}
 	${object.customDataType == null ? '' : '<customDataType>' + object.customDataType + '</customDataType>'}
 	${object.defaultValue == null ? '' : '<defaultValue>' + object.defaultValue + '</defaultValue>'}
 	${object.deleteConstraint == null ? '' : '<deleteConstraint>' + DeleteConstraint(object.deleteConstraint, true) + '</deleteConstraint>'}
 	${object.deprecated == null ? '' : '<deprecated>' + object.deprecated + '</deprecated>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.displayFormat == null ? '' : '<displayFormat>' + object.displayFormat + '</displayFormat>'}
-	${object.encrypted == null ? '' : '<encrypted>' + object.encrypted + '</encrypted>'}
+	${object.encryptionScheme == null ? '' : '<encryptionScheme>' + EncryptionScheme(object.encryptionScheme, true) + '</encryptionScheme>'}
 	${object.escapeMarkup == null ? '' : '<escapeMarkup>' + object.escapeMarkup + '</escapeMarkup>'}
 	${object.externalDeveloperName == null ? '' : '<externalDeveloperName>' + object.externalDeveloperName + '</externalDeveloperName>'}
 	${object.externalId == null ? '' : '<externalId>' + object.externalId + '</externalId>'}
@@ -36,6 +37,7 @@ module.exports = (object, asChild) => {
 	${object.formula == null ? '' : '<formula>' + object.formula + '</formula>'}
 	${object.formulaTreatBlanksAs == null ? '' : '<formulaTreatBlanksAs>' + TreatBlanksAs(object.formulaTreatBlanksAs, true) + '</formulaTreatBlanksAs>'}
 	${object.inlineHelpText == null ? '' : '<inlineHelpText>' + object.inlineHelpText + '</inlineHelpText>'}
+	${object.isAIPredictionField == null ? '' : '<isAIPredictionField>' + object.isAIPredictionField + '</isAIPredictionField>'}
 	${object.isConvertLeadDisabled == null ? '' : '<isConvertLeadDisabled>' + object.isConvertLeadDisabled + '</isConvertLeadDisabled>'}
 	${object.isFilteringDisabled == null ? '' : '<isFilteringDisabled>' + object.isFilteringDisabled + '</isFilteringDisabled>'}
 	${object.isNameField == null ? '' : '<isNameField>' + object.isNameField + '</isNameField>'}
@@ -57,7 +59,7 @@ module.exports = (object, asChild) => {
 	${object.required == null ? '' : '<required>' + object.required + '</required>'}
 	${object.restrictedAdminField == null ? '' : '<restrictedAdminField>' + object.restrictedAdminField + '</restrictedAdminField>'}
 	${object.scale == null ? '' : '<scale>' + object.scale + '</scale>'}
-	${object.securityClassification == null ? '' : '<securityClassification>' + SecurityClassification(object.securityClassification, true) + '</securityClassification>'}
+	${object.securityClassification == null ? '' : '<securityClassification>' + object.securityClassification + '</securityClassification>'}
 	${object.startingNumber == null ? '' : '<startingNumber>' + object.startingNumber + '</startingNumber>'}
 	${object.stripMarkup == null ? '' : '<stripMarkup>' + object.stripMarkup + '</stripMarkup>'}
 	${object.summarizedField == null ? '' : '<summarizedField>' + object.summarizedField + '</summarizedField>'}
@@ -67,6 +69,7 @@ module.exports = (object, asChild) => {
 	${object.trackFeedHistory == null ? '' : '<trackFeedHistory>' + object.trackFeedHistory + '</trackFeedHistory>'}
 	${object.trackHistory == null ? '' : '<trackHistory>' + object.trackHistory + '</trackHistory>'}
 	${object.trackTrending == null ? '' : '<trackTrending>' + object.trackTrending + '</trackTrending>'}
+	${object.translateData == null ? '' : '<translateData>' + object.translateData + '</translateData>'}
 	${object.type == null ? '' : '<type>' + FieldType(object.type, true) + '</type>'}
 	${object.unique == null ? '' : '<unique>' + object.unique + '</unique>'}
 	${object.valueSet == null ? '' : '<valueSet>' + ValueSet(object.valueSet, true) + '</valueSet>'}

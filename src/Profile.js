@@ -1,9 +1,11 @@
 const ProfileApplicationVisibility = require('./ProfileApplicationVisibility');
 const ProfileCategoryGroupVisibility = require('./ProfileCategoryGroupVisibility');
 const ProfileApexClassAccess = require('./ProfileApexClassAccess');
+const ProfileCustomMetadataTypeAccess = require('./ProfileCustomMetadataTypeAccess');
 const ProfileCustomPermissions = require('./ProfileCustomPermissions');
 const ProfileExternalDataSourceAccess = require('./ProfileExternalDataSourceAccess');
 const ProfileFieldLevelSecurity = require('./ProfileFieldLevelSecurity');
+const ProfileFlowAccess = require('./ProfileFlowAccess');
 const ProfileLayoutAssignment = require('./ProfileLayoutAssignment');
 const ProfileLoginHours = require('./ProfileLoginHours');
 const ProfileLoginIpRange = require('./ProfileLoginIpRange');
@@ -26,10 +28,12 @@ module.exports = (object, asChild) => {
 	${object.categoryGroupVisibilities == null ? '' : object.categoryGroupVisibilities.map(p => '<categoryGroupVisibilities>' + ProfileCategoryGroupVisibility(p, true) + '</categoryGroupVisibilities>').join('')}
 	${object.classAccesses == null ? '' : object.classAccesses.map(p => '<classAccesses>' + ProfileApexClassAccess(p, true) + '</classAccesses>').join('')}
 	${object.custom == null ? '' : '<custom>' + object.custom + '</custom>'}
+	${object.customMetadataTypeAccesses == null ? '' : object.customMetadataTypeAccesses.map(p => '<customMetadataTypeAccesses>' + ProfileCustomMetadataTypeAccess(p, true) + '</customMetadataTypeAccesses>').join('')}
 	${object.customPermissions == null ? '' : object.customPermissions.map(p => '<customPermissions>' + ProfileCustomPermissions(p, true) + '</customPermissions>').join('')}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.externalDataSourceAccesses == null ? '' : object.externalDataSourceAccesses.map(p => '<externalDataSourceAccesses>' + ProfileExternalDataSourceAccess(p, true) + '</externalDataSourceAccesses>').join('')}
 	${object.fieldPermissions == null ? '' : object.fieldPermissions.map(p => '<fieldPermissions>' + ProfileFieldLevelSecurity(p, true) + '</fieldPermissions>').join('')}
+	${object.flowAccesses == null ? '' : object.flowAccesses.map(p => '<flowAccesses>' + ProfileFlowAccess(p, true) + '</flowAccesses>').join('')}
 	${object.layoutAssignments == null ? '' : object.layoutAssignments.map(p => '<layoutAssignments>' + ProfileLayoutAssignment(p, true) + '</layoutAssignments>').join('')}
 	${object.loginHours == null ? '' : '<loginHours>' + ProfileLoginHours(object.loginHours, true) + '</loginHours>'}
 	${object.loginIpRanges == null ? '' : object.loginIpRanges.map(p => '<loginIpRanges>' + ProfileLoginIpRange(p, true) + '</loginIpRanges>').join('')}

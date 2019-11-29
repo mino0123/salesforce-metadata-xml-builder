@@ -22,6 +22,8 @@ module.exports = (object, asChild) => {
 	${object.defaultLandingTab == null ? '' : '<defaultLandingTab>' + object.defaultLandingTab + '</defaultLandingTab>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.formFactors == null ? '' : object.formFactors.map(p => '<formFactors>' + FormFactor(p, true) + '</formFactors>').join('')}
+	${object.isNavAutoTempTabsDisabled == null ? '' : '<isNavAutoTempTabsDisabled>' + object.isNavAutoTempTabsDisabled + '</isNavAutoTempTabsDisabled>'}
+	${object.isNavPersonalizationDisabled == null ? '' : '<isNavPersonalizationDisabled>' + object.isNavPersonalizationDisabled + '</isNavPersonalizationDisabled>'}
 	${object.isServiceCloudConsole == null ? '' : '<isServiceCloudConsole>' + object.isServiceCloudConsole + '</isServiceCloudConsole>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.logo == null ? '' : '<logo>' + object.logo + '</logo>'}

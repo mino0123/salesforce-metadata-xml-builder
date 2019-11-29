@@ -1,3 +1,4 @@
+const WaveXmdFormattingProperty = require('./WaveXmdFormattingProperty');
 
 module.exports = (object, asChild) => {
   var rootTagStart = '<WaveXmdMeasure>';
@@ -7,6 +8,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.conditionalFormatting == null ? '' : object.conditionalFormatting.map(p => '<conditionalFormatting>' + WaveXmdFormattingProperty(p, true) + '</conditionalFormatting>').join('')}
 	${object.dateFormat == null ? '' : '<dateFormat>' + object.dateFormat + '</dateFormat>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.field == null ? '' : '<field>' + object.field + '</field>'}

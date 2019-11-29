@@ -12,6 +12,8 @@ const Gender = require('./Gender');
 const HistoryRetentionPolicy = require('./HistoryRetentionPolicy');
 const Index = require('./Index');
 const ListView = require('./ListView');
+const ProfileSearchLayouts = require('./ProfileSearchLayouts');
+const PlatformEventPublishBehavior = require('./PlatformEventPublishBehavior');
 const RecordType = require('./RecordType');
 const SearchLayouts = require('./SearchLayouts');
 const SharingReason = require('./SharingReason');
@@ -38,18 +40,17 @@ module.exports = (object, asChild) => {
 	${object.customHelp == null ? '' : '<customHelp>' + object.customHelp + '</customHelp>'}
 	${object.customHelpPage == null ? '' : '<customHelpPage>' + object.customHelpPage + '</customHelpPage>'}
 	${object.customSettingsType == null ? '' : '<customSettingsType>' + CustomSettingsType(object.customSettingsType, true) + '</customSettingsType>'}
-	${object.dataStewardGroup == null ? '' : '<dataStewardGroup>' + object.dataStewardGroup + '</dataStewardGroup>'}
-	${object.dataStewardUser == null ? '' : '<dataStewardUser>' + object.dataStewardUser + '</dataStewardUser>'}
 	${object.deploymentStatus == null ? '' : '<deploymentStatus>' + DeploymentStatus(object.deploymentStatus, true) + '</deploymentStatus>'}
 	${object.deprecated == null ? '' : '<deprecated>' + object.deprecated + '</deprecated>'}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
 	${object.enableActivities == null ? '' : '<enableActivities>' + object.enableActivities + '</enableActivities>'}
 	${object.enableBulkApi == null ? '' : '<enableBulkApi>' + object.enableBulkApi + '</enableBulkApi>'}
-	${object.enableChangeDataCapture == null ? '' : '<enableChangeDataCapture>' + object.enableChangeDataCapture + '</enableChangeDataCapture>'}
+	${object.enableDataTranslation == null ? '' : '<enableDataTranslation>' + object.enableDataTranslation + '</enableDataTranslation>'}
 	${object.enableDivisions == null ? '' : '<enableDivisions>' + object.enableDivisions + '</enableDivisions>'}
 	${object.enableEnhancedLookup == null ? '' : '<enableEnhancedLookup>' + object.enableEnhancedLookup + '</enableEnhancedLookup>'}
 	${object.enableFeeds == null ? '' : '<enableFeeds>' + object.enableFeeds + '</enableFeeds>'}
 	${object.enableHistory == null ? '' : '<enableHistory>' + object.enableHistory + '</enableHistory>'}
+	${object.enableLicensing == null ? '' : '<enableLicensing>' + object.enableLicensing + '</enableLicensing>'}
 	${object.enableReports == null ? '' : '<enableReports>' + object.enableReports + '</enableReports>'}
 	${object.enableSearch == null ? '' : '<enableSearch>' + object.enableSearch + '</enableSearch>'}
 	${object.enableSharing == null ? '' : '<enableSharing>' + object.enableSharing + '</enableSharing>'}
@@ -69,6 +70,8 @@ module.exports = (object, asChild) => {
 	${object.listViews == null ? '' : object.listViews.map(p => '<listViews>' + ListView(p, true) + '</listViews>').join('')}
 	${object.nameField == null ? '' : '<nameField>' + CustomField(object.nameField, true) + '</nameField>'}
 	${object.pluralLabel == null ? '' : '<pluralLabel>' + object.pluralLabel + '</pluralLabel>'}
+	${object.profileSearchLayouts == null ? '' : object.profileSearchLayouts.map(p => '<profileSearchLayouts>' + ProfileSearchLayouts(p, true) + '</profileSearchLayouts>').join('')}
+	${object.publishBehavior == null ? '' : '<publishBehavior>' + PlatformEventPublishBehavior(object.publishBehavior, true) + '</publishBehavior>'}
 	${object.recordTypeTrackFeedHistory == null ? '' : '<recordTypeTrackFeedHistory>' + object.recordTypeTrackFeedHistory + '</recordTypeTrackFeedHistory>'}
 	${object.recordTypeTrackHistory == null ? '' : '<recordTypeTrackHistory>' + object.recordTypeTrackHistory + '</recordTypeTrackHistory>'}
 	${object.recordTypes == null ? '' : object.recordTypes.map(p => '<recordTypes>' + RecordType(p, true) + '</recordTypes>').join('')}

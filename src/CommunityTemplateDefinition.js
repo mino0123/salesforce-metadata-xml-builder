@@ -22,6 +22,7 @@ module.exports = (object, asChild) => {
 	${object.masterLabel == null ? '' : '<masterLabel>' + object.masterLabel + '</masterLabel>'}
 	${object.navigationLinkSet == null ? '' : object.navigationLinkSet.map(p => '<navigationLinkSet>' + NavigationLinkSet(p, true) + '</navigationLinkSet>').join('')}
 	${object.pageSetting == null ? '' : object.pageSetting.map(p => '<pageSetting>' + CommunityTemplatePageSetting(p, true) + '</pageSetting>').join('')}
+	${object.publisher == null ? '' : '<publisher>' + object.publisher + '</publisher>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

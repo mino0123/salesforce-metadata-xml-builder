@@ -15,6 +15,7 @@ module.exports = (object, asChild) => {
 	${object.lowRangeColor == null ? '' : '<lowRangeColor>' + object.lowRangeColor + '</lowRangeColor>'}
 	${object.midRangeColor == null ? '' : '<midRangeColor>' + object.midRangeColor + '</midRangeColor>'}
 	${object.reportColumn == null ? '' : '<reportColumn>' + object.reportColumn + '</reportColumn>'}
+	${object.showSubTotal == null ? '' : '<showSubTotal>' + object.showSubTotal + '</showSubTotal>'}
 	${object.showTotal == null ? '' : '<showTotal>' + object.showTotal + '</showTotal>'}
 	${object.type == null ? '' : '<type>' + DashboardComponentColumnType(object.type, true) + '</type>'}
 ${rootTagEnd}`;

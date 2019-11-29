@@ -1,3 +1,4 @@
+const EmbeddedServiceQuickActionType = require('./EmbeddedServiceQuickActionType');
 
 module.exports = (object, asChild) => {
   var rootTagStart = '<EmbeddedServiceQuickAction>';
@@ -10,5 +11,6 @@ module.exports = (object, asChild) => {
 	${object.embeddedServiceLiveAgent == null ? '' : '<embeddedServiceLiveAgent>' + object.embeddedServiceLiveAgent + '</embeddedServiceLiveAgent>'}
 	${object.order == null ? '' : '<order>' + object.order + '</order>'}
 	${object.quickActionDefinition == null ? '' : '<quickActionDefinition>' + object.quickActionDefinition + '</quickActionDefinition>'}
+	${object.quickActionType == null ? '' : '<quickActionType>' + EmbeddedServiceQuickActionType(object.quickActionType, true) + '</quickActionType>'}
 ${rootTagEnd}`;
 }

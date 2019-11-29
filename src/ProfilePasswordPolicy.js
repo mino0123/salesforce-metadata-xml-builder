@@ -7,6 +7,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.forgotPasswordRedirect == null ? '' : '<forgotPasswordRedirect>' + object.forgotPasswordRedirect + '</forgotPasswordRedirect>'}
 	${object.lockoutInterval == null ? '' : '<lockoutInterval>' + object.lockoutInterval + '</lockoutInterval>'}
 	${object.maxLoginAttempts == null ? '' : '<maxLoginAttempts>' + object.maxLoginAttempts + '</maxLoginAttempts>'}
 	${object.minimumPasswordLength == null ? '' : '<minimumPasswordLength>' + object.minimumPasswordLength + '</minimumPasswordLength>'}

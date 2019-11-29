@@ -14,6 +14,7 @@ module.exports = (object, asChild) => {
   return `${rootTagStart}
 	${object.apiOnlyUserHomePageURL == null ? '' : '<apiOnlyUserHomePageURL>' + object.apiOnlyUserHomePageURL + '</apiOnlyUserHomePageURL>'}
 	${object.complexity == null ? '' : '<complexity>' + Complexity(object.complexity, true) + '</complexity>'}
+	${object.enableSetPasswordInApi == null ? '' : '<enableSetPasswordInApi>' + object.enableSetPasswordInApi + '</enableSetPasswordInApi>'}
 	${object.expiration == null ? '' : '<expiration>' + Expiration(object.expiration, true) + '</expiration>'}
 	${object.historyRestriction == null ? '' : '<historyRestriction>' + object.historyRestriction + '</historyRestriction>'}
 	${object.lockoutInterval == null ? '' : '<lockoutInterval>' + LockoutInterval(object.lockoutInterval, true) + '</lockoutInterval>'}

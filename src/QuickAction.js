@@ -1,4 +1,5 @@
 const FieldOverride = require('./FieldOverride');
+const MobExtDisplayMode = require('./MobExtDisplayMode');
 const QuickActionLayout = require('./QuickActionLayout');
 const QuickActionSendEmailOptions = require('./QuickActionSendEmailOptions');
 const QuickActionLabel = require('./QuickActionLabel');
@@ -21,6 +22,7 @@ module.exports = (object, asChild) => {
 	${object.isProtected == null ? '' : '<isProtected>' + object.isProtected + '</isProtected>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.lightningComponent == null ? '' : '<lightningComponent>' + object.lightningComponent + '</lightningComponent>'}
+	${object.mobExtDisplayMode == null ? '' : '<mobExtDisplayMode>' + MobExtDisplayMode(object.mobExtDisplayMode, true) + '</mobExtDisplayMode>'}
 	${object.optionsCreateFeedItem == null ? '' : '<optionsCreateFeedItem>' + object.optionsCreateFeedItem + '</optionsCreateFeedItem>'}
 	${object.page == null ? '' : '<page>' + object.page + '</page>'}
 	${object.quickActionLayout == null ? '' : '<quickActionLayout>' + QuickActionLayout(object.quickActionLayout, true) + '</quickActionLayout>'}

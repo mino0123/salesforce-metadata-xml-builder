@@ -31,5 +31,6 @@ module.exports = (object, asChild) => {
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
 	${object.showInExplorer == null ? '' : '<showInExplorer>' + object.showInExplorer + '</showInExplorer>'}
 	${object.sortIndex == null ? '' : '<sortIndex>' + object.sortIndex + '</sortIndex>'}
+	${object.type == null ? '' : '<type>' + object.type + '</type>'}
 ${rootTagEnd}`;
 }

@@ -18,7 +18,7 @@ module.exports = (object, asChild) => {
 	${object.hasSidebar == null ? '' : '<hasSidebar>' + object.hasSidebar + '</hasSidebar>'}
 	${object.icon == null ? '' : '<icon>' + object.icon + '</icon>'}
 	${object.label == null ? '' : '<label>' + object.label + '</label>'}
-	${object.mobileReady == null ? '' : '<mobileReady>' + object.mobileReady + '</mobileReady>'}
+	${object.lwcComponent == null ? '' : '<lwcComponent>' + object.lwcComponent + '</lwcComponent>'}
 	${object.motif == null ? '' : '<motif>' + object.motif + '</motif>'}
 	${object.page == null ? '' : '<page>' + object.page + '</page>'}
 	${object.scontrol == null ? '' : '<scontrol>' + object.scontrol + '</scontrol>'}

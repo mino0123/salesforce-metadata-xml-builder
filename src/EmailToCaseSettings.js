@@ -9,6 +9,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.enableE2CAttachmentAsFile == null ? '' : '<enableE2CAttachmentAsFile>' + object.enableE2CAttachmentAsFile + '</enableE2CAttachmentAsFile>'}
 	${object.enableE2CSourceTracking == null ? '' : '<enableE2CSourceTracking>' + object.enableE2CSourceTracking + '</enableE2CSourceTracking>'}
 	${object.enableEmailToCase == null ? '' : '<enableEmailToCase>' + object.enableEmailToCase + '</enableEmailToCase>'}
 	${object.enableHtmlEmail == null ? '' : '<enableHtmlEmail>' + object.enableHtmlEmail + '</enableHtmlEmail>'}

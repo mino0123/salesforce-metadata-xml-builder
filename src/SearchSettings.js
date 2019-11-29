@@ -9,6 +9,11 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.documentContentSearchEnabled == null ? '' : '<documentContentSearchEnabled>' + object.documentContentSearchEnabled + '</documentContentSearchEnabled>'}
+	${object.enableAdvancedSearchInAlohaSidebar == null ? '' : '<enableAdvancedSearchInAlohaSidebar>' + object.enableAdvancedSearchInAlohaSidebar + '</enableAdvancedSearchInAlohaSidebar>'}
+	${object.enableEinsteinSearchPersonalization == null ? '' : '<enableEinsteinSearchPersonalization>' + object.enableEinsteinSearchPersonalization + '</enableEinsteinSearchPersonalization>'}
+	${object.enableQuerySuggestionPigOn == null ? '' : '<enableQuerySuggestionPigOn>' + object.enableQuerySuggestionPigOn + '</enableQuerySuggestionPigOn>'}
+	${object.enableSalesforceGeneratedSynonyms == null ? '' : '<enableSalesforceGeneratedSynonyms>' + object.enableSalesforceGeneratedSynonyms + '</enableSalesforceGeneratedSynonyms>'}
+	${object.enableSetupSearch == null ? '' : '<enableSetupSearch>' + object.enableSetupSearch + '</enableSetupSearch>'}
 	${object.optimizeSearchForCJKEnabled == null ? '' : '<optimizeSearchForCJKEnabled>' + object.optimizeSearchForCJKEnabled + '</optimizeSearchForCJKEnabled>'}
 	${object.recentlyViewedUsersForBlankLookupEnabled == null ? '' : '<recentlyViewedUsersForBlankLookupEnabled>' + object.recentlyViewedUsersForBlankLookupEnabled + '</recentlyViewedUsersForBlankLookupEnabled>'}
 	${object.searchSettingsByObject == null ? '' : '<searchSettingsByObject>' + SearchSettingsByObject(object.searchSettingsByObject, true) + '</searchSettingsByObject>'}

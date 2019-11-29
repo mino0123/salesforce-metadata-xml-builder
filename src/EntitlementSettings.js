@@ -13,10 +13,13 @@ module.exports = (object, asChild) => {
 	${object.assetLookupLimitedToSameContact == null ? '' : '<assetLookupLimitedToSameContact>' + object.assetLookupLimitedToSameContact + '</assetLookupLimitedToSameContact>'}
 	${object.enableEntitlementVersioning == null ? '' : '<enableEntitlementVersioning>' + object.enableEntitlementVersioning + '</enableEntitlementVersioning>'}
 	${object.enableEntitlements == null ? '' : '<enableEntitlements>' + object.enableEntitlements + '</enableEntitlements>'}
+	${object.enableMilestoneFeedItem == null ? '' : '<enableMilestoneFeedItem>' + object.enableMilestoneFeedItem + '</enableMilestoneFeedItem>'}
+	${object.enableMilestoneStoppedTime == null ? '' : '<enableMilestoneStoppedTime>' + object.enableMilestoneStoppedTime + '</enableMilestoneStoppedTime>'}
 	${object.entitlementLookupLimitedToActiveStatus == null ? '' : '<entitlementLookupLimitedToActiveStatus>' + object.entitlementLookupLimitedToActiveStatus + '</entitlementLookupLimitedToActiveStatus>'}
 	${object.entitlementLookupLimitedToSameAccount == null ? '' : '<entitlementLookupLimitedToSameAccount>' + object.entitlementLookupLimitedToSameAccount + '</entitlementLookupLimitedToSameAccount>'}
 	${object.entitlementLookupLimitedToSameAsset == null ? '' : '<entitlementLookupLimitedToSameAsset>' + object.entitlementLookupLimitedToSameAsset + '</entitlementLookupLimitedToSameAsset>'}
 	${object.entitlementLookupLimitedToSameContact == null ? '' : '<entitlementLookupLimitedToSameContact>' + object.entitlementLookupLimitedToSameContact + '</entitlementLookupLimitedToSameContact>'}
+	${object.ignoreMilestoneBusinessHours == null ? '' : '<ignoreMilestoneBusinessHours>' + object.ignoreMilestoneBusinessHours + '</ignoreMilestoneBusinessHours>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

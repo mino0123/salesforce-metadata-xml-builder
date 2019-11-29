@@ -13,6 +13,7 @@ module.exports = (object, asChild) => {
 	${object.lookupDialogsAdditionalFields == null ? '' : object.lookupDialogsAdditionalFields.map(p => '<lookupDialogsAdditionalFields>' + p + '</lookupDialogsAdditionalFields>').join('')}
 	${object.lookupFilterFields == null ? '' : object.lookupFilterFields.map(p => '<lookupFilterFields>' + p + '</lookupFilterFields>').join('')}
 	${object.lookupPhoneDialogsAdditionalFields == null ? '' : object.lookupPhoneDialogsAdditionalFields.map(p => '<lookupPhoneDialogsAdditionalFields>' + p + '</lookupPhoneDialogsAdditionalFields>').join('')}
+	${object.massQuickActions == null ? '' : object.massQuickActions.map(p => '<massQuickActions>' + p + '</massQuickActions>').join('')}
 	${object.searchFilterFields == null ? '' : object.searchFilterFields.map(p => '<searchFilterFields>' + p + '</searchFilterFields>').join('')}
 	${object.searchResultsAdditionalFields == null ? '' : object.searchResultsAdditionalFields.map(p => '<searchResultsAdditionalFields>' + p + '</searchResultsAdditionalFields>').join('')}
 	${object.searchResultsCustomButtons == null ? '' : object.searchResultsCustomButtons.map(p => '<searchResultsCustomButtons>' + p + '</searchResultsCustomButtons>').join('')}

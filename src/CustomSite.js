@@ -33,6 +33,7 @@ module.exports = (object, asChild) => {
 	${object.cspUpgradeInsecureRequests == null ? '' : '<cspUpgradeInsecureRequests>' + object.cspUpgradeInsecureRequests + '</cspUpgradeInsecureRequests>'}
 	${object.customWebAddresses == null ? '' : object.customWebAddresses.map(p => '<customWebAddresses>' + SiteWebAddress(p, true) + '</customWebAddresses>').join('')}
 	${object.description == null ? '' : '<description>' + object.description + '</description>'}
+	${object.enableAuraRequests == null ? '' : '<enableAuraRequests>' + object.enableAuraRequests + '</enableAuraRequests>'}
 	${object.favoriteIcon == null ? '' : '<favoriteIcon>' + object.favoriteIcon + '</favoriteIcon>'}
 	${object.fileNotFoundPage == null ? '' : '<fileNotFoundPage>' + object.fileNotFoundPage + '</fileNotFoundPage>'}
 	${object.forgotPasswordPage == null ? '' : '<forgotPasswordPage>' + object.forgotPasswordPage + '</forgotPasswordPage>'}

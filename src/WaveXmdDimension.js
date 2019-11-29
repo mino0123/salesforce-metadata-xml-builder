@@ -1,3 +1,4 @@
+const WaveXmdFormattingProperty = require('./WaveXmdFormattingProperty');
 const WaveXmdDimensionCustomAction = require('./WaveXmdDimensionCustomAction');
 const WaveXmdDimensionMember = require('./WaveXmdDimensionMember');
 const WaveXmdRecordDisplayLookup = require('./WaveXmdRecordDisplayLookup');
@@ -11,6 +12,7 @@ module.exports = (object, asChild) => {
     rootTagEnd = '';
   }
   return `${rootTagStart}
+	${object.conditionalFormatting == null ? '' : object.conditionalFormatting.map(p => '<conditionalFormatting>' + WaveXmdFormattingProperty(p, true) + '</conditionalFormatting>').join('')}
 	${object.customActions == null ? '' : object.customActions.map(p => '<customActions>' + WaveXmdDimensionCustomAction(p, true) + '</customActions>').join('')}
 	${object.customActionsEnabled == null ? '' : '<customActionsEnabled>' + object.customActionsEnabled + '</customActionsEnabled>'}
 	${object.dateFormat == null ? '' : '<dateFormat>' + object.dateFormat + '</dateFormat>'}

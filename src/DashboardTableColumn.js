@@ -13,6 +13,7 @@ module.exports = (object, asChild) => {
 	${object.calculatePercent == null ? '' : '<calculatePercent>' + object.calculatePercent + '</calculatePercent>'}
 	${object.column == null ? '' : '<column>' + object.column + '</column>'}
 	${object.decimalPlaces == null ? '' : '<decimalPlaces>' + object.decimalPlaces + '</decimalPlaces>'}
+	${object.showSubTotal == null ? '' : '<showSubTotal>' + object.showSubTotal + '</showSubTotal>'}
 	${object.showTotal == null ? '' : '<showTotal>' + object.showTotal + '</showTotal>'}
 	${object.sortBy == null ? '' : '<sortBy>' + DashboardComponentFilter(object.sortBy, true) + '</sortBy>'}
 ${rootTagEnd}`;

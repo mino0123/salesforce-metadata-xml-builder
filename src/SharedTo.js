@@ -14,6 +14,7 @@ module.exports = (object, asChild) => {
 	${object.channelProgramGroups == null ? '' : object.channelProgramGroups.map(p => '<channelProgramGroups>' + p + '</channelProgramGroups>').join('')}
 	${object.group == null ? '' : object.group.map(p => '<group>' + p + '</group>').join('')}
 	${object.groups == null ? '' : object.groups.map(p => '<groups>' + p + '</groups>').join('')}
+	${object.guestUser == null ? '' : object.guestUser.map(p => '<guestUser>' + p + '</guestUser>').join('')}
 	${object.managerSubordinates == null ? '' : object.managerSubordinates.map(p => '<managerSubordinates>' + p + '</managerSubordinates>').join('')}
 	${object.managers == null ? '' : object.managers.map(p => '<managers>' + p + '</managers>').join('')}
 	${object.portalRole == null ? '' : object.portalRole.map(p => '<portalRole>' + p + '</portalRole>').join('')}

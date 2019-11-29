@@ -8,6 +8,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.enableQuote == null ? '' : '<enableQuote>' + object.enableQuote + '</enableQuote>'}
+	${object.enableQuotesWithoutOppEnabled == null ? '' : '<enableQuotesWithoutOppEnabled>' + object.enableQuotesWithoutOppEnabled + '</enableQuotesWithoutOppEnabled>'}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}
 ${rootTagEnd}`;
 }

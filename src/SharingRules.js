@@ -1,4 +1,5 @@
 const SharingCriteriaRule = require('./SharingCriteriaRule');
+const SharingGuestRule = require('./SharingGuestRule');
 const SharingOwnerRule = require('./SharingOwnerRule');
 const SharingTerritoryRule = require('./SharingTerritoryRule');
 
@@ -11,6 +12,7 @@ module.exports = (object, asChild) => {
   }
   return `${rootTagStart}
 	${object.sharingCriteriaRules == null ? '' : object.sharingCriteriaRules.map(p => '<sharingCriteriaRules>' + SharingCriteriaRule(p, true) + '</sharingCriteriaRules>').join('')}
+	${object.sharingGuestRules == null ? '' : object.sharingGuestRules.map(p => '<sharingGuestRules>' + SharingGuestRule(p, true) + '</sharingGuestRules>').join('')}
 	${object.sharingOwnerRules == null ? '' : object.sharingOwnerRules.map(p => '<sharingOwnerRules>' + SharingOwnerRule(p, true) + '</sharingOwnerRules>').join('')}
 	${object.sharingTerritoryRules == null ? '' : object.sharingTerritoryRules.map(p => '<sharingTerritoryRules>' + SharingTerritoryRule(p, true) + '</sharingTerritoryRules>').join('')}
 	${object.fullName == null ? '' : '<fullName>' + object.fullName + '</fullName>'}

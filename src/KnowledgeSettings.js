@@ -18,6 +18,10 @@ module.exports = (object, asChild) => {
 	${object.enableCreateEditOnArticlesTab == null ? '' : '<enableCreateEditOnArticlesTab>' + object.enableCreateEditOnArticlesTab + '</enableCreateEditOnArticlesTab>'}
 	${object.enableExternalMediaContent == null ? '' : '<enableExternalMediaContent>' + object.enableExternalMediaContent + '</enableExternalMediaContent>'}
 	${object.enableKnowledge == null ? '' : '<enableKnowledge>' + object.enableKnowledge + '</enableKnowledge>'}
+	${object.enableKnowledgeArticleTextHighlights == null ? '' : '<enableKnowledgeArticleTextHighlights>' + object.enableKnowledgeArticleTextHighlights + '</enableKnowledgeArticleTextHighlights>'}
+	${object.enableKnowledgeKeywordAutoComplete == null ? '' : '<enableKnowledgeKeywordAutoComplete>' + object.enableKnowledgeKeywordAutoComplete + '</enableKnowledgeKeywordAutoComplete>'}
+	${object.enableKnowledgeTitleAutoComplete == null ? '' : '<enableKnowledgeTitleAutoComplete>' + object.enableKnowledgeTitleAutoComplete + '</enableKnowledgeTitleAutoComplete>'}
+	${object.enableLightningKbAutoLoadRichTextField == null ? '' : '<enableLightningKbAutoLoadRichTextField>' + object.enableLightningKbAutoLoadRichTextField + '</enableLightningKbAutoLoadRichTextField>'}
 	${object.enableLightningKnowledge == null ? '' : '<enableLightningKnowledge>' + object.enableLightningKnowledge + '</enableLightningKnowledge>'}
 	${object.languages == null ? '' : '<languages>' + KnowledgeLanguageSettings(object.languages, true) + '</languages>'}
 	${object.showArticleSummariesCustomerPortal == null ? '' : '<showArticleSummariesCustomerPortal>' + object.showArticleSummariesCustomerPortal + '</showArticleSummariesCustomerPortal>'}

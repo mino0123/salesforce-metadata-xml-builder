@@ -1,6 +1,8 @@
 const CodeCoverageResult = require('./CodeCoverageResult');
 const CodeCoverageWarning = require('./CodeCoverageWarning');
 const RunTestFailure = require('./RunTestFailure');
+const FlowCoverageResult = require('./FlowCoverageResult');
+const FlowCoverageWarning = require('./FlowCoverageWarning');
 const RunTestSuccess = require('./RunTestSuccess');
 
 module.exports = (object, asChild) => {
@@ -15,6 +17,8 @@ module.exports = (object, asChild) => {
 	${object.codeCoverage == null ? '' : object.codeCoverage.map(p => '<codeCoverage>' + CodeCoverageResult(p, true) + '</codeCoverage>').join('')}
 	${object.codeCoverageWarnings == null ? '' : object.codeCoverageWarnings.map(p => '<codeCoverageWarnings>' + CodeCoverageWarning(p, true) + '</codeCoverageWarnings>').join('')}
 	${object.failures == null ? '' : object.failures.map(p => '<failures>' + RunTestFailure(p, true) + '</failures>').join('')}
+	${object.flowCoverage == null ? '' : object.flowCoverage.map(p => '<flowCoverage>' + FlowCoverageResult(p, true) + '</flowCoverage>').join('')}
+	${object.flowCoverageWarnings == null ? '' : object.flowCoverageWarnings.map(p => '<flowCoverageWarnings>' + FlowCoverageWarning(p, true) + '</flowCoverageWarnings>').join('')}
 	${object.numFailures == null ? '' : '<numFailures>' + object.numFailures + '</numFailures>'}
 	${object.numTestsRun == null ? '' : '<numTestsRun>' + object.numTestsRun + '</numTestsRun>'}
 	${object.successes == null ? '' : object.successes.map(p => '<successes>' + RunTestSuccess(p, true) + '</successes>').join('')}
